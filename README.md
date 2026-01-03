@@ -1,4 +1,4 @@
-# Sample Project Title
+# Course HomePage Profile
 
 ## Features
 - Clear, accessible design (ARIA-compliant, responsive)
@@ -11,4 +11,4 @@
 ## 📦 Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/project-name.git
+   git clone https://github.com/ldumlao1204/project-homepage.git
