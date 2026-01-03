@@ -4,18 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 -Dynamic Web Fundamentals - Leilany Dumlao</title>
-    <meta name="description" content="Leilany Dumlao | WDD131 - Dynamic Web Fundamentals, Course Homepage">
+    <title>WDD 231 - Web Frontend Development I - Leilany Dumlao</title>
+    <meta name="description" content="Leilany Dumlao | WDD 231 - Web Frontend Development I, Course Homepage">
     <meta name="author" content="Leilany Dumlao">
     <link rel="stylesheet" href="styles/base.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
+    <header>
+        <span id="course-title">WDD 231 - Web Frontend Development I</span>
+        <nav>
+            <a href="https://www.linkedin.com">LinkedIn</a>
+            <a href="https://byupw.instructure.com/">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scripture">Scripture</a>
+            <a href="https://ldumlao1204.github.io/wdd131/project/index.html">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Leilany Dumlao</h1>
+        <section class="card">
+            <h2>About Me</h2>
+            <img src="images/profile.webp" alt="Hello, my name is Leilany Dumlao" width="150">
+            <p>My name is Leilany Dumlao and I am from the beautiful islands of the Philippines.
+                I'm currently studying Web Design and Development at Brigham Young University-Idaho.</p>
+
+            <p>I'm happily married to my husband and we are blessed to have three wonderful sons. I love gardening,
+                reading, learning new things, traveling and having adventures, and spending time with my family.
+                I also love meeting people around the globe and serving them through BYU-Pathway Worldwide.</p>
+
+            <h3>Baguio City, Philippines</h3>
+            <hr>
+            <div class="flag-container">
+                <figure>
+                    <img src="images/philippines-flag.webp" alt="Flag of Philippines" width="150">
+                    <figcaption>Official Flag of the Philippines</figcaption>
+                </figure>
+                <div class="flag-description">
+                    <p>The Philippines is an archipelago of over 7,000 islands in Southeast Asia. It is known for its
+                        beautiful beaches, vibrant culture, and warm, hospitable people. This is where I grew up. My
+                        family currently lives in this small city in the North, called the City of Pines.</p>
+                </div>
+            </div>
+        </section>
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com">W3 Schools</a></li>
+                <li><a href="https://stackoverflow.com">Stack Overflow</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> &#127757; Leilany Dumlao &#127757; Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
