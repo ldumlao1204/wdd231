@@ -1,0 +1,122 @@
+/* ========================================
+   DESKTOP STYLES - 640px and above
+   ======================================== */
+@media (min-width: 640px) {
+
+    /* ========================================
+       HEADER & NAVIGATION
+       ======================================== */
+    .header-content {
+        padding: 1rem 2rem;
+    }
+
+    /* Hide hamburger menu on larger screens */
+    #menu {
+        display: none;
+    }
+
+    /* Horizontal navigation */
+    nav {
+        background-color: var(--primary-color);
+    }
+
+    .navigation {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .navigation li {
+        border-bottom: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .navigation li:last-child {
+        border-right: none;
+    }
+
+    .navigation a {
+        padding: 1rem 2rem;
+    }
+
+    /* ========================================
+       MAIN CONTENT LAYOUT
+       ======================================== */
+    main {
+        padding: 2rem;
+    }
+
+    main h1 {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+    /* Two-column grid for About Me and Student Photo */
+    .main-grid {
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+
+    .about-me {
+        grid-column: 1 / 2;
+    }
+
+    .student-photo {
+        grid-column: 2 / 3;
+    }
+
+    /* ========================================
+       COURSES SECTION
+       ======================================== */
+    .courses-section {
+        grid-column: 1 / -1;
+    }
+
+    /* Course grid - multiple columns */
+    .course-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .filter-buttons {
+        grid-template-columns: repeat(3, 200px);
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    footer {
+        padding: 2.5rem 2rem;
+    }
+
+    .social-links {
+        gap: 2rem;
+    }
+
+    .social-links img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ========================================
+   LARGER DESKTOP - 1024px and above
+   ======================================== */
+@media (min-width: 1024px) {
+
+    .course-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    main h1 {
+        font-size: 3rem;
+    }
+}
