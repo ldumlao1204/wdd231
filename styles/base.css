@@ -110,6 +110,7 @@ header {
 /************ NAVIGATION - MOBILE VIEW *********************/
 nav {
   background-color: var(--primary-color);
+  justify-content: space-evenly;
 }
 
 .navigation {
