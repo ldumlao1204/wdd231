@@ -10,9 +10,7 @@
   --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* ========================================
-   GLOBAL STYLES
-   ======================================== */
+/************* SITE WIDE *********************/
 * {
   margin: 0;
   padding: 0;
@@ -36,10 +34,10 @@ img {
   display: block;
 }
 
-/* ========================================
-   HEADER STYLES
-   ======================================== */
+/*********** HEADER STYLES **********************/
 header {
+  display: grid;
+  grid-template-columns: 24px auto 44 px;
   background-color: var(--bg-light);
   border-bottom: 1px solid var(--accent-color);
   position: sticky;
@@ -73,9 +71,7 @@ header {
   color: var(--primary-color);
 }
 
-/* ========================================
-   HAMBURGER MENU
-   ======================================== */
+/*********** HAMBURGER MENU **********************/
 #menu {
   background: none;
   border: none;
@@ -111,9 +107,7 @@ header {
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* ========================================
-   NAVIGATION - MOBILE
-   ======================================== */
+/************ NAVIGATION - MOBILE VIEW *********************/
 nav {
   background-color: var(--primary-color);
 }
@@ -146,9 +140,7 @@ nav {
   background-color: rgba(10, 211, 214, 0.2);
 }
 
-/* ========================================
-   MAIN CONTENT
-   ======================================== */
+/****************** MAIN CONTENT ***********************/
 main {
   flex: 1;
   max-width: 1200px;
@@ -164,9 +156,7 @@ main h1 {
   text-align: center;
 }
 
-/* ========================================
-   CARDS & GRID
-   ======================================== */
+/************** CARDS & GRID **********************/
 .main-grid {
   display: grid;
   gap: 1.5rem;
@@ -208,9 +198,7 @@ main h1 {
   height: auto;
 }
 
-/* ========================================
-   COURSES SECTION
-   ======================================== */
+/*********** COURSES SECTION *****************/
 .courses-section {
   width: 100%;
 }
@@ -283,9 +271,7 @@ main h1 {
   color: var(--primary-color);
 }
 
-/* ========================================
-   FOOTER
-   ======================================== */
+/*************** FOOTER ******************/
 footer {
   background-color: var(--primary-color);
   color: var(--text-light);
@@ -325,3 +311,4 @@ footer {
 .last-modified {
   font-size: 0.85rem;
   opacity: 0.9;
+}
