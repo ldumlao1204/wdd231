@@ -7,7 +7,7 @@
   --text-dark: #000000;
   --text-light: #ffffff;
   --border-radius: 8px;
-  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 /************* SITE WIDE *********************/
@@ -36,28 +36,23 @@ img {
 
 /*********** HEADER STYLES **********************/
 header {
-  display: grid;
-  grid-template-columns: 24px auto 44 px;
   background-color: var(--bg-light);
   border-bottom: 1px solid var(--accent-color);
   position: sticky;
   top: 0;
   z-index: 1000;
-}
-
-.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  flex-wrap: wrap;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex-grow: 1;
 }
 
 .logo-container img {
@@ -66,20 +61,22 @@ header {
 }
 
 .site-name {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary-color);
+  text-align: end;
+
 }
 
 /*********** HAMBURGER MENU **********************/
-#menu {
+.hamburger-menu {
   background: none;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
   width: 40px;
   height: 40px;
   justify-content: center;
@@ -87,23 +84,23 @@ header {
   flex-shrink: 0;
 }
 
-.hamburger {
-  width: 30px;
+.hamburger-line {
+  width: 25px;
   height: 3px;
   background-color: var(--primary-color);
   transition: all 0.3s ease;
   display: block;
 }
 
-#menu.open .hamburger:nth-child(1) {
+.hamburger-menu.open .hamburger-line:nth-child(1) {
   transform: rotate(45deg) translate(7px, 7px);
 }
 
-#menu.open .hamburger:nth-child(2) {
+.hamburger-menu.open .hamburger-line:nth-child(2) {
   opacity: 0;
 }
 
-#menu.open .hamburger:nth-child(3) {
+.hamburger-menu.open .hamburger-line:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
@@ -111,6 +108,9 @@ header {
 nav {
   background-color: var(--primary-color);
   justify-content: space-evenly;
+  position: sticky;
+  top: 80px;
+  z-index: 999;
 }
 
 .navigation {
@@ -136,9 +136,14 @@ nav {
   transition: background-color 0.3s ease;
 }
 
-.navigation a:hover,
+.navigation a:hover {
+  background-color: rgba(10, 211, 214, 0.3);
+}
+
 .navigation a.active {
-  background-color: rgba(10, 211, 214, 0.2);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: 700;
 }
 
 /****************** MAIN CONTENT ***********************/
@@ -195,6 +200,7 @@ main h1 {
 .student-photo img {
   margin: 0 auto;
   border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
   max-width: 100%;
   height: auto;
 }

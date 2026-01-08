@@ -6,18 +6,21 @@
     /* ========================================
        HEADER & NAVIGATION
        ======================================== */
-    .header-content {
+    header {
         padding: 1rem 2rem;
     }
 
     /* Hide hamburger menu on larger screens */
-    #menu {
+    .hamburger-menu {
         display: none;
     }
 
     /* Horizontal navigation */
     nav {
         background-color: var(--primary-color);
+        position: sticky;
+        top: 80px;
+        z-index: 999;
     }
 
     .navigation {
@@ -39,6 +42,12 @@
 
     .navigation a {
         padding: 1rem 2rem;
+    }
+
+    .navigation a.active {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        font-weight: 700;
     }
 
     /* ========================================

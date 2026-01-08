@@ -1,5 +1,5 @@
 // Hamburger menu toggle
-const menuButton = document.getElementById('menu');
+const menuButton = document.getElementById('nav-button');
 const navigation = document.querySelector('.navigation');
 
 menuButton.addEventListener('click', () => {
