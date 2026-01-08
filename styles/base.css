@@ -150,7 +150,7 @@ main {
 }
 
 main h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: var(--primary-color);
   margin-bottom: 2rem;
   text-align: center;
