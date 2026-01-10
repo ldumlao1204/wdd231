@@ -86,7 +86,7 @@ const allButton = document.getElementById('all');
 const cseButton = document.getElementById('cse');
 const wddButton = document.getElementById('wdd');
 
-// Display courses function
+// Display the courses function
 function displayCourses(filteredCourses) {
     coursesContainer.innerHTML = '';
 
@@ -97,12 +97,12 @@ function displayCourses(filteredCourses) {
         coursesContainer.appendChild(courseCard);
     });
 
-    // Calculate and display total credits
+    // Calculate and display the total credits
     const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
     totalCreditsSpan.textContent = totalCredits;
 }
 
-// Filter courses function
+// Filter the courses function
 function filterCourses(subject) {
     // Remove active class from all buttons
     document.querySelectorAll('.filter-btn').forEach(btn => {
