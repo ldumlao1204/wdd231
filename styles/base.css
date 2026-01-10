@@ -147,14 +147,14 @@ main {
 main h1 {
   font-size: 3rem;
   color: var(--primary-color);
-  margin-bottom: 2rem;
-
+  margin: 1rem;
+  text-align: center;
 }
 
 /************** CARDS & GRID **********************/
 .main-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.2rem;
   margin-bottom: 2rem;
 }
 
