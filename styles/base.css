@@ -148,7 +148,7 @@ main h1 {
   font-size: 3rem;
   color: var(--primary-color);
   margin-bottom: 2rem;
-  text-align: center;
+
 }
 
 /************** CARDS & GRID **********************/
@@ -159,7 +159,7 @@ main h1 {
 }
 
 .card {
-  background-color: white;
+  background-color: var(--bg-light);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 1.5rem;
