@@ -126,8 +126,9 @@ nav {
 }
 
 .navigation a:hover {
-  background-color: rgba(10, 211, 214, 0.3);
-}
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  }
 
 .navigation a.active {
   background-color: var(--secondary-color);
