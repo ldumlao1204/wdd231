@@ -100,12 +100,16 @@ nav {
   position: sticky;
   top: 80px;
   z-index: 999;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .navigation {
   list-style: none;
   display: none;
   flex-direction: column;
+  width: 100%;
 }
 
 .navigation.open {
@@ -128,7 +132,7 @@ nav {
 .navigation a:hover {
   background-color: var(--accent-color);
   color: var(--primary-color);
-  }
+}
 
 .navigation a.active {
   background-color: var(--secondary-color);
