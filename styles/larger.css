@@ -1,11 +1,7 @@
-/* ========================================
-   DESKTOP STYLES - 640px and above
-   ======================================== */
+/*  DESKTOP STYLES - 640px and above */
 @media (min-width: 640px) {
 
-    /* ========================================
-       HEADER & NAVIGATION
-       ======================================== */
+    /* HEADER & NAVIGATION */
     header {
         padding: 1rem 2rem;
     }
@@ -50,9 +46,7 @@
         font-weight: 700;
     }
 
-    /* ========================================
-       MAIN CONTENT LAYOUT
-       ======================================== */
+    /* MAIN CONTENT LAYOUT */
     main {
         padding: 2rem;
     }
@@ -76,9 +70,7 @@
         grid-column: 2 / 3;
     }
 
-    /* ========================================
-       COURSES SECTION
-       ======================================== */
+    /* COURSES SECTION */
     .courses-section {
         grid-column: 1 / -1;
     }
@@ -95,11 +87,9 @@
         gap: 1rem;
     }
 
-    /* ========================================
-       FOOTER
-       ======================================== */
+    /* FOOTER */
     footer {
-        padding: 2.5rem 2rem;
+        padding: 2rem;
     }
 
     .social-links {
@@ -112,9 +102,7 @@
     }
 }
 
-/* ========================================
-   LARGER DESKTOP - 1024px and above
-   ======================================== */
+/* LARGER DESKTOP - 1024px and above */
 @media (min-width: 1024px) {
 
     .course-grid {
