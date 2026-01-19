@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "company_name": "Premier Marketing Solutions",
+        "address": "123 Business Avenue, Commerce City, ST 12345",
+        "phone": "(555) 123-4567",
+        "website": "https://www.premiermarketing.com",
+        "image": "premier-marketing.jpg",
+        "membership_level": 3,
+        "membership_label": "Gold",
+        "description": "Full-service digital marketing agency specializing in brand development and online presence.",
+        "industry": "Marketing & Advertising"
+    },
+    {
+        "id": 2,
+        "company_name": "TechHub Innovations",
+        "address": "456 Silicon Plaza, Commerce City, ST 12345",
+        "phone": "(555) 234-5678",
+        "website": "https://www.techhubinnovations.com",
+        "image": "techhub-innovations.jpg",
+        "membership_level": 3,
+        "membership_label": "Gold",
+        "description": "Leading technology solutions provider offering software development and IT consulting.",
+        "industry": "Technology"
+    },
+    {
+        "id": 3,
+        "company_name": "Elegant Catering Co.",
+        "address": "789 Culinary Lane, Commerce City, ST 12345",
+        "phone": "(555) 345-6789",
+        "website": "https://www.elegantcatering.com",
+        "image": "elegant-catering.jpg",
+        "membership_level": 2,
+        "membership_label": "Silver",
+        "description": "Premium catering services for corporate events, weddings, and special occasions.",
+        "industry": "Food & Beverage"
+    },
+    {
+        "id": 4,
+        "company_name": "Harmony Financial Advisors",
+        "address": "321 Money Street, Commerce City, ST 12345",
+        "phone": "(555) 456-7890",
+        "website": "https://www.harmonyfinancial.com",
+        "image": "harmony-financial.jpg",
+        "membership_level": 2,
+        "membership_label": "Silver",
+        "description": "Comprehensive financial planning and investment management for individuals and businesses.",
+        "industry": "Finance & Banking"
+    },
+    {
+        "id": 5,
+        "company_name": "BuildRight Construction",
+        "address": "654 Builder's Way, Commerce City, ST 12345",
+        "phone": "(555) 567-8901",
+        "website": "https://www.buildright.com",
+        "image": "buildright-construction.jpg",
+        "membership_level": 1,
+        "membership_label": "Member",
+        "description": "Quality construction and renovation services for commercial and residential projects.",
+        "industry": "Construction"
+    },
+    {
+        "id": 6,
+        "company_name": "Wellness Center Plus",
+        "address": "987 Health Drive, Commerce City, ST 12345",
+        "phone": "(555) 678-9012",
+        "website": "https://www.wellnessplus.com",
+        "image": "wellness-center.jpg",
+        "membership_level": 1,
+        "membership_label": "Member",
+        "description": "Full-service health and wellness facility offering fitness, therapy, and holistic services.",
+        "industry": "Healthcare & Wellness"
+    },
+    {
+        "id": 7,
+        "company_name": "Creative Design Studio",
+        "address": "147 Artist Street, Commerce City, ST 12345",
+        "phone": "(555) 789-0123",
+        "website": "https://www.creativedesignstudio.com",
+        "image": "creative-design.jpg",
+        "membership_level": 2,
+        "membership_label": "Silver",
+        "description": "Award-winning graphic design and branding services for startups and established brands.",
+        "industry": "Design & Creative"
+    },
+    {
+        "id": 8,
+        "company_name": "Legacy Legal Services",
+        "address": "258 Law Plaza, Commerce City, ST 12345",
+        "phone": "(555) 890-1234",
+        "website": "https://www.legacylegal.com",
+        "image": "legacy-legal.jpg",
+        "membership_level": 1,
+        "membership_label": "Member",
+        "description": "Professional legal services specializing in business law, contracts, and corporate matters.",
+        "industry": "Legal Services"
+    }
+]

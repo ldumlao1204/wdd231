@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Web Frontend Development I - Leilany Dumlao</title>
+    <meta name="description" content="Leilany Dumlao, Chamber of Commerce Directory. Discover the local chamber of commerce directory. Connect with local businesses, network, and grow your business with our thriving community of entrepreneurs and professionals.">
+    <meta name="author" content="Leilany Dumlao">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Chamber of Commerce - Business Directory & Networking">
+    <meta property="og:description"
+        content="Connect with local businesses and grow your network. Explore our comprehensive directory of chamber members.">
+    <meta property="og:image" content="https://wdd231-chamber.netlify.app/images/og-image.png">
+    <meta property="og:url" content="https://wdd231-chamber.netlify.app/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon-180.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <title>Chamber of Commerce - Business Directory</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="images/logo.svg" alt="Chamber of Commerce Logo" class="logo">
+                <div class="business-info">
+                    <h1>Chamber of Commerce</h1>
+                    <p class="tagline">Growing Business Together</p>
+                </div>
+            </div>
+            <nav class="navigation">
+                <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="nav-menu" class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="directory.html" class="active">Directory</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="directory-container">
+            <!-- Directory Header -->
+            <section class="directory-header">
+                <h2>Business Directory</h2>
+                <p>Explore our network of thriving businesses and professional members.</p>
+            </section>
+
+            <!-- View Toggle Controls -->
+            <section class="view-controls">
+                <label for="view-toggle">Display View:</label>
+                <div class="toggle-buttons">
+                    <button id="grid-view-btn" class="view-btn active" data-view="grid" aria-label="Grid view">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <rect x="2" y="2" width="8" height="8" />
+                            <rect x="14" y="2" width="8" height="8" />
+                            <rect x="2" y="14" width="8" height="8" />
+                            <rect x="14" y="14" width="8" height="8" />
+                        </svg>
+                        Grid
+                    </button>
+                    <button id="list-view-btn" class="view-btn" data-view="list" aria-label="List view">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <line x1="4" y1="6" x2="20" y2="6" />
+                            <line x1="4" y1="12" x2="20" y2="12" />
+                            <line x1="4" y1="18" x2="20" y2="18" />
+                        </svg>
+                        List
+                    </button>
+                </div>
+            </section>
+
+            <!-- Members Grid/List -->
+            <section class="members-container" id="members-container">
+                <!-- Member cards will be dynamically inserted here -->
+            </section>
+
+            <!-- Loading/Error Messages -->
+            <div id="loading" class="loading">Loading members...</div>
+            <div id="error" class="error" style="display: none;">Failed to load members.</div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>
+                        <strong>Chamber of Commerce</strong><br>
+                        123 Business Avenue<br>
+                        Commerce City, ST 12345<br>
+                        <strong>Phone:</strong> (555) 123-4567<br>
+                        <strong>Email:</strong> info@chamber.commerce
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">Facebook</a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Chamber of Commerce | WDD 231</p>
+                <p>Created by: Leila Hernandez</p>
+                <p>Last modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/directory.js"></script>
+</body>
+
+</html>

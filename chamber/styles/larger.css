@@ -1,0 +1,264 @@
+/* ==================================================
+   CHAMBER OF COMMERCE - RESPONSIVE DESIGN
+   Tablet and Desktop Views
+   ================================================== */
+
+/* ==================================================
+   TABLET VIEWS (768px and up)
+   ================================================== */
+
+@media (min-width: 768px) {
+
+    /* Header & Navigation */
+    .header-container {
+        flex-wrap: nowrap;
+    }
+
+    .business-info h1 {
+        font-size: 2rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-menu {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        box-shadow: none;
+        min-width: auto;
+        top: auto;
+        right: auto;
+        border-radius: 0;
+    }
+
+    .nav-menu li {
+        border-bottom: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-menu li:last-child {
+        border-right: none;
+    }
+
+    .nav-menu a {
+        padding: 0.5rem 1.25rem;
+    }
+
+    /* Main Content */
+    main {
+        padding: 3rem 2rem;
+    }
+
+    .directory-header {
+        padding: 3rem 2rem;
+    }
+
+    .directory-header h2 {
+        font-size: 3rem;
+    }
+
+    .directory-header p {
+        font-size: 1.2rem;
+    }
+
+    /* Members Grid */
+    .members-container.grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+
+    /* View Controls */
+    .view-controls {
+        justify-content: flex-end;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+}
+
+/* ==================================================
+   DESKTOP VIEWS (1024px and up)
+   ================================================== */
+
+@media (min-width: 1024px) {
+
+    /* Header */
+    .header-container {
+        padding: 1.5rem 0;
+    }
+
+    .business-info h1 {
+        font-size: 2.2rem;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Main Content */
+    main {
+        padding: 3rem 2rem;
+    }
+
+    .directory-header {
+        padding: 4rem 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .directory-header h2 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .directory-header p {
+        font-size: 1.3rem;
+    }
+
+    /* Members Grid - 3 columns on desktop */
+    .members-container.grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .member-card {
+        border-radius: 16px;
+    }
+
+    /* Enhanced Card Styling */
+    .member-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    }
+
+    /* View Controls */
+    .view-controls {
+        margin-bottom: 3rem;
+    }
+
+    /* Footer */
+    .footer-container {
+        padding: 0 2rem;
+    }
+
+    .footer-content {
+        gap: 4rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ==================================================
+   LARGE DESKTOP VIEWS (1440px and up)
+   ================================================== */
+
+@media (min-width: 1440px) {
+
+    /* Members Grid - 4 columns on large desktop */
+    .members-container.grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .directory-header h2 {
+        font-size: 4rem;
+    }
+
+    /* Enhanced spacing */
+    main {
+        padding: 4rem 3rem;
+    }
+
+    .directory-header {
+        padding: 5rem 4rem;
+    }
+}
+
+/* ==================================================
+   PRINT STYLES
+   ================================================== */
+
+@media print {
+
+    header,
+    footer,
+    .view-controls {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .members-container {
+        display: block;
+    }
+
+    .member-card {
+        page-break-inside: avoid;
+        margin-bottom: 2rem;
+    }
+}
+
+/* ==================================================
+   HIGH CONTRAST MODE
+   ================================================== */
+
+@media (prefers-contrast: more) {
+    :root {
+        --color-dark: #000000;
+        --color-text: #000000;
+    }
+
+    .member-link {
+        border: 2px solid currentColor;
+    }
+
+    .view-btn.active {
+        border-width: 3px;
+    }
+}
+
+/* ==================================================
+   DARK MODE (if system prefers dark mode)
+   ================================================== */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+
+    header {
+        background-color: #0a2d3e;
+    }
+
+    .member-card {
+        background-color: #2a2a2a;
+        border-color: #444;
+    }
+
+    .directory-header {
+        background: linear-gradient(135deg, #0a3d50, #4a3535);
+    }
+
+    .toggle-buttons {
+        background-color: #444;
+    }
+
+    .view-btn {
+        color: #e0e0e0;
+    }
+
+    .view-btn.active {
+        background-color: #3a3a3a;
+        color: #e0e0e0;
+    }
+
+    footer {
+        background-color: #0a2d3e;
+    }
+}
