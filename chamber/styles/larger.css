@@ -75,9 +75,19 @@
     }
 
     /* Footer */
-    .footer-content {
-        grid-template-columns: repeat(3, 1fr);
+    .footer-container {
         gap: 3rem;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        flex: 1;
+    }
+
+    .social-icon {
+        width: 55px;
+        height: 55px;
     }
 }
 
@@ -174,6 +184,16 @@
 
     .directory-header {
         padding: 5rem 4rem;
+    }
+
+    /* Footer */
+    .footer-container {
+        gap: 4rem;
+    }
+
+    .social-icon {
+        width: 60px;
+        height: 60px;
     }
 }
 
