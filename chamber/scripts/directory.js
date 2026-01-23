@@ -175,11 +175,16 @@ function updateFooter() {
     if (modifiedElement) {
         // Get last modified date from document
         const lastModified = new Date(document.lastModified);
-        const formattedDate = lastModified.toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
+
+        // Format: MM/DD/YYYY HH:MM:SS
+        const month = String(lastModified.getMonth() + 1).padStart(2, '0');
+        const day = String(lastModified.getDate()).padStart(2, '0');
+        const year = lastModified.getFullYear();
+        const hours = String(lastModified.getHours()).padStart(2, '0');
+        const minutes = String(lastModified.getMinutes()).padStart(2, '0');
+        const seconds = String(lastModified.getSeconds()).padStart(2, '0');
+
+        const formattedDate = `${month}/${day}/${year} ${hours}:${minutes}:${seconds}`;
         modifiedElement.textContent = formattedDate;
     }
 }
