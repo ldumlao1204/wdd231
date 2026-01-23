@@ -165,7 +165,7 @@ function showError() {
 
 // Update footer with current year and last modified date
 function updateFooter() {
-    const yearElement = document.getElementById('year');
+    const yearElement = document.getElementById('currentyear');
     const modifiedElement = document.getElementById('last-modified');
 
     if (yearElement) {
