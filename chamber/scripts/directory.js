@@ -10,15 +10,22 @@ const appState = {
     isLoading: true
 };
 
-// DOM Elements
-const membersContainer = document.getElementById('members-container');
-const loadingElement = document.getElementById('loading');
-const errorElement = document.getElementById('error');
-const gridViewBtn = document.getElementById('grid-view-btn');
-const listViewBtn = document.getElementById('list-view-btn');
+// DOM Elements - initialized on DOMContentLoaded
+let membersContainer;
+let loadingElement;
+let errorElement;
+let gridViewBtn;
+let listViewBtn;
 
 // Initialize app
 document.addEventListener('DOMContentLoaded', function () {
+    // Get DOM elements after content is loaded
+    membersContainer = document.getElementById('members-container');
+    loadingElement = document.getElementById('loading');
+    errorElement = document.getElementById('error');
+    gridViewBtn = document.getElementById('grid-view-btn');
+    listViewBtn = document.getElementById('list-view-btn');
+
     loadMembers();
     setupEventListeners();
     updateFooter();
