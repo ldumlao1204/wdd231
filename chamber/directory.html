@@ -19,7 +19,7 @@
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
-    
+
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,36 +75,16 @@
 
             <!-- View Toggle Controls -->
             <section class="view-controls">
-                <label for="view-toggle">Display View:</label>
-                <div class="toggle-buttons">
-                    <button id="grid-view-btn" class="view-btn active" data-view="grid" aria-label="Grid view">
-                        <svg viewBox="0 0 24 24" width="20" height="20">
-                            <rect x="2" y="2" width="8" height="8" />
-                            <rect x="14" y="2" width="8" height="8" />
-                            <rect x="2" y="14" width="8" height="8" />
-                            <rect x="14" y="14" width="8" height="8" />
-                        </svg>
-                        Grid
-                    </button>
-                    <button id="list-view-btn" class="view-btn" data-view="list" aria-label="List view">
-                        <svg viewBox="0 0 24 24" width="20" height="20">
-                            <line x1="4" y1="6" x2="20" y2="6" />
-                            <line x1="4" y1="12" x2="20" y2="12" />
-                            <line x1="4" y1="18" x2="20" y2="18" />
-                        </svg>
-                        List
-                    </button>
-                </div>
+                <button id="grid" class="view-btn active" aria-label="Grid view">Grid</button>
+                <button id="list" class="view-btn" aria-label="List view">List</button>
             </section>
 
             <!-- Members Grid/List -->
-            <section class="members-container" id="members-container">
-                <!-- Member cards will be dynamically inserted here -->
-            </section>
+            <article class="members-container" id="members-container">
+                <!-- Member sections will be dynamically inserted here -->
+            </article>
 
-            <!-- Loading/Error Messages -->
-            <div id="loading" class="loading">Loading members...</div>
-            <div id="error" class="error" style="display: none;">Failed to load members.</div>
+
         </div>
     </main>
 

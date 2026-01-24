@@ -66,7 +66,10 @@
 
     /* Members Grid */
     .members-container.grid {
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 5px;
+        align-items: center;
     }
 
     /* View Controls */
@@ -134,16 +137,6 @@
     .members-container.grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
-    }
-
-    .member-card {
-        border-radius: 16px;
-    }
-
-    /* Enhanced Card Styling */
-    .member-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
     }
 
     /* View Controls */

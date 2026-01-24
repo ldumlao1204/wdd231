@@ -14,8 +14,8 @@ const appState = {
 let membersContainer;
 let loadingElement;
 let errorElement;
-let gridViewBtn;
-let listViewBtn;
+let gridButton;
+let listButton;
 
 // Initialize app
 document.addEventListener('DOMContentLoaded', function () {
@@ -23,24 +23,25 @@ document.addEventListener('DOMContentLoaded', function () {
     membersContainer = document.getElementById('members-container');
     loadingElement = document.getElementById('loading');
     errorElement = document.getElementById('error');
-    gridViewBtn = document.getElementById('grid-view-btn');
-    listViewBtn = document.getElementById('list-view-btn');
+    gridButton = document.getElementById('grid');
+    listButton = document.getElementById('list');
 
     loadMembers();
     setupEventListeners();
     updateFooter();
+    restoreViewPreference();
 });
 
 // Setup event listeners
 function setupEventListeners() {
-    if (gridViewBtn) {
-        gridViewBtn.addEventListener('click', function () {
+    if (gridButton) {
+        gridButton.addEventListener('click', function () {
             switchView('grid');
         });
     }
 
-    if (listViewBtn) {
-        listViewBtn.addEventListener('click', function () {
+    if (listButton) {
+        listButton.addEventListener('click', function () {
             switchView('list');
         });
     }
@@ -93,34 +94,23 @@ function displayMembers() {
 
 // Create member card element
 function createMemberCard(member) {
-    const card = document.createElement('article');
-    card.className = 'member-card';
+    const section = document.createElement('section');
+    section.className = 'member-card';
 
     const membershipClass = member.membership_level === 3 ? 'gold' :
         member.membership_level === 2 ? 'silver' : '';
 
     const imagePath = `images/members/${member.image}`;
 
-    card.innerHTML = `
+    section.innerHTML = `
         <img src="${imagePath}" alt="${member.company_name}" class="member-image" 
              onerror="this.src='https://via.placeholder.com/300x200?text=${encodeURIComponent(member.company_name)}'">
-        <div class="member-content">
-            <h3>${member.company_name}</h3>
-            <span class="member-level ${membershipClass}">${member.membership_label}</span>
-            <div class="member-info">
-                <p><strong>Industry:</strong> ${member.industry}</p>
-                <p><strong>Address:</strong> ${member.address}</p>
-                <p><strong>Phone:</strong> <a href="tel:${member.phone}">${member.phone}</a></p>
-                <p><strong>Description:</strong> ${member.description}</p>
-            </div>
-            <div class="member-links">
-                <a href="${member.website}" target="_blank" class="member-link">Visit Website</a>
-                <a href="mailto:info@${member.website.replace('https://', '').replace('http://', '').replace('www.', '').replace(/\/.*/g, '')}" class="member-link">Contact</a>
-            </div>
-        </div>
+        <h3>${member.company_name}</h3>
+        <p class="member-membership">${member.membership_label}</p>
+        <a href="${member.website}" target="_blank" class="member-link">Details</a>
     `;
 
-    return card;
+    return section;
 }
 
 // Switch view between grid and list
@@ -128,13 +118,13 @@ function switchView(view) {
     appState.currentView = view;
 
     // Update button states
-    if (gridViewBtn && listViewBtn) {
+    if (gridButton && listButton) {
         if (view === 'grid') {
-            gridViewBtn.classList.add('active');
-            listViewBtn.classList.remove('active');
+            gridButton.classList.add('active');
+            listButton.classList.remove('active');
         } else {
-            gridViewBtn.classList.remove('active');
-            listViewBtn.classList.add('active');
+            gridButton.classList.remove('active');
+            listButton.classList.add('active');
         }
     }
 
@@ -203,6 +193,3 @@ function restoreViewPreference() {
         switchView(savedView);
     }
 }
-
-// Call restore preference after initial load
-window.addEventListener('load', restoreViewPreference);
