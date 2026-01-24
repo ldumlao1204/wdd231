@@ -3,8 +3,9 @@
     --color-light: #efe6e6;
     --color-soft-cyan: #dbf0ee;
     --color-soft-peach: #f5e0db;
-    --color-text: #0d475e;
-    --color-text-light: #555;
+    --color-text: #0d478e;
+    --color-text-light: #555555;
+    --color-text-link: #000080;
     --font-primary: 'Roboto', sans-serif;
     --transition: all 0.3s ease;
 }
@@ -14,6 +15,8 @@
    ================================================== */
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -24,7 +27,7 @@ html {
 body {
     font-family: var(--font-primary);
     color: var(--color-text);
-    background-color: #ffffff;
+    background-color: var(--color-light);
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -36,7 +39,7 @@ body {
 
 header {
     background-color: var(--color-dark);
-    color: white;
+    color: var(--color-light);
     padding: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -103,7 +106,7 @@ header {
 .menu-toggle span {
     width: 100%;
     height: 3px;
-    background-color: white;
+    background-color: var(--color-light);
     border-radius: 2px;
     transition: var(--transition);
 }
@@ -152,7 +155,7 @@ header {
 .nav-menu a {
     display: block;
     padding: 1rem 1.5rem;
-    color: white;
+    color: var(--color-light);
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
@@ -164,9 +167,7 @@ header {
     color: var(--color-dark);
 }
 
-/* ==================================================
-   MAIN CONTENT
-   ================================================== */
+/****MAIN CONTENT****/
 
 main {
     max-width: 1200px;
@@ -209,15 +210,15 @@ main {
     gap: 0.5rem;
     margin: 1rem auto;
     padding: 0.5rem;
-    background-color: #333;
+    background-color: var(--color-text-light);
     text-align: center;
 }
 
 .view-btn {
     padding: 0.5rem 1rem;
     font-weight: 700;
-    background-color: #333;
-    color: white;
+    background-color: var(--color-text-light);
+    color: var(--color-light);
     border: none;
     cursor: pointer;
     border-radius: 4px;
@@ -255,7 +256,7 @@ main {
 .member-card {
     border: 1px solid rgb(0 0 0 / 10%);
     padding: 1rem;
-    background-color: #fff;
+    background-color: var(--color-light);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -264,7 +265,7 @@ main {
 
 .members-container.grid .member-card {
     text-align: center;
-    background-color: #ddd;
+    background-color: var(--color-light);
 }
 
 /* Hide list-specific elements in grid view */
@@ -277,8 +278,8 @@ main {
 .member-image {
     width: 120px;
     height: 120px;
-    border: 1px solid #fff;
-    box-shadow: 0 0 1rem #555;
+    border: 1px solid var(--color-light);
+    box-shadow: 0 0 1rem var(--color-dark);
     object-fit: contain;
     margin: 0 auto 1rem;
     display: block;
@@ -328,7 +329,7 @@ main {
 }
 
 .member-info a {
-    color: navy;
+    color: var(--color-text-link);
     text-decoration: none;
     word-break: break-all;
 }
@@ -341,7 +342,7 @@ main {
     display: inline-block;
     padding: 0.5rem 1rem;
     background-color: var(--color-dark);
-    color: white;
+    color: var(--color-light);
     text-decoration: none;
     border-radius: 4px;
     font-weight: 600;
@@ -368,7 +369,7 @@ main {
     margin: 0;
     padding: 1rem;
     border: 1px solid rgb(0 0 0 / 10%);
-    background-color: #ddd;
+    background-color: var(--color-soft-peach);
     align-items: center;
     gap: 1rem;
     min-height: auto;
@@ -407,7 +408,7 @@ main {
 }
 
 .members-container.list .list-phone a {
-    color: navy;
+    color: var(--color-text-link);
     text-decoration: none;
 }
 
@@ -422,12 +423,12 @@ main {
 }
 
 .members-container.list .list-website a {
-    color: navy;
+    color: var(--color-text-link);
     text-decoration: underline;
 }
 
 .members-container.list .list-website a:hover {
-    color: navy;
+    color: var(--color-text-link);
 }
 
 .members-container.list .member-link {
@@ -435,7 +436,7 @@ main {
 }
 
 .members-container.list .member-card:nth-child(even) {
-    background-color: #bbb;
+    background-color: var(--color-soft-cyan);
 }
 
 /* Loading & Error */
@@ -447,19 +448,13 @@ main {
     color: var(--color-text-light);
 }
 
-.error {
-    color: #d32f2f;
-    background-color: #ffebee;
-    border-radius: 8px;
-}
-
 /* ==================================================
-   FOOTER
+   FOOTER STYLES
    ================================================== */
 
 footer {
     background-color: var(--color-dark);
-    color: white;
+    color: var(--color-light);
     margin-top: 4rem;
     padding: 2rem 1rem;
 }
