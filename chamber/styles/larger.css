@@ -49,11 +49,10 @@
     }
 
     .directory-header {
-        padding: 3rem 2rem;
+        padding: 1rem;
     }
-
     .directory-header h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .directory-header p {
@@ -116,12 +115,12 @@
     }
 
     .directory-header {
-        padding: 4rem 3rem;
-        margin-bottom: 3rem;
+        padding: 2rem;
+        margin-bottom: 1rem;
     }
 
     .directory-header h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin-bottom: 1rem;
     }
 
@@ -163,7 +162,7 @@
     }
 
     .directory-header h2 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     /* Enhanced spacing */
