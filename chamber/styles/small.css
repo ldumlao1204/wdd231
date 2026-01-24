@@ -299,16 +299,17 @@ main {
     display: none;
 }
 
-display: grid;
-grid-template-columns: 2fr 2fr 1.5fr 1.5fr;
-margin: 0;
-padding: 1rem;
-border: 1px solid rgb(0 0 0 / 10%);
-background-color: var(--color-soft-peach);
-align-items: center;
-gap: 1rem;
-min-height: auto;
-height: auto;
+.members-container.list .member-card {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1.5fr 1.5fr;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    background-color: var(--color-soft-peach);
+    align-items: center;
+    gap: 1rem;
+    min-height: auto;
+    height: auto;
 }
 
 .members-container.list .member-card h3 {
