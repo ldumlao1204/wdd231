@@ -220,7 +220,7 @@ main {
     padding: 0.5rem 1rem;
     font-weight: 700;
     background-color: var(--color-text-light);
-    color: var(--color-soft-peach);
+    color: var(--color-light);
     border: none;
     cursor: pointer;
     border-radius: 4px;
@@ -252,6 +252,8 @@ main {
 
 .members-container.list {
     grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Member Card */
@@ -289,99 +291,23 @@ main {
     display: block;
 }
 
+.members-container.grid .list-address,
+.members-container.grid .list-phone,
+.members-container.grid .list-website,
 .members-container.list .member-image {
     display: none;
 }
 
-.member-card h3 {
-    font-size: 1.25rem;
-    margin: 0 0 0.5rem 0;
-    font-weight: 700;
-    color: var(--color-dark);
-}
-
-.member-membership {
-    font-size: 0.9rem;
-    margin: 0 0 1rem 0;
-    padding: 0.25rem 0.75rem;
-    display: inline-block;
-    background-color: var(--color-soft-cyan);
-    color: var(--color-dark);
-    border-radius: 20px;
-    font-weight: 600;
-}
-
-.members-container.grid .member-membership {
-    background-color: var(--color-soft-cyan);
-}
-
-.member-info {
-    flex-grow: 1;
-    margin: 0.75rem 0;
-}
-
-.member-info p {
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
-    color: var(--color-text-light);
-    line-height: 1.4;
-}
-
-.member-info strong {
-    color: var(--color-dark);
-    font-weight: 600;
-}
-
-.member-info a {
-    color: var(--color-text-link);
-    text-decoration: none;
-    word-break: break-all;
-}
-
-.member-info a:hover {
-    text-decoration: underline;
-}
-
-.member-link {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: var(--color-dark);
-    color: var(--color-light);
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-align: center;
-    margin-top: auto;
-    transition: var(--transition);
-}
-
-.member-link:hover {
-    background-color: var(--color-soft-cyan);
-    color: var(--color-dark);
-}
-
-/* List View Layout */
-.members-container.list {
-    display: flex;
-    flex-direction: column;
-}
-
-.members-container.list .member-card {
-    display: grid;
-    grid-template-columns: 2fr 2fr 1.5fr 1.5fr;
-    margin: 0;
-    padding: 1rem;
-    border: 1px solid rgb(0 0 0 / 10%);
-    background-color: var(--color-soft-peach);
-    align-items: center;
-    gap: 1rem;
-    min-height: auto;
-    height: auto;
-}
-
-.members-container.list .member-image {
-    display: none !important;
+display: grid;
+grid-template-columns: 2fr 2fr 1.5fr 1.5fr;
+margin: 0;
+padding: 1rem;
+border: 1px solid rgb(0 0 0 / 10%);
+background-color: var(--color-soft-peach);
+align-items: center;
+gap: 1rem;
+min-height: auto;
+height: auto;
 }
 
 .members-container.list .member-card h3 {
@@ -391,11 +317,11 @@ main {
 }
 
 .members-container.list .member-membership {
-    display: none !important;
+    display: none;
 }
 
 .members-container.list .member-info {
-    display: none !important;
+    display: none;
 }
 
 .members-container.list .list-address {
@@ -436,7 +362,7 @@ main {
 }
 
 .members-container.list .member-link {
-    display: none !important;
+    display: none;
 }
 
 .members-container.list .member-card:nth-child(even) {
