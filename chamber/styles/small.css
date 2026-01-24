@@ -1,10 +1,10 @@
 :root {
     --color-dark: #0d475e;
     --color-light: #efe6e6;
-    --color-soft-cyan: #dbf0ee;
-    --color-soft-peach: #f5e0db;
+    --color-soft-cyan: #f3fbfb;
+    --color-soft-peach: #f6f0ef;
     --color-text: #0d478e;
-    --color-text-light: #555555;
+    --color-text-light: #3d3c3c;
     --color-text-link: #000080;
     --font-primary: 'Roboto', sans-serif;
     --transition: all 0.3s ease;
@@ -220,7 +220,7 @@ main {
     padding: 0.5rem 1rem;
     font-weight: 700;
     background-color: var(--color-text-light);
-    color: var(--color-soft-cyan);
+    color: var(--color-soft-peach);
     border: none;
     cursor: pointer;
     border-radius: 4px;
@@ -402,7 +402,7 @@ main {
     grid-column: 2;
     margin: 0;
     font-size: 0.9rem;
-    color: var(--color-text-light);
+    color: var(--color-dark);
 }
 
 .members-container.list .list-phone {
