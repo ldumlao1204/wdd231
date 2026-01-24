@@ -5,7 +5,7 @@
         "address": "John Hay Special Economic Zone, Camp John Hay, Baguio City 2600",
         "phone": "(074) 422-4360",
         "website": "https://www.jhmc.com.ph/",
-        "image": "images/jhmc.webp",
+        "image": "jhmc.webp",
         "membership_level": 3,
         "membership_label": "Gold"
     },
@@ -15,7 +15,7 @@
         "address": "1 Abanao St., Baguio City 2600, Philippines",
         "phone": "+63 74 446 0700",
         "website": "https://www.hotelveniz.com",
-        "image": "images/hotelveniz.webp",
+        "image": "hotelveniz.webp",
         "membership_level": 3,
         "membership_label": "Gold"
     },
@@ -25,7 +25,7 @@
         "address": "Corner Montinola Street, Kisad Rd, Baguio, 2600 Benguet",
         "phone": "(074) 637-2192",
         "website": "https://crownlegacyhotel.com/",
-        "image": "imagescrown-legacy.webp",
+        "image": "crown-legacy.webp",
         "membership_level": 3,
         "membership_label": "Gold"
     },
@@ -45,7 +45,7 @@
         "address": "Level 2, Sunset Terraces, SM City Baguio, Baguio City, Philippines",
         "phone": "+63 966 415 9942",
         "website": "https://www.chocolatedebatirol.com/",
-        "image": "images/chocolate-batirol.webp",
+        "image": "choco-de-batirol.webp",
         "membership_level": 2,
         "membership_label": "Silver"
     },
@@ -55,7 +55,7 @@
         "address": "26 A. Mabini Street, Baguio City, Philippines",
         "phone": "(074) 423-1193",
         "website": "https://victoria-bakery.odoo.com/",
-        "image": "images/victoria-bakery.webp",
+        "image": "victoria-bakery.webp",
         "membership_level": 1,
         "membership_label": "Member"
     },
@@ -65,7 +65,7 @@
         "address": "151 Upper Session Road (near Victory Liner bus terminal), Baguio City",
         "phone": "+63.074.443.4360",
         "website": "https://www.nardas.com/",
-        "image": "images/nardas.webp",
+        "image": "nardas.webp",
         "membership_level": 1,
         "membership_label": "Member"
     },
@@ -75,7 +75,7 @@
         "address": "2 Easter Road, Guisad, Baguio City",
         "phone": "(074) 619-0043",
         "website": "https://easterweavinginc.com/",
-        "image": "images/easter-weaving.webp",
+        "image": "easter-weaving.webp",
         "membership_level": 2,
         "membership_label": "Silver"
     }

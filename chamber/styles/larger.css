@@ -1,11 +1,7 @@
-/* ==================================================
-   CHAMBER OF COMMERCE - RESPONSIVE DESIGN
-   Tablet and Desktop Views
-   ================================================== */
+/* CHAMBER OF COMMERCE - RESPONSIVE DESIGN
+   Tablet and Desktop Views*/
 
-/* ==================================================
-   TABLET VIEWS (768px and up)
-   ================================================== */
+/* TABLET VIEWS (768px and up)*/
 
 @media (min-width: 768px) {
 
@@ -67,9 +63,9 @@
     /* Members Grid */
     .members-container.grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-gap: 5px;
-        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-gap: 2rem;
+        align-items: stretch;
     }
 
     /* View Controls */

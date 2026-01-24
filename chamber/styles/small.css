@@ -1,10 +1,3 @@
-/* ==================================================
-   CHAMBER OF COMMERCE - MOBILE FIRST CSS
-   Color Palette: #0d475e, #efe6e6, #dbf0ee, #f5e0db
-   Typography: Roboto - Minimal, Elegant, Bold
-   ================================================== */
-
-/* Root Variables */
 :root {
     --color-dark: #0d475e;
     --color-light: #efe6e6;
@@ -261,48 +254,106 @@ main {
 /* Member Card */
 .member-card {
     border: 1px solid rgb(0 0 0 / 10%);
-    padding: 0.5rem;
-    background-color: #ddd;
+    padding: 1rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 450px;
 }
 
 .members-container.grid .member-card {
     text-align: center;
+    background-color: #ddd;
 }
 
-.members-container.grid .member-card>* {
-    margin: 0.1rem;
+/* Hide list-specific elements in grid view */
+.members-container.grid .list-address,
+.members-container.grid .list-phone,
+.members-container.grid .list-website {
+    display: none;
 }
 
 .member-image {
-    width: auto;
-    height: 75px;
+    width: 120px;
+    height: 120px;
     border: 1px solid #fff;
     box-shadow: 0 0 1rem #555;
-}
-
-.members-container.grid .member-image {
+    object-fit: contain;
+    margin: 0 auto 1rem;
     display: block;
 }
 
-.member-card h3 {
-    font-size: 1.5rem;
-    margin: 0;
+.members-container.list .member-image {
+    display: none;
 }
 
-.members-container.grid .member-card h3 {
-    font-size: 1.5rem;
+.member-card h3 {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+    color: var(--color-dark);
 }
 
 .member-membership {
-    font-size: 0.95rem;
-    margin: 0;
+    font-size: 0.9rem;
+    margin: 0 0 1rem 0;
+    padding: 0.25rem 0.75rem;
+    display: inline-block;
+    background-color: var(--color-soft-cyan);
+    color: var(--color-dark);
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.members-container.grid .member-membership {
+    background-color: var(--color-soft-cyan);
+}
+
+.member-info {
+    flex-grow: 1;
+    margin: 0.75rem 0;
+}
+
+.member-info p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.4;
+}
+
+.member-info strong {
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.member-info a {
+    color: navy;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.member-info a:hover {
+    text-decoration: underline;
 }
 
 .member-link {
-    font-family: Arial, sans-serif;
-    font-size: 0.85rem;
-    color: navy;
-    text-decoration: underline;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-dark);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: auto;
+    transition: var(--transition);
+}
+
+.member-link:hover {
+    background-color: var(--color-soft-cyan);
+    color: var(--color-dark);
 }
 
 /* List View Layout */
@@ -313,38 +364,74 @@ main {
 
 .members-container.list .member-card {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 1.5fr 1.5fr;
     margin: 0;
-    padding: 0.25rem;
-    border: none;
+    padding: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
     background-color: #ddd;
     align-items: center;
-    gap: 0;
-}
-
-.members-container.list .member-card>* {
-    margin: 0 1rem;
-    padding: 0.5rem 0;
+    gap: 1rem;
+    min-height: auto;
+    height: auto;
 }
 
 .members-container.list .member-image {
-    display: none;
+    display: none !important;
 }
 
 .members-container.list .member-card h3 {
-    font-size: 1rem;
     grid-column: 1;
+    margin: 0;
+    font-size: 1rem;
 }
 
 .members-container.list .member-membership {
+    display: none !important;
+}
+
+.members-container.list .member-info {
+    display: none !important;
+}
+
+.members-container.list .list-address {
     grid-column: 2;
-    text-align: center;
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+
+.members-container.list .list-phone {
+    grid-column: 3;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.members-container.list .list-phone a {
+    color: navy;
+    text-decoration: none;
+}
+
+.members-container.list .list-phone a:hover {
+    text-decoration: underline;
+}
+
+.members-container.list .list-website {
+    grid-column: 4;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.members-container.list .list-website a {
+    color: navy;
+    text-decoration: underline;
+}
+
+.members-container.list .list-website a:hover {
+    color: navy;
 }
 
 .members-container.list .member-link {
-    grid-column: 3;
-    text-align: right;
-    margin-right: 1rem;
+    display: none !important;
 }
 
 .members-container.list .member-card:nth-child(even) {
