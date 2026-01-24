@@ -220,7 +220,7 @@ main {
     padding: 0.5rem 1rem;
     font-weight: 700;
     background-color: var(--color-text-light);
-    color: var(--color-light);
+    color: var(--color-soft-cyan);
     border: none;
     cursor: pointer;
     border-radius: 4px;
