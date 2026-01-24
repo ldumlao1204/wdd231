@@ -104,6 +104,7 @@ function createMemberCard(member) {
 
     section.innerHTML = `
         <img src="${imagePath}" alt="${member.company_name}" class="member-image" 
+             loading="lazy"
              onerror="this.src='https://via.placeholder.com/300x200?text=${encodeURIComponent(member.company_name)}'">
         <h3 class="card-name">${member.company_name}</h3>
         <p class="member-membership">${member.membership_label}</p>

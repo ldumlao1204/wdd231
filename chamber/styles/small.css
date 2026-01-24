@@ -284,6 +284,7 @@ main {
 .member-image {
     width: 120px;
     height: 120px;
+    aspect-ratio: 1 / 1;
     border: 1px solid var(--color-light);
     box-shadow: 0 0 1rem var(--color-dark);
     object-fit: contain;
@@ -460,6 +461,19 @@ footer {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
+}
+
+/* Logo and Header Images */
+.logo {
+    aspect-ratio: 1 / 1;
+}
+
+/* Social Icons */
+.social-icon img {
+    width: 28px;
+    height: 28px;
+    aspect-ratio: 1 / 1;
 }
 
 .sr-only {
