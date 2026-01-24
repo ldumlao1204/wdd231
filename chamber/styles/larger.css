@@ -50,11 +50,16 @@
 
     main h1 {
         font-size: 2.8rem;
+        text-align: center;
     }
 
     main h2 {
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
+    }
+
+    .view-controls h2 {
+        font-size: 1.2rem;
     }
 
     /* Members Grid */
@@ -114,11 +119,16 @@
 
     main h1 {
         font-size: 3rem;
+        text-align: center;
     }
 
     main h2 {
         font-size: 1.6rem;
         margin-bottom: 1.5rem;
+    }
+
+    .view-controls h2 {
+        font-size: 1.3rem;
     }
 
     /* Members Grid - 3 columns on desktop */
