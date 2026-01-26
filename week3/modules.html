@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modular JavaScript - BYU-I Course Registration</title>
+    <link rel="stylesheet" href="styles/modules.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Course Registration</h1>
+        
+        <section class="course-section">
+            <h2 id="courseTitle"></h2>
+            
+            <div class="input-group">
+                <label for="sectionNumber">Section Number:</label>
+                <input type="number" id="sectionNumber" min="1" max="4" placeholder="Enter section number">
+                <button id="enrollStudent">Enroll</button>
+                <button id="dropStudent">Drop</button>
+            </div>
+            
+            <div id="sections"></div>
+        </section>
+    </div>
+
+    <script type="module" src="scripts/modules.mjs"></script>
+</body>
+</html>
