@@ -30,7 +30,7 @@ body {
 }
 
 /* ==================================================
-   HEADER & NAVIGATION
+   HEADER & NAVIGATION - DIRECTORY PAGE
    ================================================== */
 
 header {
@@ -68,7 +68,7 @@ header {
 }
 
 main h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--color-dark);
     margin: 1rem auto;
@@ -294,6 +294,10 @@ main {
     background-color: var(--color-light);
 }
 
+.members-container.grid .member-info strong {
+    display: none;
+}
+
 /* Hide list-specific elements in grid view */
 .members-container.grid .list-address,
 .members-container.grid .list-phone,
@@ -321,21 +325,25 @@ main {
 
 .members-container.list .member-card {
     display: grid;
-    grid-template-columns: 2fr 2fr 1.5fr 1.5fr;
+    grid-template-columns: 1.5fr 1.5fr 1.2fr 1.2fr;
     margin: 0;
-    padding: 1rem;
+    padding: 0.75rem;
     border: 1px solid rgb(0 0 0 / 10%);
     background-color: var(--color-soft-peach);
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
     min-height: auto;
     height: auto;
+    overflow-x: auto;
 }
 
 .members-container.list .member-card h3 {
     grid-column: 1;
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .members-container.list .member-membership {
@@ -349,19 +357,22 @@ main {
 .members-container.list .list-address {
     grid-column: 2;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--color-dark);
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .members-container.list .list-phone {
     grid-column: 3;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .members-container.list .list-phone a {
     color: var(--color-text-link);
     text-decoration: none;
+    word-break: break-word;
 }
 
 .members-container.list .list-phone a:hover {
@@ -371,16 +382,17 @@ main {
 .members-container.list .list-website {
     grid-column: 4;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .members-container.list .list-website a {
     color: var(--color-text-link);
     text-decoration: underline;
+    display: inline-block;
 }
 
 .members-container.list .list-website a:hover {
-    color: var(--color-text-link);
+    color: var(--color-dark);
 }
 
 .members-container.list .member-link {
@@ -511,3 +523,5 @@ img {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* END OF DIRECTORY PAGE */

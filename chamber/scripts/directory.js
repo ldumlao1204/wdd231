@@ -118,7 +118,7 @@ function createMemberCard(member) {
         <!-- List View Data -->
         <p class="list-address">${member.address}</p>
         <p class="list-phone"><a href="tel:${member.phone}">${member.phone}</a></p>
-        <p class="list-website"><a href="${member.website}" target="_blank">${member.website}</a></p>
+        <p class="list-website"><a href="${member.website}" target="_blank">website</a></p>
     `;
 
     return section;
