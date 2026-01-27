@@ -5,5 +5,6 @@ export function setSectionSelection(sections) {
         const option = document.createElement("option");
         option.value = section.sectionNum;
         option.textContent = `Section ${section.sectionNum}`;
+        sectionSelect.appendChild(option);
     });
 }

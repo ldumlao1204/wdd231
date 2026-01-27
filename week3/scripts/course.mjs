@@ -5,28 +5,23 @@ const byuiCourse = {
     sections: [
         {
             sectionNum: 1,
-            roomNum: 'SB 236',
-            enrolled: 26,
+            roomNum: 'Brother Bingham',
+            enrolled: 88,
             capacity: 30
         },
         {
             sectionNum: 2,
-            roomNum: 'SB 100',
-            enrolled: 20,
+            roomNum: 'Sister Schultz',
+            enrolled: 81,
             capacity: 30
         },
         {
             sectionNum: 3,
-            roomNum: 'SB 202',
-            enrolled: 25,
+            roomNum: 'Sister Smith',
+            enrolled: 95,
             capacity: 30
         },
-        {
-            sectionNum: 4,
-            roomNum: 'SB 205',
-            enrolled: 22,
-            capacity: 30
-        }
+      
     ],
     changeEnrollment: function (sectionNum, add = true) {
         const section = this.sections.find(s => s.sectionNum == sectionNum);
