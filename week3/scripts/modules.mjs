@@ -1,100 +1,73 @@
-// Course object with sections and methods
 const byuiCourse = {
-    code: "CSE 121B",
-    name: "Javascript Language",
+    code: "WDD231",
+    name: "Web Frontend Development I",
     sections: [
         {
-            sectionNum: 1,
-            roomNum: 'SB 236',
-            enrolled: 26,
-            capacity: 30
+            sectionNumber: 1,
+            enrolled: 88,
+            instructor: "Brother Bingham",
         },
         {
-            sectionNum: 2,
-            roomNum: 'SB 100',
-            enrolled: 20,
-            capacity: 30
+            sectionNumber: 2,
+            enrolled: 81,
+            instructor: "Sister Shultz",
         },
         {
-            sectionNum: 3,
-            roomNum: 'SB 202',
-            enrolled: 25,
-            capacity: 30
+            sectionNumber: 3,
+            enrolled: 95,
+            instructor: "Sister Smith",
         },
-        {
-            sectionNum: 4,
-            roomNum: 'SB 205',
-            enrolled: 22,
-            capacity: 30
-        }
     ],
-    changeEnrollment: function (sectionNum, add = true) {
-        const section = this.sections.find(s => s.sectionNum == sectionNum);
-
-        if (section) {
-            if (add && section.enrolled < section.capacity) {
-                section.enrolled++;
-            } else if (!add && section.enrolled > 0) {
-                section.enrolled--;
+    changeEnrollment: function (sectionNumber, add = true) {
+        // Find the section with the given section number
+        const sectionIndex = this.sections.findIndex(
+            (section) => section.sectionNumber == sectionNumber
+        );
+        if (sectionIndex >= 0) {
+            if (add) {
+                this.sections[sectionIndex].enrolled++;
+            } else {
+                this.sections[sectionIndex].enrolled--;
             }
+            renderSections(this.sections);
         }
-
-        renderSections(this.sections);
-    }
+    },
 };
 
-// Function to set the course title
-function setTitle(course) {
-    const titleElement = document.querySelector("#courseTitle");
-    titleElement.textContent = `${course.code}: ${course.name}`;
-}
-
-// Function to render all sections
-function renderSections(sections) {
-    const sectionsContainer = document.querySelector("#sections");
-    sectionsContainer.innerHTML = "";
-
-    sections.forEach(section => {
-        const sectionDiv = document.createElement("div");
-        sectionDiv.className = "section";
-
-        const remaining = section.capacity - section.enrolled;
-
-        sectionDiv.innerHTML = `
-            <h3>Section ${section.sectionNum}</h3>
-            <p><strong>Room:</strong> ${section.roomNum}</p>
-            <p><strong>Enrolled:</strong> <span class="enrolled">${section.enrolled}</span></p>
-            <p><strong>Remaining:</strong> <span class="available">${remaining}</span></p>
-        `;
-
-        sectionsContainer.appendChild(sectionDiv);
-    });
-}
-
-// Function to populate section selection dropdown
-function setSectionSelection(sections) {
+function setSectionSelection() {
     const sectionSelect = document.querySelector("#sectionNumber");
-    sections.forEach(section => {
+    byuiCourse.sections.forEach((section) => {
         const option = document.createElement("option");
-        option.value = section.sectionNum;
-        option.textContent = `Section ${section.sectionNum}`;
+        option.value = section.sectionNumber;
+        option.textContent = `${section.sectionNumber}`;
+        sectionSelect.appendChild(option);
     });
 }
 
-// Initialize the page
-document.addEventListener("DOMContentLoaded", function () {
-    setTitle(byuiCourse);
-    renderSections(byuiCourse.sections);
-    setSectionSelection(byuiCourse.sections);
-});
+function setTitle(course) {
+    document.querySelector("#courseName").textContent = course.name;
+    document.querySelector("#courseCode").textContent = course.code;
+}
 
-// Event listeners
+function renderSections(sections) {
+    const html = sections.map(
+        (section) => `<tr>
+    <td>${section.sectionNumber}</td>
+    <td>${section.enrolled}</td>
+    <td>${section.instructor}</td></tr>`
+    );
+    document.querySelector("#sections").innerHTML = html.join("");
+}
+
 document.querySelector("#enrollStudent").addEventListener("click", function () {
     const sectionNum = Number(document.querySelector("#sectionNumber").value);
     byuiCourse.changeEnrollment(sectionNum);
 });
-
 document.querySelector("#dropStudent").addEventListener("click", function () {
     const sectionNum = Number(document.querySelector("#sectionNumber").value);
     byuiCourse.changeEnrollment(sectionNum, false);
 });
+
+setTitle(byuiCourse);
+setSectionSelection(byuiCourse.sections);
+renderSections(byuiCourse.sections);
