@@ -21,13 +21,13 @@ const byuiCourse = {
             enrolled: 95,
             capacity: 30
         },
-      
+
     ],
     changeEnrollment: function (sectionNum, add = true) {
         const section = this.sections.find(s => s.sectionNum == sectionNum);
 
         if (section) {
-            if (add && section.enrolled < section.capacity) {
+            if (add) {
                 section.enrolled++;
             } else if (!add && section.enrolled > 0) {
                 section.enrolled--;
