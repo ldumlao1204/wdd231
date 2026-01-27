@@ -8,9 +8,9 @@ export function setTitle(course) {
 export function renderSections(sections) {
     const html = sections.map(
         (section) => `<tr>
-    <td>${section.sectionNum}</td>
+    <td>${section.sectionNumber}</td>
     <td>${section.enrolled}</td>
-    <td>${section.roomNum}</td></tr>`
+    <td>${section.instructor}</td></tr>`
     );
     document.querySelector("#sections").innerHTML = html.join("");
 }

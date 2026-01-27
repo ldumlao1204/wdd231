@@ -5,19 +5,19 @@ const byuiCourse = {
     sections: [
         {
             sectionNum: 1,
-            roomNum: 'Brother Bingham',
+            instructor: 'Brother Bingham',
             enrolled: 88,
             capacity: 30
         },
         {
             sectionNum: 2,
-            roomNum: 'Sister Schultz',
+            instructor: 'Sister Schultz',
             enrolled: 81,
             capacity: 30
         },
         {
             sectionNum: 3,
-            roomNum: 'Sister Smith',
+            instructor: 'Sister Smith',
             enrolled: 95,
             capacity: 30
         },
