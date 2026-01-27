@@ -1,7 +1,7 @@
 // Course object with sections and methods
 const byuiCourse = {
-    code: "CSE 121B",
-    name: "Javascript Language",
+    code: "WDD231",
+    name: "Web Frontend Development I",
     sections: [
         {
             sectionNum: 1,
