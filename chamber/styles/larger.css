@@ -13,25 +13,26 @@
 
     /* Horizontal navigation */
     nav {
-        background-color: var(--primary-color);
-        position: sticky;
-        top: 80px;
-        z-index: 999;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
+        background-color: transparent;
+        position: static;
+        width: auto;
+        max-width: none;
+        margin: 0;
+        flex-grow: 1;
     }
 
     .navigation {
         display: flex !important;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
         width: 100%;
     }
 
     .navigation li {
         border-bottom: none;
         border-right: 1px solid rgba(255, 255, 255, 0.2);
+        flex: 1;
+        text-align: center;
     }
 
     .navigation li:last-child {
@@ -39,17 +40,19 @@
     }
 
     .navigation a {
-        padding: 1rem 2rem;
+        padding: 1rem;
+        color: var(--color-light);
     }
 
     .navigation a.active {
-        background-color: var(--secondary-color);
-        color: var(--primary-color);
+        background-color: var(--color-soft-cyan);
+        color: var(--color-dark);
         font-weight: 700;
     }
+
     /* Main Content */
     main {
-        padding: 2rem;
+        padding: 1rem;
     }
 
     main h1 {
@@ -72,6 +75,7 @@
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         grid-gap: 2rem;
         align-items: stretch;
+        grid-auto-rows: 1fr;
     }
 
     /* View Controls */
