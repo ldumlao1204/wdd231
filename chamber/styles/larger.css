@@ -1,48 +1,52 @@
-/* CHAMBER OF COMMERCE - RESPONSIVE DESIGN
-   Tablet and Desktop Views*/
+/*  DESKTOP STYLES - 640px and above */
+@media (min-width: 640px) {
 
-/* TABLET VIEWS (768px and up)*/
-
-@media (min-width: 768px) {
-
-    /* Header & Navigation */
-    .header-container {
-        flex-wrap: nowrap;
+    /* HEADER & NAVIGATION */
+    header {
+        padding: 1rem 2rem;
     }
 
-    .business-info h2 {
-        font-size: 2rem;
-    }
-
-    .menu-toggle {
+    /* Hide hamburger menu on larger screens */
+    .hamburger-menu {
         display: none;
     }
 
-    .nav-menu {
-        position: static;
-        display: flex;
-        flex-direction: row;
-        background-color: transparent;
-        box-shadow: none;
-        min-width: auto;
-        top: auto;
-        right: auto;
-        border-radius: 0;
+    /* Horizontal navigation */
+    nav {
+        background-color: var(--primary-color);
+        position: sticky;
+        top: 80px;
+        z-index: 999;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
-    .nav-menu li {
+    .navigation {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navigation li {
         border-bottom: none;
         border-right: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .nav-menu li:last-child {
+    .navigation li:last-child {
         border-right: none;
     }
 
-    .nav-menu a {
-        padding: 0.5rem 1.25rem;
+    .navigation a {
+        padding: 1rem 2rem;
     }
 
+    .navigation a.active {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        font-weight: 700;
+    }
     /* Main Content */
     main {
         padding: 2rem;
