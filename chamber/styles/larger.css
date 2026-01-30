@@ -231,7 +231,7 @@
 @media (prefers-contrast: more) {
     :root {
         --color-dark: #000000;
-        --color-text: #000000;
+        --color-text: #faf5f5;
     }
 
     .member-link {
