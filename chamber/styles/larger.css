@@ -4,6 +4,7 @@
     /* HEADER & NAVIGATION */
     header {
         padding: 1rem 2rem;
+        display: flex;
     }
 
     /* Hide hamburger menu on larger screens */
