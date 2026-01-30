@@ -1,10 +1,10 @@
 :root {
     --color-dark: #0d475e;
     --color-light: #efe6e6;
-    --color-soft-cyan: #f3fbfb;
+    --color-soft-cyan: #dff7f7;
     --color-soft-peach: #f6f0ef;
-    --color-text: #0f1b29;
-    --color-text-light: #141414;
+    --color-text: #010811;
+    --color-text-black: #030000;
     --color-text-link: #000080;
     --font-primary: 'Roboto', sans-serif;
     --transition: all 0.3s ease;
@@ -35,7 +35,7 @@ body {
 
 header {
     background-color: var(--color-dark);
-    border-bottom: 1px solid var(--color-text-light);
+    border-bottom: 1px solid var(--color-text-black);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -51,6 +51,7 @@ header {
     align-items: center;
     gap: 0.75rem;
     flex-grow: 1;
+    padding: 15px;
 }
 
 .logo-container img {
@@ -64,9 +65,10 @@ header {
 .site-name {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-soft-peach);
+    line-height: 1.2;
+    color: var(--color-soft-cyan);
     align-self: flex-end;
-    margin-bottom: 0.15rem;
+    margin-bottom: 0.45rem;
 }
 
 /*********** HAMBURGER MENU **********************/
@@ -79,13 +81,13 @@ header {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    font-size: 2rem;
-    color: var(--color-soft-peach);
+    font-size: 2.3rem;
+    color: var(--color-soft-cyan);
     width: 50px;
     height: 50px;
     transition: all 0.3s ease;
     position: absolute;
-    top: 0.75rem;
+    top: 1.8rem;
     right: 1rem;
 }
 
@@ -99,7 +101,7 @@ header {
 
 /************ NAVIGATION - MOBILE VIEW *********************/
 nav {
-    background-color: var(--color-light);
+    background-color: var(--color-soft-cyan);
     justify-content: space-evenly;
     position: sticky;
     top: 80px;
@@ -136,9 +138,8 @@ nav {
 
 
 .navigation a:hover {
-    background-color: var(--color-soft-cyan);
+    background-color: var(--color-light);
     color: var(--color-dark);
-    border-radius: 10px;
 }
 
 .navigation a.active {
