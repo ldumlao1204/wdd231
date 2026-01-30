@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baguio Chamber of Commerce - Home</title>
+    <title>Baguio Chamber of Commerce - Home Page</title>
     <meta name="description"
         content="Welcome to the Baguio Chamber of Commerce. Connecting businesses, fostering growth, and building a strong community in the City of Pines.">
     <meta name="author" content="Leilany Dumlao">
 
     <!-- Facebook Open Graph Meta Tags -->
-    <meta property="og:title" content="Baguio Chamber of Commerce - Home">
+    <meta property="og:title" content="Baguio Chamber of Commerce - Home Page">
     <meta property="og:description"
         content="Join the Baguio Chamber of Commerce to connect with local leaders and grow your business.">
     <meta property="og:image" content="https://ldumlao1204.github.io/wdd231/chamber/images/hero.webp">
@@ -56,41 +56,64 @@
     </header>
 
     <!-- Main Content -->
+
     <main>
-        <!-- Hero Section -->
-        <div class="hero">
-            <img src="images/hero.webp" alt="Baguio City Landscape" loading="lazy">
-            <div class="hero-overlay">
-                <h2>Building Business, Building Community</h2>
-                <a href="join.html" class="cta-btn">Join the Chamber</a>
+        <!-- Hero Section with Call to Action -->
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-chamber-large.webp" media="(min-width: 800px)">
+                <img src="images/hero-chamber.webp" alt="Baguio City Businesses" loading="eager">
+            </picture>
+            <div class="hero-content">
+                <h1>Welcome to Baguio Chamber of Commerce</h1>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
             </div>
-        </div>
+        </section>
+
 
         <div class="home-grid">
-            <!-- Current Events -->
-            <section class="card events-section">
+        
+            <!-- Current Events Section -->
+            <section class="card events-card">
                 <h2>Current Events</h2>
-                <div class="event-content">
-                    <p><strong>Annual Business Expo</strong><br>October 15, 2024 - 9:00 AM</p>
-                    <p><strong>Networking Night</strong><br>November 5, 2024 - 6:00 PM</p>
+                <div class="event-list">
+                    <div class="event-item">
+                        <h3>Annual Business Expo</h3>
+                        <p class="event-date">📅 October 15, 2024</p>
+                        <p class="event-time">🕒 9:00 AM - 5:00 PM</p>
+                        <p class="event-description">Connect with local businesses and discover new opportunities.</p>
+                    </div>
+                    <div class="event-item">
+                        <h3>Networking Night</h3>
+                        <p class="event-date">📅 November 5, 2024</p>
+                        <p class="event-time">🕒 6:00 PM - 9:00 PM</p>
+                        <p class="event-description">Meet fellow business owners in a relaxed evening setting.</p>
+                    </div>
+                    <div class="event-item">
+                        <h3>Business Workshop Series</h3>
+                        <p class="event-date">📅 Every Wednesday in November</p>
+                        <p class="event-time">🕒 2:00 PM - 4:00 PM</p>
+                        <p class="event-description">Learn essential skills for growing your business.</p>
+                    </div>
                 </div>
             </section>
-
+        
             <!-- Weather Section -->
-            <section class="card weather-section">
-                <h2>Weather</h2>
+            <section class="card weather-card">
+                <h2>Current Weather</h2>
                 <div id="weather-container">
-                    <!-- Weather data injected by JS -->
+                    <div class="loading">Loading weather data...</div>
                 </div>
             </section>
-
-            <!-- Member Spotlights -->
+        
+            <!-- Member Spotlights Section -->
             <section class="spotlights-section">
                 <h2>Member Spotlights</h2>
                 <div id="spotlight-container" class="spotlight-grid">
-                    <!-- Spotlights injected by JS -->
+                    <div class="loading">Loading member spotlights...</div>
                 </div>
             </section>
+        
         </div>
     </main>
 
