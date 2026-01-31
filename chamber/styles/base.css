@@ -9,6 +9,7 @@
     --font-primary: 'Roboto', sans-serif;
     --transition: all 0.3s ease;
     --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    --icon-bg-color: rgb(149, 164, 172)
 }
 
 * {
@@ -472,9 +473,9 @@ main {
       display: flex;
       flex-direction: column;
       margin-left: 15px;
+      padding: 5px;
       background: var(--color-soft-cyan);
-      border-bottom: 1px solid var(--color-dark);
-      border-radius: 8px 0;
+      border-radius: 20px 0;
       overflow: hidden;
       height: 100%;
       min-height: 200px;
@@ -505,6 +506,7 @@ main {
       display: flex;
       align-items: center;
       justify-content: center;
+      
   }
 
   .card-inside,
@@ -519,10 +521,9 @@ main {
   .card-inside p {
       font-size: 1rem;
       margin: 0;
-      /* Removes the gap between stripes */
       padding: 14px 1rem;
       /* Adds space back inside the stripe */
-      line-height: 1.7;  /* Better line spacing */
+      line-height: 1.6;  /* Better line spacing */
   }
 
   .card-inside p:nth-of-type(even) {
@@ -533,7 +534,7 @@ main {
   /*  weather Card style */
   /* ===================== */
   .weather-info {
-      padding: 2rem;
+      padding: 0.5rem;
       /* Matches card-inside padding */
       display: flex;
       align-items: center;
@@ -555,7 +556,8 @@ main {
   }
   
   #icon-container {
-      background-color: red;   
+      background-color: var(--icon-bg-color);   
+      border-radius: 10px;
 
   }
 
@@ -568,7 +570,8 @@ main {
   /* Right Side: City, Temp */
   .weather-right {
       flex: 1;
-      text-align: right;
+      text-align: center;
+      margin-bottom: 1rem;
       /* Aligns text to the right edge */
   }
 
@@ -578,7 +581,7 @@ main {
   }
 
   #current-temp {
-      font-size: 1.4rem;
+      font-size: 2rem;
       font-weight: 900;
       margin: 2px 0;
   }
@@ -589,11 +592,11 @@ main {
   }
 
   #forecast-content p {
-      margin: 0.75rem 0;
-      padding: 0.85rem;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
       background-color: rgba(255, 255, 255, 0.5);
       border-left: 3px solid var(--color-dark);
-      font-size: 0.95rem;
+      font-size: 1rem;
       line-height: 1.6;  /* Better line spacing */
   }
 

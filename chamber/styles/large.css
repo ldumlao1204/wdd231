@@ -100,6 +100,7 @@
         grid-template-columns: 3fr 1fr 1fr;  /* Events card is 2x wider */
         gap: 1.5rem;
         align-items: stretch;
+        --transition: all 0.3s ease;
     }
 
     .card1, .card2, .card3 {
@@ -119,13 +120,13 @@
     }
 
     #icon-container {
-        background-color: rgb(251, 255, 0);
-            
+        background-color: var(--icon-bg-color);
+        border-radius: 10px;
+           
     }
 
     #weather-icon {
         width: 150px;
-        /* Increase size */
         height: auto;
     }
 

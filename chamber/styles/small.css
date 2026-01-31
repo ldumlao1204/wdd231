@@ -150,7 +150,7 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
         align-items: stretch;
-    }
+   }
 
     .card1, .card2, .card3 {
         display: flex;
@@ -163,6 +163,11 @@
         flex-direction: column;
         flex: 1;
     }
+
+    .card-content p {
+        margin: 10px;
+    }
+
 
     /* Spotlight Section */
     .spotlight-section {
@@ -219,7 +224,7 @@
 
     /* Weather Card */
     .weather-info {
-        padding: 1rem 2rem;
+        padding: 1rem;
     }
 
     #weather-icon {
@@ -244,6 +249,7 @@
 
     footer {
         padding: 2.5rem 2rem;
+        max-width: 1200px;
     }
 
     .footer-container {
