@@ -415,10 +415,11 @@ main {
 
 /* Call to Action Button */
 .cta-button {
-    position: absolute;
-    bottom: 2rem;  /* Visible in mobile view */
-    left: 50%;
-    transform: translateX(-50%);  /* Center horizontally */
+    position: relative;
+    bottom: 1.5rem;  /* Lower center position in mobile */
+    top: 40px;
+    left: 0%;
+    transform: translateY(50%);  /* Center horizontally */
     background-color: var(--color-soft-cyan);
     color: var(--color-text-black);
     padding: 0.8rem 2rem;
@@ -428,6 +429,7 @@ main {
     transition: all 0.3s;
     border-radius: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
 
 .cta-button:hover {

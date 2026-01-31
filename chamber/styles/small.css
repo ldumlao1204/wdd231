@@ -124,16 +124,15 @@
     }
 
     .cta-button {
+        position: relative;
         font-size: 1.2rem;
         padding: 1rem 2.5rem;
-        bottom: 3rem;  /* More space from bottom */
-        left: auto;
-        right: 2rem;  /* Position to the right on tablet */
-        transform: none;
+        bottom: 2rem;  /* Lower center in tablet view */
+        transform: translateY(50%);  /* Keep centered */
     }
 
     .cta-button:hover {
-        transform: translateY(-2px);  /* Reset transform for tablet */
+        transform: translateX(-50%) translateY(-2px);
     }
 
     .home-page-title h2 {

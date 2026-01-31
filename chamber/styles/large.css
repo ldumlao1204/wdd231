@@ -73,11 +73,13 @@
 
     /* Hero CTA Button - Desktop */
     .cta-button {
+        position: relative;
+        top: 40px;;
         font-size: 1.3rem;
         padding: 1.2rem 3rem;
-        bottom: 4rem;
-        right: 3rem;
-        left: auto;
+        bottom: 2.5rem;  /* Lower position in large view */
+        right: 1rem;
+        left: 30px;
         transform: none;
     }
 
