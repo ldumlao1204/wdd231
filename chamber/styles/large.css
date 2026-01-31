@@ -311,3 +311,43 @@
         background-color: #0a2d3e;
     }
 }
+
+/* ══════════════════════════════════════
+     RESPONSIVE
+     ══════════════════════════════════════ */
+
+/* Tablet: 2 columns */
+@media (max-width: 820px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .spotlight {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 520px) {
+    body {
+        padding: 20px 14px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .spotlight {
+        grid-column: 1;
+    }
+
+    .spotlight-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .spotlight-stats {
+        justify-content: center;
+    }
+}
