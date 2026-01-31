@@ -60,24 +60,28 @@ function displaySpotlights(members) {
         const badgeClass = member.membership_level === 3 ? 'gold-badge' : 'silver-badge';
 
         card.innerHTML = `
-            <div class="spotlight-header">
-                <img src="images/members/${member.image}"
-                     alt="${member.company_name} logo"
-                     loading="lazy"
-                     onerror="this.src='https://via.placeholder.com/300x200?text=${encodeURIComponent(member.company_name)}'">
+            <div class="spotlight-title">
                 <h3>${member.company_name}</h3>
-                <span class="membership-badge ${badgeClass}">${membershipBadge}</span>
             </div>
-            <div class="spotlight-body">
-                <p class="spotlight-phone">
-                    <strong>Phone:</strong> <a href="tel:${member.phone.replace(/\s/g, '')}">${member.phone}</a>
-                </p>
-                <p class="spotlight-address">
-                    <strong>Address:</strong> ${member.address}
-                </p>
-                <p class="spotlight-website">
-                    <a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>
-                </p>
+            <div class="spotlight-content">
+                <div class="spotlight-logo">
+                    <img src="images/members/${member.image}"
+                         alt="${member.company_name} logo"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/300x200?text=${encodeURIComponent(member.company_name)}'">
+                </div>
+                <div class="spotlight-info">
+                    <span class="membership-badge ${badgeClass}">${membershipBadge}</span>
+                    <p class="spotlight-phone">
+                        <strong>Phone:</strong> <a href="tel:${member.phone.replace(/\s/g, '')}">${member.phone}</a>
+                    </p>
+                    <p class="spotlight-address">
+                        <strong>Address:</strong> ${member.address}
+                    </p>
+                    <p class="spotlight-website">
+                        <a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>
+                    </p>
+                </div>
             </div>
         `;
 

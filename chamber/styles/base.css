@@ -475,6 +475,24 @@ main {
       border-bottom: 1px solid var(--color-dark);
       border-radius: 8px 0;
       overflow: hidden;
+      height: 100%;
+      min-height: 200px;
+  }
+
+  .card1 .card-content,
+  .card2 .card-content,
+  .card3 .card-content {
+      height: 100%;
+  }
+
+  /* Indent Events Card Content */
+  .card1 .card-inside p {
+      padding-left: 2rem;
+  }
+
+  /* Add space before first event */
+  .card1 .card-inside p:first-child {
+      margin-top: 1rem;
   }
 
   .card-title {
@@ -590,76 +608,105 @@ main {
       gap: 1.5rem;
   }
 
+  /* Spotlight Card */
   .spotlight-card {
-      background: linear-gradient(135deg, var(--color-soft-peach), var(--color-soft-cyan));
+      background: var(--color-light);
       border: 2px solid var(--color-dark);
       border-radius: 12px;
-      padding: 1.5rem;
       box-shadow: var(--box-shadow);
       transition: var(--transition);
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
   }
 
   .spotlight-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-3px);
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   }
 
-  .spotlight-header {
+  /* Company Name Header */
+  .spotlight-title {
+      background-color: var(--color-dark);
+      padding: 1rem;
       text-align: center;
-      border-bottom: 2px solid var(--color-dark);
-      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--color-text-black);
   }
 
-  .spotlight-card img {
-      width: 100%;
-      max-width: 180px;
-      height: auto;
-      margin: 0 auto 1rem;
+  .spotlight-title h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: var(--color-light);
+      font-weight: 700;
+  }
+
+  /* Content Area (Logo + Info) */
+  .spotlight-content {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+      padding: 1.5rem 1.5rem 1.5rem 1rem;  /* Reduced left padding for better balance */
+      align-items: flex-start;
+  }
+
+  /* Logo Section */
+  .spotlight-logo {
+      flex-shrink: 0;
+  }
+
+  .spotlight-logo img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
       border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+      background-color: var(--color-soft-cyan);
+      padding: 0.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
   }
 
-  .spotlight-card h3 {
-      font-size: 1.3rem;
-      color: var(--color-dark);
-      margin-bottom: 0.75rem;
-      font-weight: 700;
-  }
-
-  .membership-badge {
-      display: inline-block;
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-  }
-
-  .gold-badge {
-      background: linear-gradient(135deg, #FFD700, #FFA500);
-      color: var(--color-text-black);
-  }
-
-  .silver-badge {
-      background: linear-gradient(135deg, #C0C0C0, #A8A8A8);
-      color: var(--color-text-black);
-  }
-
-  .spotlight-body {
-      text-align: left;
+  /* Info Section (Badge, Phone, Address, Website) */
+  .spotlight-info {
+      flex: 1;
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
   }
 
-  .spotlight-body p {
-      font-size: 0.95rem;
+  .membership-badge {
+      display: inline-block;
+      padding: 0.4rem 0.5rem;
+      border-radius: 25px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+      width: fit-content;
+      margin-bottom: 0.5rem;
+  }
+
+  .gold-badge {
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      color: var(--color-text-black);
+      box-shadow: 0 2px 5px rgba(255, 215, 0, 0.3);
+  }
+
+  .silver-badge {
+      background: linear-gradient(135deg, #C0C0C0, #A8A8A8);
+      color: var(--color-text-black);
+      box-shadow: 0 2px 5px rgba(192, 192, 192, 0.3);
+  }
+
+  .spotlight-info p {
+      font-size: 0.9rem;
       margin: 0;
       line-height: 1.6;
+      color: var(--color-text);
+  }
+
+  .spotlight-phone a,
+  .spotlight-address {
       color: var(--color-text);
   }
 
@@ -671,6 +718,7 @@ main {
 
   .spotlight-phone a:hover {
       text-decoration: underline;
+      color: var(--color-text-black);
   }
 
   .spotlight-website a {
@@ -683,7 +731,9 @@ main {
       font-weight: 600;
       transition: var(--transition);
       text-align: center;
+      font-size: 0.9rem;
       margin-top: 0.5rem;
+      width: fit-content;
   }
 
   .spotlight-website a:hover {

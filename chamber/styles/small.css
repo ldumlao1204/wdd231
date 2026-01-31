@@ -141,10 +141,19 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
+        align-items: stretch;
+    }
+
+    .card1, .card2, .card3 {
+        display: flex;
+        flex-direction: column;
     }
 
     .card-content {
         margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
     }
 
     /* Spotlight Section */
@@ -156,18 +165,34 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
+        align-items: stretch;
     }
 
     .spotlight-card {
-        padding: 1.25rem;
+        flex-direction: column;
     }
 
-    .spotlight-card img {
-        max-width: 160px;
+    .spotlight-title h3 {
+        font-size: 1.1rem;
     }
 
-    .spotlight-card h3 {
-        font-size: 1.2rem;
+    .spotlight-content {
+        padding: 1.25rem 1.25rem 1.25rem 1rem;  /* Consistent margins */
+        gap: 1.25rem;
+    }
+
+    .spotlight-logo img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .spotlight-info p {
+        font-size: 0.85rem;
+    }
+
+    .membership-badge {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.9rem;
     }
 
     .card-title {

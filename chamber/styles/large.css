@@ -83,8 +83,20 @@
     /* Home Page Grid */
     .container-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 3fr 1fr 1fr;  /* Events card is 2x wider */
         gap: 1.5rem;
+        align-items: stretch;
+    }
+
+    .card1, .card2, .card3 {
+        display: flex;
+        height: 100%;
+    }
+
+    .card-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
     }
 
     /* Spotlight Section */
@@ -97,6 +109,38 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
+        align-items: stretch;
+    }
+
+    .spotlight-card {
+        flex-direction: column;
+    }
+
+    .spotlight-title {
+        padding: 1.25rem;
+    }
+
+    .spotlight-title h3 {
+        font-size: 1.3rem;
+    }
+
+    .spotlight-content {
+        padding: 1.75rem 1.75rem 1.75rem 1.25rem;  /* Consistent margins */
+        gap: 1.75rem;
+    }
+
+    .spotlight-logo img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .spotlight-info p {
+        font-size: 0.95rem;
+    }
+
+    .membership-badge {
+        font-size: 0.85rem;
+        padding: 0.45rem 1.1rem;
     }
 
     /* View Controls */
@@ -149,12 +193,40 @@
 
     /* Adjust Home Grid for wider screens if needed */
     .container-grid {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 2fr 1fr 1fr;  /* Events card is 2x wider */
         gap: 2rem;
+        align-items: stretch;
     }
 
     .spotlight-container {
         gap: 2rem;
+    }
+
+    .spotlight-title {
+        padding: 1.5rem;
+    }
+
+    .spotlight-title h3 {
+        font-size: 1.4rem;
+    }
+
+    .spotlight-content {
+        padding: 2rem 2rem 2rem 1.5rem;  /* Consistent margins */
+        gap: 2rem;
+    }
+
+    .spotlight-logo img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .spotlight-info p {
+        font-size: 1rem;
+    }
+
+    .membership-badge {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.2rem;
     }
 
     .business-info h2 {
