@@ -403,7 +403,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: var(--color-text);
+    color: var(--color-light);
     width: 90%;
 }
 
@@ -415,27 +415,26 @@ main {
 
 /* Call to Action Button */
 .cta-button {
-    position: relative;
-    bottom: 1.5rem;  /* Lower center position in mobile */
-    top: 40px;
-    left: 0%;
-    transform: translateY(50%);  /* Center horizontally */
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--color-soft-cyan);
     color: var(--color-text-black);
     padding: 0.8rem 2rem;
     font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     border-radius: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 10;
+    z-index: 100;
 }
 
 .cta-button:hover {
     background-color: var(--color-soft-peach);
-    transform: translateX(-50%) translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
 .home-page-title h2 {
@@ -524,8 +523,7 @@ main {
       font-size: 1rem;
       margin: 0;
       padding: 14px 1rem;
-      /* Adds space back inside the stripe */
-      line-height: 1.6;  /* Better line spacing */
+      line-height: 1.6;  
   }
 
   .card-inside p:nth-of-type(even) {
@@ -537,7 +535,6 @@ main {
   /* ===================== */
   .weather-info {
       padding: 0.5rem;
-      /* Matches card-inside padding */
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -553,7 +550,6 @@ main {
 
   #weather-icon {
       width: 100px;
-      /* Increase size */
       height: auto;
   }
   
@@ -607,7 +603,7 @@ main {
   }
 
   /* ==================================
-     SPOTLIGHT SECTION (Mobile-first)
+     SPOTLIGHT SECTION 
      ================================== */
   .spotlight-section {
       margin-top: 2rem;
@@ -658,7 +654,7 @@ main {
       display: flex;
       flex-direction: row;
       gap: 1.5rem;
-      padding: 1.5rem 1.5rem 1.5rem 1rem;  /* Reduced left padding for better balance */
+      padding: 1.5rem 1.5rem 1.5rem 1rem;  
       align-items: flex-start;
   }
 

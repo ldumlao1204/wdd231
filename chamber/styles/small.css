@@ -112,7 +112,7 @@
     }
 
     /* ==================================================
-       HOME PAGE - TABLET VIEW
+       HOME PAGE
        ================================================== */
 
     .hero {
@@ -121,18 +121,16 @@
 
     .hero h1 {
         font-size: 3rem;
+     
     }
 
     .cta-button {
-        position: relative;
         font-size: 1.2rem;
         padding: 1rem 2.5rem;
-        bottom: 2rem;  /* Lower center in tablet view */
-        transform: translateY(50%);  /* Keep centered */
     }
 
     .cta-button:hover {
-        transform: translateX(-50%) translateY(-2px);
+        transform: translateX(-50%) scale(1.05);
     }
 
     .home-page-title h2 {
@@ -243,7 +241,7 @@
     }
 
     /* ==================================================
-       FOOTER - TABLET VIEW
+       FOOTER sTYLE
        ================================================== */
 
     footer {
