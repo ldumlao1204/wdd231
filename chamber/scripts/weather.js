@@ -1,14 +1,16 @@
-// Weather API Configuration
-const apiKey = '350390bbf1828b6f3c0decce2bdf19c9'; // Using the key provided in context
-const lat = '16.4023'; // Baguio City Latitude
-const lon = '120.5960'; // Baguio City Longitude
-const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
-const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+// ================================================
+// WEATHER API - OpenWeatherMap
+// ================================================
 
-// Member Data URL
-const membersUrl = 'data/members.json';
+// API Configuration
+const apiKey = '350390bbf1828b6f3c0decce2bdf19c9'; // My API key
+const lat = '16.41312336329535';  // Baguio City Latitude
+const lon = '120.58716868053386'; // Baguio City Longitude
 
-// --- Weather Functionality ---
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+
+// Fetch Weather Data
 async function fetchWeather() {
     try {
         const [weatherResponse, forecastResponse] = await Promise.all([
@@ -19,96 +21,82 @@ async function fetchWeather() {
         if (weatherResponse.ok && forecastResponse.ok) {
             const weatherData = await weatherResponse.json();
             const forecastData = await forecastResponse.json();
-            displayWeather(weatherData, forecastData);
+            displayCurrentWeather(weatherData);
+            displayForecast(forecastData);
         } else {
             throw new Error('Error fetching weather data');
         }
     } catch (error) {
-        console.error(error);
+        console.error('Weather fetch error:', error);
+        displayWeatherError();
     }
 }
 
-function displayWeather(current, forecast) {
-    const weatherContainer = document.getElementById('weather-container');
-    
-    // Current Weather
-    const currentTemp = Math.round(current.main.temp);
-    const description = current.weather[0].description;
-    const icon = `https://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`;
+// Display Current Weather
+function displayCurrentWeather(data) {
+    const iconContainer = document.getElementById('icon-container');
+    const descElement = document.getElementById('desc');
+    const cityElement = document.getElementById('city');
+    const tempElement = document.getElementById('current-temp');
 
-    // Process Forecast (Get one reading per day for next 3 days)
-    // The API returns data every 3 hours. We filter for roughly 24-hour intervals (noon).
-    const threeDayForecast = forecast.list.filter(item => item.dt_txt.includes('12:00:00')).slice(0, 3);
+    if (!iconContainer || !descElement || !cityElement || !tempElement) {
+        console.error('Weather display elements not found');
+        return;
+    }
 
-    let forecastHTML = '<div class="forecast-container">';
+    // Current weather details
+    const currentTemp = Math.round(data.main.temp);
+    const description = data.weather[0].description;
+    const iconCode = data.weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    const cityName = data.name;
+
+    // Update DOM elements
+    iconContainer.innerHTML = `<img src="${iconUrl}" alt="${description}" id="weather-icon">`;
+    descElement.textContent = description;
+    cityElement.textContent = cityName;
+    tempElement.innerHTML = `${currentTemp}&deg;C`;
+}
+
+// Display 3-Day Forecast
+function displayForecast(data) {
+    const forecastContainer = document.getElementById('forecast-content');
+
+    if (!forecastContainer) {
+        console.error('Forecast container not found');
+        return;
+    }
+
+    // Filter for noon readings (12:00:00) to get one per day
+    const threeDayForecast = data.list
+        .filter(item => item.dt_txt.includes('12:00:00'))
+        .slice(0, 3);
+
+    let forecastHTML = '';
+
     threeDayForecast.forEach(day => {
         const date = new Date(day.dt * 1000);
-        const dayName = date.toLocaleDateString('en-US', { weekday: 'short' });
+        const dayName = date.toLocaleDateString('en-US', { weekday: 'long' });
         const temp = Math.round(day.main.temp);
+        const description = day.weather[0].description;
+
         forecastHTML += `
-            <div class="forecast-day">
-                <p>${dayName}</p>
-                <p><strong>${temp}&deg;F</strong></p>
-            </div>
+            <p><strong>${dayName}:</strong> ${temp}&deg;C - ${description}</p>
         `;
     });
-    forecastHTML += '</div>';
 
-    weatherContainer.innerHTML = `
-        <div class="current-weather">
-            <img src="${icon}" alt="${description}">
-            <p class="temperature">${currentTemp}&deg;F</p>
-            <p class="description">${description}</p>
-        </div>
-        <h4>3-Day Forecast</h4>
-        ${forecastHTML}
-    `;
+    forecastContainer.innerHTML = forecastHTML;
 }
 
-// --- Spotlight Functionality ---
-async function fetchMembers() {
-    try {
-        const response = await fetch(membersUrl);
-        if (response.ok) {
-            const members = await response.json();
-            displaySpotlights(members);
-        }
-    } catch (error) {
-        console.error('Error fetching members:', error);
+// Display error message
+function displayWeatherError() {
+    const tempElement = document.getElementById('current-temp');
+    if (tempElement) {
+        tempElement.textContent = 'Weather data unavailable';
     }
 }
 
-function displaySpotlights(members) {
-    // Filter for Gold (3) or Silver (2) members
-    const qualifiedMembers = members.filter(member => 
-        member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver' || 
-        member.membershipLevel === 3 || member.membershipLevel === 2
-    );
-
-    // Shuffle and pick 2-3
-    const shuffled = qualifiedMembers.sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, 3); // Display up to 3
-
-    const container = document.getElementById('spotlight-container');
-    container.innerHTML = '';
-
-    selected.forEach(member => {
-        const card = document.createElement('div');
-        card.className = 'spotlight-card';
-        card.innerHTML = `
-            <h3>${member.name}</h3>
-            <img src="images/${member.image}" alt="${member.name} Logo" loading="lazy">
-            <p class="membership-tag">${member.membershipLevel === 3 || member.membershipLevel === 'Gold' ? 'Gold Member' : 'Silver Member'}</p>
-            <div class="spotlight-info">
-                <p>${member.phone}</p>
-                <p>${member.address}</p>
-                <a href="${member.website}" target="_blank">Website</a>
-            </div>
-        `;
-        container.appendChild(card);
-    });
+// Initialize weather on page load
+if (document.getElementById('current-temp')) {
+    fetchWeather();
 }
-
-// Initialize
-fetchWeather();
-fetchMembers();
