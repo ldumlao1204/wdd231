@@ -1,19 +1,14 @@
 // ================================================
 // WEATHER API - OpenWeatherMap
 // ================================================
-// select HTML elements in the document
-const myCity = document.querySelector('#city');
-const myGraphic = document.querySelector('#graphic');
-const myTemp = document.querySelector('#current-temp');
-const myDescription = document.querySelector('#description');
-
 
 // API Configuration
 const apiKey = '350390bbf1828b6f3c0decce2bdf19c9'; // My API key
-const lat = '16.41312336329535';  // Baguio City Latitude
-const lon = '120.58716868053386'; // Baguio City Longitude
+const lat = '16.41312336329535';  // Baguio City, Philippines Latitude
+const lon = '120.58716868053386'; // Baguio City, Philippines Longitude
 
-const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}& units=imperial`;
+// Fixed: Removed duplicate units parameter
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
 // Fetch Weather Data
@@ -27,6 +22,13 @@ async function fetchWeather() {
         if (weatherResponse.ok && forecastResponse.ok) {
             const weatherData = await weatherResponse.json();
             const forecastData = await forecastResponse.json();
+
+            // 📊 LOG DATA TO CONSOLE FOR DEBUGGING
+            console.log('=== WEATHER DATA ===');
+            console.log('Current Weather:', weatherData);
+            console.log('Forecast Data:', forecastData);
+            console.log('==================');
+
             displayCurrentWeather(weatherData);
             displayForecast(forecastData);
         } else {
@@ -57,6 +59,14 @@ function displayCurrentWeather(data) {
     const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
     const cityName = data.name;
 
+    // 📊 LOG EXTRACTED VALUES TO CONSOLE
+    console.log('Displaying weather:', {
+        city: cityName,
+        temp: currentTemp,
+        description: description,
+        icon: iconCode
+    });
+
     // Update DOM elements
     iconContainer.innerHTML = `<img src="${iconUrl}" alt="${description}" id="weather-icon">`;
     descElement.textContent = description;
@@ -77,6 +87,9 @@ function displayForecast(data) {
     const threeDayForecast = data.list
         .filter(item => item.dt_txt.includes('12:00:00'))
         .slice(0, 3);
+
+    // 📊 LOG FORECAST DATA TO CONSOLE
+    console.log('3-Day Forecast:', threeDayForecast);
 
     let forecastHTML = '';
 
@@ -104,7 +117,7 @@ function displayWeatherError() {
 
 // Initialize weather on page load
 if (document.getElementById('current-temp')) {
+    console.log('🌤️ Initializing weather fetch...');
     fetchWeather();
 }
 
-apiFetch();
