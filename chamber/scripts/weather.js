@@ -1,13 +1,19 @@
 // ================================================
 // WEATHER API - OpenWeatherMap
 // ================================================
+// select HTML elements in the document
+const myCity = document.querySelector('#city');
+const myGraphic = document.querySelector('#graphic');
+const myTemp = document.querySelector('#current-temp');
+const myDescription = document.querySelector('#description');
+
 
 // API Configuration
 const apiKey = '350390bbf1828b6f3c0decce2bdf19c9'; // My API key
 const lat = '16.41312336329535';  // Baguio City Latitude
 const lon = '120.58716868053386'; // Baguio City Longitude
 
-const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}& units=imperial`;
 const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
 // Fetch Weather Data
@@ -100,3 +106,5 @@ function displayWeatherError() {
 if (document.getElementById('current-temp')) {
     fetchWeather();
 }
+
+apiFetch();

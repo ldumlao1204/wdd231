@@ -71,6 +71,20 @@
         font-size: 1.2rem;
     }
 
+    /* Hero CTA Button - Desktop */
+    .cta-button {
+        font-size: 1.3rem;
+        padding: 1.2rem 3rem;
+        bottom: 4rem;
+        right: 3rem;
+        left: auto;
+        transform: none;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-2px);
+    }
+
     /* Members Grid */
     .members-container.grid {
         display: grid;
@@ -97,6 +111,27 @@
         flex: 1;
         display: flex;
         flex-direction: column;
+    }
+
+    .card-content p {
+        margin: 15px;
+        
+    }
+
+    #icon-container {
+        background-color: rgb(251, 255, 0);
+            
+    }
+
+    #weather-icon {
+        width: 150px;
+        /* Increase size */
+        height: auto;
+    }
+
+    /* Add extra space before first event in large view */
+    .card1 .card-inside p:first-child {
+        margin-top: 1.5rem;
     }
 
     /* Spotlight Section */

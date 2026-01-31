@@ -415,22 +415,23 @@ main {
 /* Call to Action Button */
 .cta-button {
     position: absolute;
-    bottom: -160%;
-    right: 1rem;
+    bottom: 2rem;  /* Visible in mobile view */
+    left: 50%;
+    transform: translateX(-50%);  /* Center horizontally */
     background-color: var(--color-soft-cyan);
-    color: var(--text-dark);
+    color: var(--color-text-black);
     padding: 0.8rem 2rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
     transition: all 0.3s;
-    text-align: end;
     border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .cta-button:hover {
     background-color: var(--color-soft-peach);
-    transform: translateY(-2px);
+    transform: translateX(-50%) translateY(-2px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -519,8 +520,9 @@ main {
       font-size: 1rem;
       margin: 0;
       /* Removes the gap between stripes */
-      padding: 12px 1rem;
+      padding: 14px 1rem;
       /* Adds space back inside the stripe */
+      line-height: 1.7;  /* Better line spacing */
   }
 
   .card-inside p:nth-of-type(even) {
@@ -531,7 +533,7 @@ main {
   /*  weather Card style */
   /* ===================== */
   .weather-info {
-      padding: 0 2rem;
+      padding: 2rem;
       /* Matches card-inside padding */
       display: flex;
       align-items: center;
@@ -551,10 +553,15 @@ main {
       /* Increase size */
       height: auto;
   }
+  
+  #icon-container {
+      background-color: red;   
+
+  }
 
   #desc {
       margin: 0;
-      font-size: 0.8rem;
+      font-size: 1rem;
       text-transform: capitalize;
   }
 
@@ -583,10 +590,11 @@ main {
 
   #forecast-content p {
       margin: 0.75rem 0;
-      padding: 0.75rem;
+      padding: 0.85rem;
       background-color: rgba(255, 255, 255, 0.5);
       border-left: 3px solid var(--color-dark);
       font-size: 0.95rem;
+      line-height: 1.6;  /* Better line spacing */
   }
 
   #forecast-content p:nth-of-type(even) {

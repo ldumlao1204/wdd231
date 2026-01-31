@@ -126,6 +126,14 @@
     .cta-button {
         font-size: 1.2rem;
         padding: 1rem 2.5rem;
+        bottom: 3rem;  /* More space from bottom */
+        left: auto;
+        right: 2rem;  /* Position to the right on tablet */
+        transform: none;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-2px);  /* Reset transform for tablet */
     }
 
     .home-page-title h2 {
