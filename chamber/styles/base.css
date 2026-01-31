@@ -410,14 +410,16 @@ main {
 .hero h1 {
     font-size: 2.5rem;
     font-weight: 900;
-     
+    color: var(--color-dark);
+    background-color: var(--color-soft-cyan);
+   
 }
 
 /* Call to Action Button */
 .cta-button {
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
+    position: relative;
+    top: 8rem;
+    right: 10px;
     transform: translateX(-50%);
     background-color: var(--color-soft-cyan);
     color: var(--color-text-black);
@@ -429,6 +431,7 @@ main {
     border-radius: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 100;
+    margin-bottom: 1rem;
 }
 
 .cta-button:hover {
