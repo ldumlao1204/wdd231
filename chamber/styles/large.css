@@ -97,6 +97,7 @@
 
     .hero h1 {
         font-size: 3rem;
+        opacity: 0.70;
     }
 
     /* Hero CTA Button */
