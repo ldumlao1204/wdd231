@@ -306,6 +306,41 @@
     }
 
     /* ==================================================
+       JOIN PAGE - TABLET & DESKTOP
+       ================================================== */
+
+    .form-membership-container {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .form-section {
+        padding: 2.5rem;
+    }
+
+    .membership-cards {
+        gap: 1.25rem;
+    }
+
+    .membership-card {
+        padding: 1.25rem;
+    }
+
+    /* ==================================================
+       THANK YOU PAGE
+       ================================================== */
+
+    .thankyou-page {
+        padding: 3rem 2rem;
+    }
+
+    .application-details {
+        padding: 2.5rem;
+    }
+
+    /* ==================================================
        FOOTER
        ================================================== */
 

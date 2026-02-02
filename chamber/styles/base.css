@@ -869,6 +869,416 @@ img {
     border-width: 0;
 }
 
+/* ==================================================
+   JOIN PAGE STYLES
+   ================================================== */
+
+.join-page {
+    width: 100%;
+}
+
+.join-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.join-container h1 {
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    text-align: center;
+    margin-bottom: 1rem;
+    background-color: var(--color-soft-cyan);
+    border-radius: 15px 0;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.form-membership-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Form Section Styles */
+.form-section {
+    background-color: var(--color-soft-cyan);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+}
+
+.form-section h2 {
+    font-size: 1.8rem;
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.membership-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.membership-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    color: var(--color-text-black);
+    font-size: 1rem;
+}
+
+.membership-form input[type="text"],
+.membership-form input[type="email"],
+.membership-form input[type="tel"],
+.membership-form textarea {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    border: 2px solid var(--color-dark);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--font-primary);
+    transition: var(--transition);
+    background-color: var(--color-soft-peach);
+}
+
+.membership-form input:focus,
+.membership-form textarea:focus {
+    outline: none;
+    border-color: var(--color-text-black);
+    box-shadow: 0 0 0 3px rgba(13, 71, 94, 0.1);
+}
+
+.membership-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Fieldset for Radio Buttons */
+.membership-level {
+    border: 2px solid var(--color-dark);
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: var(--color-soft-peach);
+}
+
+.membership-level legend {
+    font-weight: 700;
+    color: var(--color-dark);
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+}
+
+.membership-level label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.membership-level input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--color-dark);
+}
+
+.submit-button {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: var(--transition);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:hover {
+    background-color: var(--color-dark);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Membership Cards Section */
+.membership-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.membership-cards h2 {
+    font-size: 1.8rem;
+    color: var(--color-dark);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Individual Membership Card with Animation */
+.membership-card {
+    background: linear-gradient(135deg, var(--color-soft-cyan), var(--color-light));
+    border: 2px solid var(--color-dark);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    animation: slideInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+/* Staggered animation delays for each card */
+.np-card {
+    animation-delay: 0.1s;
+}
+
+.bronze-card {
+    animation-delay: 0.3s;
+}
+
+.silver-card {
+    animation-delay: 0.5s;
+}
+
+.gold-card {
+    animation-delay: 0.7s;
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.membership-card h3 {
+    font-size: 1.5rem;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+}
+
+.membership-card .price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-text-black);
+    margin: 0.5rem 0;
+}
+
+.membership-card p {
+    font-size: 1rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.learn-more-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.learn-more-btn:hover {
+    background-color: var(--color-text-black);
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+.membership-modal {
+    border: 3px solid var(--color-dark);
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    background-color: var(--color-light);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.membership-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+}
+
+.membership-modal h2 {
+    font-size: 2rem;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.modal-price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-text-black);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.membership-modal h3 {
+    font-size: 1.3rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-dark);
+    padding-bottom: 0.5rem;
+}
+
+.membership-modal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.membership-modal li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.membership-modal li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-dark);
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--color-dark);
+    color: var(--color-light);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    line-height: 1;
+}
+
+.close-modal:hover {
+    background-color: var(--color-text-black);
+    transform: scale(1.1);
+}
+
+/* ==================================================
+   THANK YOU PAGE STYLES
+   ================================================== */
+
+.thankyou-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.thankyou-page h1 {
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+.thankyou-message {
+    font-size: 1.2rem;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.application-details {
+    background-color: var(--color-soft-peach);
+    border: 2px solid var(--color-dark);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+    text-align: left;
+}
+
+.application-details h2 {
+    font-size: 1.8rem;
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.detail-item {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.detail-label {
+    font-weight: 700;
+    color: var(--color-dark);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.detail-value {
+    font-size: 1.1rem;
+    color: var(--color-text-black);
+}
+
+.back-home-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: var(--transition);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-home-btn:hover {
+    background-color: var(--color-text-black);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
