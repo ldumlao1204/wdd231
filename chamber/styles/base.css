@@ -1031,7 +1031,7 @@ img {
 /* Individual Membership Card with Animation */
 .membership-card {
     background: linear-gradient(135deg, var(--color-soft-cyan), var(--color-light));
-    border: 2px solid var(--color-dark);
+    border: 1px solid var(--color-dark);
     border-radius: 12px;
     padding: 1.5rem;
     text-align: center;
@@ -1071,7 +1071,7 @@ img {
 }
 
 .membership-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
@@ -1113,11 +1113,16 @@ img {
 
 /* Modal Styles */
 .membership-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: 3px solid var(--color-dark);
     border-radius: 12px;
     padding: 2rem;
     max-width: 500px;
     width: 90%;
+    margin: 0;
     background-color: var(--color-light);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
