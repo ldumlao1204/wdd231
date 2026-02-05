@@ -1,9 +1,19 @@
 // Set the timestamp when the page loads
-document.addEventListener('DOMContentLoaded', function() {
+function setTimestamp() {
     const timestampField = document.getElementById('timestamp');
-    const now = new Date();
-    timestampField.value = now.toISOString();
-});
+    if (timestampField) {
+        const now = new Date();
+        timestampField.value = now.toISOString();
+    }
+}
+
+// Run on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', setTimestamp);
+
+// Also try to set immediately in case DOM is already loaded
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimestamp();
+}
 
 // Modal functionality
 const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
