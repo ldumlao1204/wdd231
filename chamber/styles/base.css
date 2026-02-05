@@ -3,6 +3,7 @@
     --color-light: #efe6e6;
     --color-soft-cyan: #dff7f7;
     --color-soft-peach: #f6f0ef;
+    --bg-color: #ffffff;
     --color-text: #010811;
     --color-text-black: #030000;
     --color-text-link: #000080;
@@ -908,7 +909,7 @@ img {
 
 /* Form Section Styles */
 .form-section {
-    background-color: var(--color-soft-cyan);
+    background-color: var(--color-soft-peach);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--box-shadow);
@@ -941,12 +942,12 @@ img {
 .membership-form textarea {
     margin-top: 0.5rem;
     padding: 0.75rem;
-    border: 2px solid var(--color-dark);
+    border: 1px solid var(--color-dark);
     border-radius: 8px;
     font-size: 1rem;
     font-family: var(--font-primary);
     transition: var(--transition);
-    background-color: var(--color-soft-peach);
+    background-color: var(--color-soft-cyan);
 }
 
 .membership-form input:focus,
@@ -963,7 +964,7 @@ img {
 
 /* Fieldset for Radio Buttons */
 .membership-level {
-    border: 2px solid var(--color-dark);
+    border: 1px solid var(--color-dark);
     border-radius: 8px;
     padding: 1.5rem;
     background-color: var(--color-soft-peach);
@@ -999,13 +1000,13 @@ img {
     background-color: var(--color-dark);
     color: var(--color-light);
     border: none;
-    border-radius: 12px;
+    border-radius: 25px;
     font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;
     text-transform: uppercase;
-    transition: var(--transition);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px var(--box-shadow);
 }
 
 .submit-button:hover {
@@ -1170,7 +1171,7 @@ img {
 }
 
 .membership-modal li::before {
-    content: "✓";
+    content: "•";
     position: absolute;
     left: 0;
     color: var(--color-dark);
@@ -1246,7 +1247,7 @@ img {
 .detail-item {
     padding: 1rem;
     margin-bottom: 0.75rem;
-    background-color: white;
+    background-color: var(--bg-color);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
