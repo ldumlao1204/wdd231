@@ -184,8 +184,13 @@
                                           rows="5"></textarea>
                             </label>
 
-                            <!-- Hidden Timestamp -->
+                            <!-- Hidden Timestamp - Value set immediately when form loads -->
                             <input type="hidden" id="timestamp" name="timestamp">
+                            <script>
+                                const timestampInput = document.getElementById('timestamp');
+                                timestampInput.value = new Date().toISOString();
+                                console.log('Timestamp set:', timestampInput.value);
+                            </script>
 
                             <!-- Submit Button -->
                             <button type="submit" class="submit-button">Sign Me Up!</button>
