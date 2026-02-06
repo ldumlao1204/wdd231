@@ -594,17 +594,52 @@
         color: #e0e0e0;
     }
 
+    /* Header & Navigation */
     header {
         background-color: #0a2d3e;
     }
 
-    .member-card {
-        background-color: #2a2a2a;
-        border-color: #444;
+    .navigation {
+        background-color: #1a1a1a;
     }
 
+    .navigation a {
+        color: #e0e0e0;
+    }
+
+    .navigation a:hover {
+        background-color: #2a2a2a;
+        color: #dff7f7;
+    }
+
+    .navigation a.active {
+        background-color: #0a3d50;
+        color: #dff7f7;
+    }
+
+    /* Main Content */
+    main {
+        background-color: #1a1a1a;
+    }
+
+    main h1,
+    main h2,
+    main h3 {
+        color: #e0e0e0;
+    }
+
+    main p {
+        color: #d0d0d0;
+    }
+
+    /* Directory Page */
     .directory-header {
         background: linear-gradient(135deg, #0a3d50, #4a3535);
+    }
+
+    .directory-header h2,
+    .directory-header p {
+        color: #e0e0e0;
     }
 
     .toggle-buttons {
@@ -612,15 +647,306 @@
     }
 
     .view-btn {
+        background-color: #2a2a2a;
         color: #e0e0e0;
     }
 
     .view-btn.active {
-        background-color: #3a3a3a;
+        background-color: #0a3d50;
         color: #e0e0e0;
     }
 
+    .view-btn:hover {
+        background-color: #0a3d50;
+        color: #e0e0e0;
+    }
+
+    /* Member Cards */
+    .member-card {
+        background-color: #2a2a2a;
+        border-color: #444;
+    }
+
+    .member-card h3 {
+        color: #e0e0e0;
+    }
+
+    .member-info p {
+        color: #d0d0d0;
+    }
+
+    .member-link {
+        background-color: #0a3d50;
+        color: #e0e0e0;
+    }
+
+    .members-container.list .member-card {
+        background-color: #2a2a2a;
+        border-color: #444;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        color: #e0e0e0;
+    }
+
+    .cta-button {
+        background-color: #0a3d50;
+        color: #e0e0e0;
+    }
+
+    .cta-button:hover {
+        background-color: #0d475e;
+        color: #e0e0e0;
+    }
+
+    /* Home Page Cards */
+    .card1, .card2, .card3 {
+        background-color: #2a2a2a;
+    }
+
+    .card-title {
+        background-color: #0a3d50;
+        color: #e0e0e0;
+    }
+
+    .card-inside {
+        background-color: #2a2a2a;
+    }
+
+    .card-inside p {
+        color: #d0d0d0;
+    }
+
+    /* Spotlight Cards */
+    .spotlight-card {
+        background-color: #2a2a2a;
+        border-color: #444;
+    }
+
+    .spotlight-title {
+        background-color: #0a3d50;
+    }
+
+    .spotlight-title h3 {
+        color: #e0e0e0;
+    }
+
+    .spotlight-info p {
+        color: #d0d0d0;
+    }
+
+    .spotlight-website a {
+        background-color: #0a3d50;
+        color: #e0e0e0;
+    }
+
+    /* Join Page */
+    .join-page {
+        background-color: #1a1a1a;
+    }
+
+    .join-container h1,
+    .join-container h2 {
+        color: #e0e0e0;
+    }
+
+    .intro-text {
+        color: #d0d0d0;
+    }
+
+    .form-section {
+        background-color: #2a2a2a;
+    }
+
+    .form-section h2 {
+        color: #e0e0e0;
+    }
+
+    /* Form Elements */
+    .membership-form label {
+        color: #e0e0e0;
+    }
+
+    .membership-form input,
+    .membership-form textarea {
+        background-color: #3a3a3a;
+        border-color: #555;
+        color: #e0e0e0;
+    }
+
+    .membership-form input::placeholder,
+    .membership-form textarea::placeholder {
+        color: #999;
+    }
+
+    .membership-form input:focus,
+    .membership-form textarea:focus {
+        border-color: #0a3d50;
+        box-shadow: 0 0 0 3px rgba(10, 61, 80, 0.3);
+    }
+
+    .membership-level {
+        background-color: #3a3a3a;
+        border-color: #555;
+    }
+
+    .membership-level legend {
+        color: #e0e0e0;
+    }
+
+    .membership-level label {
+        color: #d0d0d0;
+    }
+
+    .submit-button {
+        background-color: #0a3d50;
+        color: #e0e0e0;
+    }
+
+    .submit-button:hover {
+        background-color: #0d475e;
+    }
+
+    /* Membership Cards */
+    .membership-card {
+        background-color: #2a2a2a;
+        border-color: #444;
+    }
+
+    .membership-card h3 {
+        color: #e0e0e0;
+    }
+
+    .membership-card .price {
+        color: #dff7f7;
+    }
+
+    .membership-card p {
+        color: #d0d0d0;
+    }
+
+    .learn-more-btn {
+        background-color: #0a3d50;
+        color: #e0e0e0;
+    }
+
+    .learn-more-btn:hover {
+        background-color: #0d475e;
+    }
+
+    /* Modals */
+    .membership-modal {
+        background-color: #2a2a2a;
+        border-color: #0a3d50;
+    }
+
+    .membership-modal h2,
+    .membership-modal h3 {
+        color: #e0e0e0;
+    }
+
+    .membership-modal p,
+    .membership-modal li {
+        color: #d0d0d0;
+    }
+
+    .close-modal {
+        color: #e0e0e0;
+    }
+
+    .close-modal:hover {
+        background-color: #444;
+    }
+
+    /* Thank You Page */
+    .thankyou-page {
+        background-color: #1a1a1a;
+    }
+
+    .thankyou-page h1,
+    .thankyou-page h2 {
+        color: #e0e0e0;
+    }
+
+    .thankyou-page p {
+        color: #d0d0d0;
+    }
+
+    .application-details {
+        background-color: #2a2a2a;
+        border-color: #444;
+    }
+
+    .detail-row strong {
+        color: #dff7f7;
+    }
+
+    .detail-row span {
+        color: #d0d0d0;
+    }
+
+    .back-home-btn {
+        background-color: #0a3d50;
+        color: #e0e0e0;
+    }
+
+    .back-home-btn:hover {
+        background-color: #0d475e;
+    }
+
+    /* Discover Page */
+    .discover-page {
+        background-color: #1a1a1a;
+    }
+
+    .discover-card {
+        background-color: #2a2a2a;
+        border-color: #444;
+    }
+
+    .discover-card h3 {
+        color: #e0e0e0;
+    }
+
+    .discover-card p {
+        color: #d0d0d0;
+    }
+
+    /* Footer */
     footer {
         background-color: #0a2d3e;
+    }
+
+    .footer-left h2,
+    .footer-right h2,
+    .footer-left p,
+    .footer-right p {
+        color: #e0e0e0;
+    }
+
+    .social-icon {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .social-icon:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Weather Section */
+    #weather-icon {
+        filter: brightness(0.9);
+    }
+
+    #city,
+    #current-temp,
+    #desc {
+        color: #e0e0e0;
+    }
+
+    #forecast-content p {
+        background-color: #2a2a2a;
+        color: #d0d0d0;
+        border-left-color: #0a3d50;
     }
 }
