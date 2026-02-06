@@ -986,6 +986,9 @@ img {
 .membership-level input[type="radio"] {
     width: 20px;
     height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    flex-shrink: 0;
     cursor: pointer;
     accent-color: var(--color-dark);
 }
