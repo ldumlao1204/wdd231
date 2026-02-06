@@ -1,5 +1,7 @@
 // Get the query string from the URL
 const currentUrl = window.location.search;
+console.log(currentUrl)
+
 const urlParams = new URLSearchParams(currentUrl);
 
 // Retrieve form data from URL parameters
