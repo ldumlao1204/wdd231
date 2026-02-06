@@ -1,4 +1,8 @@
-// Timestamp is set via inline script in join.html for immediate execution
+// Set timestamp when page loads
+const timestampField = document.getElementById('timestamp');
+if (timestampField) {
+    timestampField.value = new Date().toISOString();
+}
 
 // Modal functionality
 const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
