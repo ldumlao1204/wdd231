@@ -7,10 +7,18 @@
     --color-text: #010811;
     --color-text-black: #030000;
     --color-text-link: #000080;
+    --color-error: #d32f2f;
+    --color-gold: #ffd700;
+    --color-gold-dark: #ffa500;
+    --color-silver: #c0c0c0;
+    --color-silver-dark: #a8a8a8;
     --font-primary: 'Roboto', sans-serif;
     --transition: all 0.3s ease;
     --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
-    --icon-bg-color: rgb(149, 164, 172)
+    --box-shadow-light: 0 2px 10px rgba(0, 0, 0, 0.15);
+    --box-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.4);
+    --icon-bg-color: #95a4ac;
+    --border-light: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -28,8 +36,6 @@ body {
     color: var(--color-text);
     background-color: var(--color-light);
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
 }
 
 /* ==================================================
@@ -88,7 +94,7 @@ header {
     color: var(--color-soft-cyan);
     width: 50px;
     height: 50px;
-    transition: all 0.3s ease;
+    transition: var(--transition);
     position: absolute;
     top: 1.8rem;
     right: 1rem;
@@ -127,16 +133,16 @@ nav {
 }
 
 .navigation li {
-    border-bottom: 1px solid rgba(224, 28, 28, 0.1);
+    border-bottom: 1px solid var(--border-light);
 }
 
 .navigation a {
     display: block;
     padding: 1rem;
     text-decoration: none;
-    color: var(--color-text-light);
+    color: var(--color-text);
     font-weight: 400;
-    transition: background-color 0.3s ease;
+    transition: var(--transition);
 }
 
 
@@ -170,7 +176,7 @@ main {
     margin-bottom: 1rem;
     padding: 1rem;
     background: linear-gradient(135deg, var(--color-soft-cyan), var(--color-soft-peach));
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    box-shadow: var(--box-shadow);
     border-radius: 12px;
 }
 
@@ -185,7 +191,7 @@ main {
 .directory-header p {
     margin: 0;
     font-size: 1.1rem;
-    color: var(--color-text-light);
+    color: var(--color-text);
     font-weight: 300;
 }
 
@@ -212,7 +218,7 @@ main {
     padding: 0.5rem 1rem;
     font-weight: 700;
     background-color: var(--color-light);
-    color: var(--color-text-light);
+    color: var(--color-text);
     border: none;
     cursor: pointer;
     border-radius: 4px;
@@ -226,7 +232,7 @@ main {
 }
 
 .view-btn:hover {
-    background-color: var(--color-text-light);
+    background-color: var(--color-dark);
     color: var(--color-light);
 }
 
@@ -250,7 +256,7 @@ main {
 
 /* Member Card */
 .member-card {
-    border: 1px solid rgb(0 0 0 / 10%);
+    border: 1px solid var(--border-light);
     padding: 1rem;
     background-color: var(--color-light);
     display: flex;
@@ -258,7 +264,7 @@ main {
     height: 100%;
     min-height: 350px;
     margin-bottom: 0.5rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    box-shadow: var(--box-shadow);
 }
 
 .members-container.grid .member-card {
@@ -273,7 +279,8 @@ main {
 /* Hide list-specific elements in grid view */
 .members-container.grid .list-address,
 .members-container.grid .list-phone,
-.members-container.grid .list-website {
+.members-container.grid .list-website,
+.members-container.list .member-image {
     display: none;
 }
 
@@ -288,19 +295,12 @@ main {
     display: block;
 }
 
-.members-container.grid .list-address,
-.members-container.grid .list-phone,
-.members-container.grid .list-website,
-.members-container.list .member-image {
-    display: none;
-}
-
 .members-container.list .member-card {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr;
     margin-right: .5rem;
     padding: 0.5rem;
-    border: 1px solid rgb(0 0 0 / 10%);
+    border: 1px solid var(--border-light);
     background-color: var(--color-soft-peach);
     align-items: center;
     gap: 1rem;
@@ -431,9 +431,9 @@ main {
     font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: var(--transition);
     border-radius: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow-light);
     z-index: 100;
     margin-bottom: 1rem;
 }
@@ -441,7 +441,7 @@ main {
 .cta-button:hover {
     background-color: var(--color-soft-peach);
     transform: translateX(-50%) scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--box-shadow);
 }
 
 .home-page-title h2 {
@@ -600,10 +600,10 @@ main {
   #forecast-content p {
       margin: 0.5rem 0;
       padding: 0.5rem;
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: var(--color-soft-peach);
       border-left: 3px solid var(--color-dark);
       font-size: 1rem;
-      line-height: 1.6;  /* Better line spacing */
+      line-height: 1.6;
   }
 
   #forecast-content p:nth-of-type(even) {
@@ -639,7 +639,7 @@ main {
 
   .spotlight-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      box-shadow: var(--box-shadow-hover);
   }
 
   /* Company Name Header */
@@ -676,10 +676,10 @@ main {
       height: 100px;
       object-fit: contain;
       border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+      box-shadow: var(--box-shadow-light);
       background-color: var(--color-soft-cyan);
       padding: 0.5rem;
-      border: 1px solid rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--border-light);
   }
 
   /* Info Section (Badge, Phone, Address, Website) */
@@ -704,15 +704,13 @@ main {
   }
 
   .gold-badge {
-      background: linear-gradient(135deg, #FFD700, #FFA500);
+      background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
       color: var(--color-text-black);
-      box-shadow: 0 2px 5px rgba(255, 215, 0, 0.3);
   }
 
   .silver-badge {
-      background: linear-gradient(135deg, #C0C0C0, #A8A8A8);
+      background: linear-gradient(135deg, var(--color-silver), var(--color-silver-dark));
       color: var(--color-text-black);
-      box-shadow: 0 2px 5px rgba(192, 192, 192, 0.3);
   }
 
   .spotlight-info p {
@@ -759,7 +757,7 @@ main {
   }
 
   .error-message {
-      color: #d32f2f;
+      color: var(--color-error);
       font-weight: 600;
       text-align: center;
       padding: 1rem;
@@ -824,16 +822,14 @@ footer {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--border-light);
     border-radius: 50%;
-    color: var(--color-text-light);
     text-decoration: none;
     transition: var(--transition);
 }
 
 .social-icon:hover {
-    background-color: var(--color-text-light);
-    color: var(--color-dark);
+    background-color: var(--color-light);
     transform: scale(1.1);
 }
 
@@ -954,7 +950,7 @@ img {
 .membership-form textarea:focus {
     outline: none;
     border-color: var(--color-text-black);
-    box-shadow: 0 0 0 3px rgba(13, 71, 94, 0.1);
+    box-shadow: 0 0 0 3px var(--border-light);
 }
 
 .membership-form textarea {
@@ -1005,14 +1001,14 @@ img {
     font-weight: 700;
     cursor: pointer;
     text-transform: uppercase;
-    transition: color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 10px var(--box-shadow);
+    transition: var(--transition);
+    box-shadow: var(--box-shadow-light);
 }
 
 .submit-button:hover {
-    background-color: var(--color-dark);
+    background-color: var(--color-text-black);
     transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow);
 }
 
 /* Membership Cards Section */
@@ -1073,7 +1069,7 @@ img {
 
 .membership-card:hover {
     transform: translateY(5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow-hover);
 }
 
 .membership-card h3 {
@@ -1125,7 +1121,7 @@ img {
     width: 90%;
     margin: 0;
     background-color: var(--color-light);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow-hover);
 }
 
 .membership-modal::backdrop {
@@ -1276,13 +1272,13 @@ img {
     font-size: 1.1rem;
     font-weight: 700;
     transition: var(--transition);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow-light);
 }
 
 .back-home-btn:hover {
     background-color: var(--color-text-black);
     transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1292,5 +1288,3 @@ img {
         transition-duration: 0.01ms !important;
     }
 }
-
-/* END OF FOOTER */
