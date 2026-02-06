@@ -3,7 +3,15 @@
 
     /* HEADER & NAVIGATION */
     header {
-        padding: 1rem 2rem;
+        padding: 1rem 0;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    header .logo-container,
+    header .hamburger-menu {
+        padding: 0 2rem;
     }
 
     /* Hide hamburger menu on larger screens */
