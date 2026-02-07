@@ -1,17 +1,17 @@
-/* ===== CSS Reset & Base ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* ===== Color Scheme Variables ===== */
 :root {
     --primary: #0057B8;       /* Royal Blue - header, footer */
     --secondary: #D11F38;     /* Heart Red - buttons, accents */
     --text: #333333;          /* Dark Charcoal - body text */
     --bg: #F9FAFB;            /* Off-White - background */
     --white: #ffffff;
+}
+
+/* ===== CSS Reset & Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* ===== Typography ===== */
@@ -106,8 +106,9 @@ section p strong {
 .wireframes {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem;
     justify-content: center;
+    align-items: flex-start;
     margin-top: 1rem;
 }
 
@@ -118,27 +119,31 @@ section p strong {
 .wireframe-placeholder {
     border: 3px dashed var(--primary);
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 1rem;
     background-color: var(--bg);
     color: #999;
     font-style: italic;
 }
 
+.wireframe-placeholder p {
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
 .wireframe-placeholder.mobile {
-    width: 220px;
-    height: 420px;
+    max-width: 250px;
 }
 
 .wireframe-placeholder.desktop {
-    width: 450px;
-    height: 300px;
+    max-width: 500px;
 }
 
 .wireframe-placeholder img {
+    display: block;
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
+    border-radius: 4px;
 }
 
 /* ===== Footer ===== */
@@ -234,9 +239,13 @@ a:hover {
         text-align: center;
     }
 
+    .wireframes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wireframe-placeholder.mobile,
     .wireframe-placeholder.desktop {
-        width: 100%;
-        max-width: 450px;
-        height: 250px;
+        max-width: 100%;
     }
 }
