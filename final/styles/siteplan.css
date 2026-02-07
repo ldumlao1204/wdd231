@@ -1,7 +1,7 @@
 
 :root {
-    --primary: #0057B8;       /* Royal Blue - header, footer */
-    --secondary: #D11F38;     /* Heart Red - buttons, accents */
+    --primary: #004799;       /* Royal Blue - header, footer */
+    --secondary: #a2071b;     /* Heart Red - buttons, accents */
     --text: #333333;          /* Dark Charcoal - body text */
     --bg: #F9FAFB;            /* Off-White - background */
     --white: #ffffff;
