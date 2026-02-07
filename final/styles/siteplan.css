@@ -93,7 +93,7 @@ figure img {
 
 figcaption {
     font-size: 0.85rem;
-    color: #666;
+    color: #555;
     margin-top: 0.3rem;
 }
 
@@ -121,7 +121,7 @@ section p strong {
     border-radius: 8px;
     padding: 1rem;
     background-color: var(--bg);
-    color: #999;
+    color: #555;
     font-style: italic;
 }
 
@@ -201,6 +201,10 @@ footer {
     gap: 1rem;
     justify-content: center;
     align-items: center;
+}
+
+.social-icon {
+    color: var(--white);
 }
 
 .social-icon img {
