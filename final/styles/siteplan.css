@@ -1,0 +1,242 @@
+/* ===== CSS Reset & Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Color Scheme Variables ===== */
+:root {
+    --primary: #0057B8;       /* Royal Blue - header, footer */
+    --secondary: #D11F38;     /* Heart Red - buttons, accents */
+    --text: #333333;          /* Dark Charcoal - body text */
+    --bg: #F9FAFB;            /* Off-White - background */
+    --white: #ffffff;
+}
+
+/* ===== Typography ===== */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text);
+    background-color: var(--bg);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* ===== Main Content ===== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+main section {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+main section h2 {
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 3px solid var(--secondary);
+    padding-bottom: 0.4rem;
+}
+
+main section h3 {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+main section p {
+    margin-bottom: 0.5rem;
+}
+
+main section ul {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+main section ul li {
+    margin-bottom: 0.4rem;
+}
+
+/* ===== Logo Figure ===== */
+figure {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+figure img {
+    border-radius: 8px;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.3rem;
+}
+
+/* ===== Color Schema Swatches ===== */
+section p strong {
+    color: var(--primary);
+}
+
+/* ===== Wireframe Section ===== */
+.wireframes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.wireframe {
+    text-align: center;
+}
+
+.wireframe-placeholder {
+    border: 3px dashed var(--primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg);
+    color: #999;
+    font-style: italic;
+}
+
+.wireframe-placeholder.mobile {
+    width: 220px;
+    height: 420px;
+}
+
+.wireframe-placeholder.desktop {
+    width: 450px;
+    height: 300px;
+}
+
+.wireframe-placeholder img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1.5rem 1rem;
+}
+
+.footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-left h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-left p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+/* ===== Social Icons ===== */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icon:hover img {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* ===== Links ===== */
+a {
+    color: var(--secondary);
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+
+    .wireframe-placeholder.desktop {
+        width: 100%;
+        max-width: 450px;
+        height: 250px;
+    }
+}
