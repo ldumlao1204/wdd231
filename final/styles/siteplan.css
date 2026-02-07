@@ -121,13 +121,6 @@ section p strong {
     border-radius: 8px;
     padding: 1rem;
     background-color: var(--bg);
-    color: #555;
-    font-style: italic;
-}
-
-.wireframe-placeholder p {
-    margin-bottom: 0.5rem;
-    font-size: 0.85rem;
 }
 
 .wireframe-placeholder.mobile {
