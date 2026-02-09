@@ -1,4 +1,4 @@
-const discover = [
+export const discover = [
     {
         "id": 1,
         "name": "Burnham Park",

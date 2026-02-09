@@ -1,14 +1,13 @@
-import discover from "../data/discover.mjs";
+import { discover } from "../data/discover.mjs";
 
 const grid = document.getElementById("discover-grid");
 const visitMessage = document.getElementById("visit-message");
 
 // Build cards from the imported data
 function buildCards() {
-    discover.forEach((item, index) => {
+    discover.forEach((item) => {
         const card = document.createElement("article");
         card.classList.add("discover-card");
-        card.style.gridArea = `card${index + 1}`;
 
         card.innerHTML = `
             <h2>${item.name}</h2>
