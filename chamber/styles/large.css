@@ -493,20 +493,16 @@
     }
 
     /* ==================================================
-       DISCOVER PAGE - LARGE VIEW (3 columns)
+       DISCOVER PAGE - LARGE VIEW (2 columns)
        ================================================== */
 
-    .discover-header h1 {
-        font-size: 3rem;
-    }
-
     .discover-grid {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
-            "card1 card2 card3"
-            "card4 card4 card5"
-            "card6 card7 card7"
-            "card8 card8 card8";
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
     }
 
     .discover-card:hover {
