@@ -241,6 +241,34 @@
     }
 
     /* ==================================================
+       DISCOVER PAGE - TABLET VIEW (Medium: 2 columns)
+       ================================================== */
+
+    .discover-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card1 card1"
+            "card2 card3"
+            "card4 card5"
+            "card6 card7"
+            "card8 card8";
+    }
+
+    /* Image hover effect - tablet and above only */
+    .discover-card figure img {
+        transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .discover-card:hover figure img {
+        transform: scale(1.08);
+        filter: brightness(1.1) saturate(1.2);
+    }
+
+    /* ==================================================
        FOOTER sTYLE
        ================================================== */
 

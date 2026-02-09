@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Baguio - Baguio Chamber of Commerce</title>
+    <meta name="description"
+        content="Discover the beauty of Baguio City, the Summer Capital of the Philippines. Explore top attractions, landmarks, and cultural sites that make Baguio a premier destination.">
+    <meta name="author" content="Leilany Dumlao">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Discover Baguio - Baguio Chamber of Commerce">
+    <meta property="og:description"
+        content="Explore the top attractions and landmarks of Baguio City, the City of Pines.">
+    <meta property="og:image" content="https://ldumlao1204.github.io/wdd231/chamber/images/og-image.png">
+    <meta property="og:url" content="https://ldumlao1204.github.io/wdd231/chamber/discover.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Scripts -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/getdate.js" defer></script>
+    <script type="module" src="scripts/discover.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="images/bcc-logo.webp" alt="Chamber of Commerce Logo" class="logo" width="50" height="50">
+            <span class="site-name">Baguio Chamber of Commerce</span>
+        </div>
+        <button id="nav-button" class="hamburger-menu" aria-label="navigation" aria-expanded="false"></button>
+
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="discover-page">
+            <div class="discover-header">
+                <h1>Discover Baguio City</h1>
+                <p>Explore the top attractions and hidden gems of the City of Pines</p>
+            </div>
+
+            <!-- Visit Message -->
+            <div id="visit-message" class="visit-message"></div>
+
+            <!-- Discover Cards Grid -->
+            <div class="discover-grid" id="discover-grid">
+                <!-- Cards will be built dynamically by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>Baguio Chamber of Commerce</h2>
+                <p>135 Session Road<br>
+                    Baguio City, Philippines<br>
+                    info@baguiochamber.org<br>
+                    (012) 923 367 4219</p>
+            </div>
+            <div class="footer-center">
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon"><img
+                            src="images/facebook.svg" alt="Facebook" width="28" height="28" loading="lazy"></a>
+                    <a href="https://www.twitter.com" target="_blank" class="social-icon"><img
+                            src="images/twitter.svg" alt="Twitter" width="28" height="28" loading="lazy"></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="social-icon"><img
+                            src="images/linkedin.svg" alt="LinkedIn" width="28" height="28" loading="lazy"></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p><strong>WDD231 Class Project</strong><br>
+                    Leilany Dumlao<br>
+                    &copy; <span id="currentyear"></span> Baguio Chamber of Commerce<br>
+                    Last Modification: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
