@@ -1333,33 +1333,28 @@ img {
     color: var(--color-dark);
 }
 
-/* Discover Grid - Mobile First (Small: single column) */
-.discover-grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-areas:
-        "card1"
-        "card2"
-        "card3"
-        "card4"
-        "card5"
-        "card6"
-        "card7"
-        "card8";
-}
-
-/* Discover Card */
+/* Discover Card - uses grid-template-areas for internal layout */
 .discover-card {
     background-color: var(--color-soft-peach);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--box-shadow);
     transition: var(--transition);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas:
+        "name"
+        "photograph"
+        "location"
+        "description"
+        "button";
+}
+
+.discover-card:hover {
+    transform: translateY(-5px);
 }
 
 .discover-card h2 {
+    grid-area: name;
     margin: 0;
     padding: 0.75rem 1rem;
     background-color: var(--color-dark);
@@ -1370,6 +1365,7 @@ img {
 }
 
 .discover-card figure {
+    grid-area: photograph;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -1383,24 +1379,27 @@ img {
 }
 
 .discover-card address {
+    grid-area: location;
     font-style: normal;
-    padding: 0.75rem 1rem 0;
+    margin: 0.75rem 1rem 0;
+    line-height: 1.5;
     font-size: 0.9rem;
     color: var(--color-dark);
     font-weight: 500;
 }
 
 .discover-card p {
-    padding: 0.5rem 1rem;
+    grid-area: description;
+    margin: 0.5rem 1rem;
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--color-text);
-    flex: 1;
 }
 
 .discover-card .learn-more-btn {
+    grid-area: button;
     margin: 0 1rem 1rem;
-    align-self: flex-start;
+    justify-self: start;
 }
 
 /* Named Grid Area assignments for each card */
