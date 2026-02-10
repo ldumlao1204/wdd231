@@ -418,10 +418,13 @@ main {
     background-color: var(--color-dark);
     border-radius: 0;
     width: auto;
-  
-    opacity: 0.9
+    opacity: 0.9;
+}
+.hero p {
+    font-size: 1.3rem;
+    color: var(--color-light);
     
-   
+
 }
 
 /* Call to Action Button */
@@ -569,7 +572,6 @@ main {
   #icon-container {
       background-color: var(--icon-bg-color);   
       border-radius: 10px;
-
   }
 
   #desc {
@@ -1336,7 +1338,7 @@ img {
     margin-bottom: 1.5rem;
     background-color: var(--color-dark);
     border-radius: 8px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     color: var(--color-soft-peach);
     box-shadow: var(--box-shadow);
