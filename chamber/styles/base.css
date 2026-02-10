@@ -1403,7 +1403,7 @@ img {
 .discover-card .learn-more-btn {
     grid-area: button;
     margin: 0 1rem 1rem;
-    justify-self: start;
+    justify-self: center;
 }
 
 @media (prefers-reduced-motion: reduce) {
