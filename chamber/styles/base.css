@@ -1359,6 +1359,7 @@ img {
         "location"
         "description"
         "button";
+    grid-template-rows: auto auto auto 1fr auto;
 }
 
 .discover-card:hover {
