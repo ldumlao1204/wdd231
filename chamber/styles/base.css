@@ -411,7 +411,7 @@ main {
 .hero h1 {
     font-size: 2.5rem;
     font-weight: 900;
-    color: var(--color-dark);
+    color: #010811;
     background-color: var(--color-soft-cyan);
     border-radius: 25px 0;
     margin: 10px;
