@@ -118,6 +118,7 @@ nav {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    border-radius: 12px;
 
 }
 
@@ -149,12 +150,14 @@ nav {
 .navigation a:hover {
     background-color: var(--color-light);
     color: var(--color-dark);
+    border-radius: 12px;
 }
 
 .navigation a.active {
     background-color: var(--color-dark);
     color: var(--color-light);
     font-weight: 700;
+    border-radius: 12px;
 }
 
 /****MAIN CONTENT****/
@@ -405,17 +408,19 @@ main {
     transform: translate(-50%, -50%);
     text-align: center;
     color: var(--color-light);
-    width: 90%;
+    width: 100%;
 }
 
 .hero h1 {
     font-size: 2.5rem;
     font-weight: 900;
-    color: #010811;
-    background-color: var(--color-soft-cyan);
-    border-radius: 25px 0;
-    margin: 10px;
-    opacity: 0.70;
+    color: var(--bg-color);
+    background-color: var(--color-dark);
+    border-radius: 0;
+    width: auto;
+  
+    opacity: 0.9
+    
    
 }
 
@@ -1329,12 +1334,12 @@ img {
     text-align: center;
     padding: 1rem;
     margin-bottom: 1.5rem;
-    background-color: var(--color-soft-cyan);
-    border-left: 4px solid var(--color-dark);
-    border-radius: 0 8px 8px 0;
-    font-size: 1rem;
+    background-color: var(--color-dark);
+    border-radius: 8px;
+    font-size: 1.5rem;
     font-weight: 500;
-    color: var(--color-dark);
+    color: var(--color-soft-peach);
+    box-shadow: var(--box-shadow);
 }
 
 /* Discover Card - uses grid-template-areas for internal layout */
@@ -1380,6 +1385,7 @@ img {
     height: 200px;
     object-fit: cover;
     display: block;
+    transition: var(--transition);
 }
 
 .discover-card address {
