@@ -306,7 +306,7 @@
 
     footer {
         padding: 2.5rem 2rem;
-        max-width: 1200px;
+        width: 100%;
     }
 
     .footer-container {
