@@ -611,8 +611,8 @@
 
 @media (prefers-contrast: more) {
     :root {
-        --color-dark: #000000;
-        --color-text: #000000;
+        --color-dark: var(--color-text-black);
+        --color-text: var(--bg-color);
     }
 
     .member-link {
@@ -630,13 +630,13 @@
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #1a1a1a;
+        background-color: var(--color-text-black);
         color: #e0e0e0;
     }
 
     /* Header & Navigation */
     header {
-        background-color: #0a2d3e;
+        background-color: var(--color-dark);
     }
 
     .navigation {
@@ -728,7 +728,7 @@
 
     /* Hero Section */
     .hero h1 {
-        color: #e0e0e0;
+        color: var(--bg-color);
     }
 
     .cta-button {
