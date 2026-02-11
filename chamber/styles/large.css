@@ -97,7 +97,7 @@
 
     .hero h1 {
         font-size: 3rem;
-        color: #ffffff;
+        color: var(--bg-color);
         font-weight: 900;
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
         opacity: 0.9;
