@@ -243,21 +243,56 @@
     }
 
     /* ==================================================
-       DISCOVER PAGE - TABLET VIEW (Medium: 2 columns)
+       DISCOVER PAGE - MEDIUM VIEW (1 column, horizontal cards)
        ================================================== */
 
     .discover-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas:
-            "card1 card2"
-            "card3 card4"
-            "card5 card6"
-            "card7 card8";
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
     }
 
-    /* Image hover effect - tablet and above only */
+    /* Card internal layout - image left, content right */
+    .discover-card {
+        grid-template-columns: clamp(180px, 40%, 300px) 1fr;
+        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-areas:
+            "photograph name"
+            "photograph description"
+            "photograph description"
+            "location location"
+            "button button";
+    }
+
+    .discover-card figure {
+        height: 100%;
+    }
+
     .discover-card figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .discover-card h2 {
+        min-height: auto;
+    }
+
+    .discover-card address {
+        text-align: left;
+        margin: 0.5rem 1rem;
+    }
+
+    .discover-card .learn-more-btn {
+        justify-self: center;
     }
 
     .discover-card:hover figure img {
