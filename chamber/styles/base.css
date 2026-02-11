@@ -5,7 +5,7 @@
     --color-soft-peach: #f6f0ef;
     --bg-color: #ffffff;
     --color-text: #010811;
-    --color-text-black: #000000;
+    --color-text-black: #030000;
     --color-text-link: #000080;
     --color-error: #d32f2f;
     --color-gold: #ffd700;
@@ -423,9 +423,9 @@ main {
 }
 .hero p {
     font-size: 1.5rem;
-    color: var(--bg-color);
+    color: var(--color-dark);
     font-weight: 600;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.4);
 }
 
 /* Call to Action Button */
