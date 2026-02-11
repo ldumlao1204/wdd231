@@ -73,7 +73,7 @@
        ================================================== */
 
     main {
-        padding: 0.5rem;
+        padding: 0 0.5rem 0.5rem;
     }
 
     main h1 {
@@ -97,6 +97,9 @@
 
     .hero h1 {
         font-size: 3rem;
+        color: #ffffff;
+        font-weight: 900;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
         opacity: 0.70;
     }
 
@@ -270,22 +273,27 @@
         font-size: 1rem;
     }
 
-    /* Members Grid */
+    /* Members Grid - horizontal card layout at 768px */
     .members-container.grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 1rem;
         align-items: stretch;
-        grid-auto-rows: 1fr;
     }
 
-    .member-card {
-        min-height: 380px;
+    .members-container.grid .member-card {
+        flex-direction: row-reverse;
+        align-items: center;
+        min-height: auto;
+        gap: 1rem;
+        padding: 1rem;
     }
 
-    .member-image {
-        width: 200px;
-        height: 140px;
+    .members-container.grid .member-image {
+        width: 150px;
+        height: 120px;
+        margin: 0;
+        flex-shrink: 0;
     }
 
     /* List View */
@@ -303,6 +311,19 @@
     .members-container.list .list-phone,
     .members-container.list .list-website {
         font-size: 0.9rem;
+    }
+
+    /* ==================================================
+       DISCOVER PAGE - 768px (2 columns)
+       ================================================== */
+
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
     }
 
     /* ==================================================
@@ -423,7 +444,7 @@
 
     /* Main Content */
     main {
-        padding: 1rem;
+        padding: 0 1rem 1rem;
     }
 
     main h1 {
@@ -486,10 +507,22 @@
         padding: 0.5rem 1.2rem;
     }
 
-    /* Members Grid - 3 columns */
+    /* Members Grid - 3 columns, back to vertical card layout */
     .members-container.grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.3rem;
+    }
+
+    .members-container.grid .member-card {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .members-container.grid .member-image {
+        width: 180px;
+        height: 130px;
+        margin: 1rem auto;
     }
 
     /* ==================================================
@@ -544,7 +577,7 @@
 
     /* Enhanced spacing */
     main {
-        padding: 4rem 3rem;
+        padding: 0 3rem 4rem;
     }
 
     .directory-header {

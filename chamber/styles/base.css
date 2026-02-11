@@ -414,18 +414,18 @@ main {
 .hero h1 {
     font-size: 2.5rem;
     font-weight: 900;
-    color: var(--bg-color);
+    color: #ffffff;
     background-color: var(--color-dark);
     border-radius: 0;
     width: auto;
     opacity: 0.9;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 .hero p {
     font-size: 1.3rem;
-    color: var(--color-light);
-    font-weight: 500;
-    
-
+    color: #ffffff;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Call to Action Button */
