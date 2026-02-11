@@ -79,30 +79,19 @@
         font-size: 1rem;
     }
 
-    /* Members Grid - 2 columns on tablet */
+    /* Members Grid - 2 columns on tablet, vertical cards */
     .members-container.grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 1rem;
-    }
-
-    /* Member Card - Horizontal layout: image right, text left */
-    .members-container.grid .member-card {
-        flex-direction: row-reverse;
-        align-items: center;
-        min-height: auto;
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .members-container.grid .member-image {
-        width: 150px;
-        height: 120px;
-        margin: 0;
-        flex-shrink: 0;
     }
 
     .member-card {
         min-height: auto;
+    }
+
+    .member-image {
+        width: 180px;
+        height: 130px;
     }
 
     /* List View Adjustments */
