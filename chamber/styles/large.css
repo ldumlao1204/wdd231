@@ -591,7 +591,8 @@
     }
 
     body {
-        background: var(--color-text);
+        background: #ffffff;
+        color: #000000;
     }
 
     .members-container {
@@ -639,16 +640,17 @@
     }
 
     .navigation {
-        background-color: #1a1a1a;
+        background-color: var(--color-text-black);
+        color: var(--bg-color);
     }
 
     .navigation a {
-        color: #e0e0e0;
+        color: var(--bg-color);
     }
 
     .navigation a:hover {
-        background-color: #2a2a2a;
-        color: #dff7f7;
+        background-color: var(--color-text);
+        color: var(--color-soft-peach);
     }
 
     .navigation a.active {
@@ -664,11 +666,11 @@
     main h1,
     main h2,
     main h3 {
-        color: #e0e0e0;
+        color: var(--color-silver);
     }
 
     main p {
-        color: #d0d0d0;
+        color: var(--silver-dark);
     }
 
     /* Directory Page */
@@ -678,7 +680,7 @@
 
     .directory-header h2,
     .directory-header p {
-        color: #e0e0e0;
+        color: var(--bg-color);
     }
 
     .toggle-buttons {
@@ -691,13 +693,13 @@
     }
 
     .view-btn.active {
-        background-color: #0a3d50;
-        color: #e0e0e0;
+        background-color: var(--color-soft-peach);
+        color: var(--color-silver);
     }
 
     .view-btn:hover {
-        background-color: #0a3d50;
-        color: #e0e0e0;
+        background-color: var(--color-dark);
+        color: var(--color-soft-cyan);
     }
 
     /* Member Cards */
