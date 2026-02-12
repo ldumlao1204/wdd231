@@ -3,60 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tetralogy Of Fallot - Congenital Heart Disease</title>
+    <title>Tetralogy of Fallot Lifeline | Congenital Heart Disease Resources</title>
     <meta name="description"
         content="A comprehensive guide to Tetralogy of Fallot (ToF) and Congenital Heart Disease. Learn about heart defects, surgical recovery, and tips for heart warrior families.">
     <meta name="author" content="Leilany Dumlao">
 
-
     <!-- Facebook Open Graph Meta Tags -->
-    <meta property="og:title" content="Tetralogy of Fallot - Home Page">
+    <meta property="og:title" content="Tetralogy of Fallot Lifeline - Home">
     <meta property="og:description"
         content="Welcome to your home for Tetralogy of Fallot resources. Explore clear medical education, recovery guides, and a supportive community for every Heart Warrior family.">
-    <meta property="og:image" content="https://ldumlao1204.github.io/wdd231/chamber/images/hero.webp">
-    <meta property="og:url" content="https://ldumlao1204.github.io/wdd231/chamber/index.html">
+    <meta property="og:image" content="https://ldumlao1204.github.io/wdd231/final/images/tof-logo.webp">
+    <meta property="og:url" content="https://ldumlao1204.github.io/wdd231/final/index.html">
     <meta property="og:type" content="website">
-    
+
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/project-small.css">
     <link rel="stylesheet" href="styles/project-medium.css">
     <link rel="stylesheet" href="styles/project-large.css">
-    
-    <!-- Scripts -->
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/getdate.js" defer></script>
-    
-    </head>
-    
-    <body>
-        <!-- Header -->
-        <header>
-            <img src="images/tof-logo.webp" alt="Tetralogy of Fallot" class="logo" width="100" height="100"           loading="lazy">
-            <span class="site-name">Tetralogy of Fallot Lifeline</span>
-          
-            <button id="ham-btn" class="hamburger"></button>
-    
-            <nav>
-                <ul class="navigation">
-                    <li><a href="index.html" class="active">Home</a>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-
 </head>
 <body>
-    
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="images/tof-logo.webp" alt="Tetralogy of Fallot Lifeline Logo" class="logo" width="100" height="100">
+        </a>
+        <span class="site-name">Tetralogy of Fallot Lifeline</span>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle Navigation Menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Every Heart Warrior Deserves a Lifeline</h1>
+                <p>Empowering families and individuals affected by Tetralogy of Fallot with trusted medical information, personal stories, and a supportive community.</p>
+                <a href="about.html" class="cta-button">Learn About ToF</a>
+            </div>
+        </section>
+
+        <!-- Info Cards Section -->
+        <section class="info-section">
+            <h2>Understanding Tetralogy of Fallot</h2>
+            <div class="info-cards">
+                <article class="info-card">
+                    <div class="card-icon">&#x2764;</div>
+                    <h3>What is ToF?</h3>
+                    <p>Tetralogy of Fallot is a congenital heart condition made up of four related defects that affect the heart's structure and blood flow. It is the most common cyanotic heart defect.</p>
+                </article>
+                <article class="info-card">
+                    <div class="card-icon">&#x2695;</div>
+                    <h3>Treatment & Surgery</h3>
+                    <p>Most children with ToF undergo open-heart surgery within the first year of life. The surgery repairs the heart defects, allowing normal blood flow and improved oxygen levels.</p>
+                </article>
+                <article class="info-card">
+                    <div class="card-icon">&#x1F31F;</div>
+                    <h3>Living with ToF</h3>
+                    <p>With advances in surgical techniques, most people with repaired ToF lead full, active lives. Regular cardiology follow-ups ensure long-term heart health and early intervention if needed.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Dynamic Resources Section -->
+        <section class="resources-section">
+            <h2>ToF Resources & Support</h2>
+            <p class="section-description">Explore our curated collection of medical centers, support organizations, and educational resources for the ToF community.</p>
+            <div class="filter-controls">
+                <label for="category-filter">Filter by Category:</label>
+                <select id="category-filter">
+                    <option value="all">All Resources</option>
+                    <option value="Medical Center">Medical Centers</option>
+                    <option value="Support Organization">Support Organizations</option>
+                    <option value="Educational Resource">Educational Resources</option>
+                    <option value="Research Institution">Research Institutions</option>
+                </select>
+            </div>
+            <div id="resources-container" class="resources-grid">
+                <!-- Dynamic content loaded via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Dialog -->
+    <dialog id="resource-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <div id="modal-details"></div>
+        </div>
+    </dialog>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Contact Us</h3>
+                <p>ldumlao@byupathway.edu</p>
+                <p>Baguio City, Philippines</p>
+                <p>(+63) 928 380 3501</p>
+            </div>
+            <div class="footer-center">
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <img src="images/facebook.svg" alt="Facebook" width="28" height="28" loading="lazy">
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <img src="images/twitter.svg" alt="Twitter" width="28" height="28" loading="lazy">
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <img src="images/linkedin.svg" alt="LinkedIn" width="28" height="28" loading="lazy">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p>WDD231 Final Project</p>
+                <p>Leilany Dumlao</p>
+                <p>&copy; <span id="currentyear"></span> Tetralogy of Fallot Lifeline</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="attributions.html">Attributions</a>
+            <a href="#" id="video-link">Video Demo</a>
+        </div>
+    </footer>
+
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/navigation.js"></script>
+    <script type="module" src="scripts/main.js"></script>
 </body>
 </html>

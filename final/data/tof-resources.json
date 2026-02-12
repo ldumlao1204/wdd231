@@ -1,0 +1,166 @@
+{
+    "resources": [
+        {
+            "name": "Boston Children's Hospital - Heart Center",
+            "category": "Medical Center",
+            "description": "One of the largest and most experienced pediatric heart centers in the world, offering comprehensive care for Tetralogy of Fallot from diagnosis through adulthood.",
+            "location": "Boston, Massachusetts, USA",
+            "specialty": "Pediatric Cardiac Surgery",
+            "website": "https://www.childrenshospital.org",
+            "rating": 5
+        },
+        {
+            "name": "Texas Children's Hospital",
+            "category": "Medical Center",
+            "description": "Home to one of the nation's largest pediatric cardiology programs, with dedicated ToF specialists and a nationally ranked heart center.",
+            "location": "Houston, Texas, USA",
+            "specialty": "Congenital Heart Disease",
+            "website": "https://www.texaschildrens.org",
+            "rating": 5
+        },
+        {
+            "name": "Great Ormond Street Hospital",
+            "category": "Medical Center",
+            "description": "A leading international center for pediatric cardiac surgery, with pioneering research in congenital heart defect repair techniques.",
+            "location": "London, United Kingdom",
+            "specialty": "Pediatric Cardiology",
+            "website": "https://www.gosh.nhs.uk",
+            "rating": 5
+        },
+        {
+            "name": "Children's Heart Foundation",
+            "category": "Support Organization",
+            "description": "The largest national organization solely dedicated to funding congenital heart defect research, providing grants for innovative studies.",
+            "location": "Nationwide, USA",
+            "specialty": "Research Funding",
+            "website": "https://www.childrensheartfoundation.org",
+            "rating": 4
+        },
+        {
+            "name": "Mended Little Hearts",
+            "category": "Support Organization",
+            "description": "A nationwide network offering support, education, and hope to families affected by congenital heart defects through local chapters.",
+            "location": "Nationwide, USA",
+            "specialty": "Family Support",
+            "website": "https://mendedhearts.org",
+            "rating": 4
+        },
+        {
+            "name": "Adult Congenital Heart Association (ACHA)",
+            "category": "Support Organization",
+            "description": "Dedicated to improving the quality of life and extending the lives of adults with congenital heart defects through education and advocacy.",
+            "location": "Nationwide, USA",
+            "specialty": "Adult CHD Advocacy",
+            "website": "https://www.achaheart.org",
+            "rating": 5
+        },
+        {
+            "name": "CDC - Congenital Heart Defects Information",
+            "category": "Educational Resource",
+            "description": "Comprehensive, evidence-based information from the Centers for Disease Control about congenital heart defects including Tetralogy of Fallot.",
+            "location": "Online",
+            "specialty": "Public Health Education",
+            "website": "https://www.cdc.gov/heart-defects",
+            "rating": 5
+        },
+        {
+            "name": "American Heart Association - ToF Guide",
+            "category": "Educational Resource",
+            "description": "Patient-friendly guide to understanding Tetralogy of Fallot, including symptoms, diagnosis, treatment options, and living with the condition.",
+            "location": "Online",
+            "specialty": "Patient Education",
+            "website": "https://www.heart.org",
+            "rating": 5
+        },
+        {
+            "name": "Mayo Clinic - Tetralogy of Fallot",
+            "category": "Educational Resource",
+            "description": "Detailed medical resource covering symptoms, causes, risk factors, complications, and treatment options for Tetralogy of Fallot.",
+            "location": "Online",
+            "specialty": "Medical Reference",
+            "website": "https://www.mayoclinic.org",
+            "rating": 5
+        },
+        {
+            "name": "National Heart, Lung, and Blood Institute",
+            "category": "Research Institution",
+            "description": "Part of the NIH, funding and conducting research on heart and vascular diseases including congenital heart defects like Tetralogy of Fallot.",
+            "location": "Bethesda, Maryland, USA",
+            "specialty": "Cardiovascular Research",
+            "website": "https://www.nhlbi.nih.gov",
+            "rating": 5
+        },
+        {
+            "name": "Cincinnati Children's Heart Institute",
+            "category": "Medical Center",
+            "description": "A top-ranked pediatric heart program known for innovative surgical techniques and excellent long-term outcomes for ToF patients.",
+            "location": "Cincinnati, Ohio, USA",
+            "specialty": "Pediatric Heart Surgery",
+            "website": "https://www.cincinnatichildrens.org",
+            "rating": 4
+        },
+        {
+            "name": "The Paleta Project",
+            "category": "Support Organization",
+            "description": "A community-driven initiative connecting Heart Warrior families through shared experiences, resources, and emotional support programs.",
+            "location": "Online",
+            "specialty": "Peer Support",
+            "website": "https://www.thepaletaproject.org",
+            "rating": 4
+        },
+        {
+            "name": "Congenital Heart Public Health Consortium",
+            "category": "Research Institution",
+            "description": "A coalition of organizations working to reduce morbidity and mortality in people with congenital heart defects through data and research.",
+            "location": "Atlanta, Georgia, USA",
+            "specialty": "Public Health Research",
+            "website": "https://www.chphc.org",
+            "rating": 4
+        },
+        {
+            "name": "HeartKids Australia",
+            "category": "Support Organization",
+            "description": "Australia's leading organization providing support, education, and advocacy for children and adults living with congenital heart disease.",
+            "location": "Nationwide, Australia",
+            "specialty": "Family Advocacy",
+            "website": "https://www.heartkids.org.au",
+            "rating": 4
+        },
+        {
+            "name": "Stanford Children's Health - Lucile Packard",
+            "category": "Medical Center",
+            "description": "World-class pediatric cardiac care with advanced imaging, minimally invasive procedures, and specialized follow-up for Tetralogy of Fallot.",
+            "location": "Palo Alto, California, USA",
+            "specialty": "Advanced Cardiac Imaging",
+            "website": "https://www.stanfordchildrens.org",
+            "rating": 5
+        },
+        {
+            "name": "PubMed - ToF Research Database",
+            "category": "Research Institution",
+            "description": "Access thousands of peer-reviewed research articles about Tetralogy of Fallot, surgical outcomes, and long-term prognosis studies.",
+            "location": "Online",
+            "specialty": "Medical Research Literature",
+            "website": "https://pubmed.ncbi.nlm.nih.gov",
+            "rating": 5
+        },
+        {
+            "name": "KidsHealth - Tetralogy of Fallot",
+            "category": "Educational Resource",
+            "description": "Kid-friendly and parent-friendly explanations of Tetralogy of Fallot, written in easy-to-understand language with helpful illustrations.",
+            "location": "Online",
+            "specialty": "Family Education",
+            "website": "https://kidshealth.org",
+            "rating": 4
+        },
+        {
+            "name": "Sisters by Heart",
+            "category": "Support Organization",
+            "description": "A parent-to-parent support organization providing care packages, emotional support, and connection for families facing a CHD diagnosis.",
+            "location": "Nationwide, USA",
+            "specialty": "Parent-to-Parent Support",
+            "website": "https://www.sistersbyheart.org",
+            "rating": 4
+        }
+    ]
+}
