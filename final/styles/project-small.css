@@ -1,0 +1,26 @@
+:root {
+    --primary-color: #004799; /*(Royal Blue)*/
+    --secondary-Color: #a2071b; /*(Heart Red)*/
+    --text-color: #333333; /*(Dark Charcoal)*/
+    --bg-color: #F9FAFB; /*(Off-White/Light Gray)*/
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", "Open Sans" sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
