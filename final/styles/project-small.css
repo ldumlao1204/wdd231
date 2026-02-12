@@ -54,9 +54,15 @@ header span {
     border: none;
     color: var(--text-color);
     cursor: pointer;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}    
 
-}
 .hamburger::after {
     content: "\2630";
+    font-size: 2rem;
+}
+
+.hamburger.show::after {
+    content: "\00D7";
     font-size: 2rem;
 }
