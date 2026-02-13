@@ -1,21 +1,39 @@
 @media only screen and (min-width: 60rem) {
-    /* Container max-width */
-    header {
-        max-width: 1200px;
-        margin: 0 auto;
-        grid-template-columns: 70px 1fr auto;
-        padding: 12px 32px;
-        border-radius: 0;
-    }
-
-    /* Sticky header full-width background */
+    /* Header */
     header {
         max-width: 100%;
+        grid-template-columns: 85px 1fr auto;
+        padding: 12px 32px;
+    }
+
+    header .logo {
+        width: 70px;
+        height: 70px;
     }
 
     main {
-        max-width: 1200px;
+        max-width: 100%;
         margin: 0 auto;
+    }
+
+    /* Hero & Banner stay full width */
+    .hero,
+    .page-banner {
+        max-width: 100%;
+    }
+
+    /* Content sections get max-width */
+    .info-section,
+    .resources-section,
+    .about-intro,
+    .defects-section,
+    .treatment-section,
+    .mission-section,
+    .contact-section,
+    .thankyou-section {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .site-name {
@@ -28,8 +46,9 @@
     }
 
     /* Hero */
-    .hero {
-        padding: 80px 60px;
+    .hero-img {
+        height: 550px;
+        width: 100%;
     }
 
     .hero h1 {
@@ -37,18 +56,21 @@
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
+        
     }
 
     .hero p {
         font-size: 1.15rem;
         max-width: 700px;
+        margin-top: 10px;
     }
 
-    .page-banner {
-        padding: 56px 60px;
+    /* Page Banner */
+    .banner-img {
+        height: 350px;
     }
 
-    .page-banner h1 {
+    .banner-content h1 {
         font-size: 2.4rem;
     }
 

@@ -1,8 +1,13 @@
 @media only screen and (min-width: 38rem) {
     /* Header */
     header {
-        grid-template-columns: 60px 1fr auto;
+        grid-template-columns: 75px 1fr auto;
         padding: 10px 24px;
+    }
+
+    header .logo {
+        width: 65px;
+        height: 65px;
     }
 
     .site-name {
@@ -40,8 +45,8 @@
     }
 
     /* Hero */
-    .hero {
-        padding: 64px 40px;
+    .hero-img {
+        height: 450px;
     }
 
     .hero h1 {
@@ -50,6 +55,11 @@
 
     .hero p {
         font-size: 1.1rem;
+    }
+
+    /* Page Banner */
+    .banner-img {
+        height: 300px;
     }
 
     .page-banner {

@@ -5,6 +5,7 @@
     --bg-color: #F9FAFB;
     --white: #ffffff;
     --light-gray: #e8ecef;
+    --active-button: 1F3F6B;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -54,7 +55,7 @@ a:hover {
 /*************** HEADER *********************/
 header {
     display: grid;
-    grid-template-columns: 60px 1fr 44px;
+    grid-template-columns: 70px 1fr 44px;
     align-items: center;
     padding: 8px 16px;
     background-color: var(--primary-color);
@@ -71,8 +72,8 @@ header {
 }
 
 header .logo {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
@@ -141,29 +142,50 @@ nav {
 }
 
 .navigation a.active {
-    border-bottom: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--active-button);
 }
 
 /*************** HERO SECTION *********************/
 .hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #0066cc 50%, var(--secondary-color) 100%);
+    position: relative;
     color: var(--white);
-    padding: 48px 20px;
     text-align: center;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 15px;
+    background: linear-gradient(135deg, rgba(0, 71, 153, 0.75) 0%, rgba(0, 102, 204, 0.6) 50%, rgba(162, 7, 27, 0.65) 100%);
 }
 
 .hero h1 {
     font-size: 1.8rem;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
     font-size: 1rem;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
     opacity: 0.95;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .cta-button {
@@ -187,16 +209,42 @@ nav {
 
 /*************** PAGE BANNER *********************/
 .page-banner {
-    background: linear-gradient(135deg, var(--primary-color), #0066cc);
+    position: relative;
     color: var(--white);
-    padding: 40px 20px;
     text-align: center;
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px;
+    background: linear-gradient(135deg, rgba(0, 71, 153, 0.8), rgba(0, 102, 204, 0.7));
+}
+
+.banner-content h1 {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .page-banner p {
     margin-top: 8px;
     opacity: 0.9;
     font-size: 1rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /*************** INFO CARDS *********************/
