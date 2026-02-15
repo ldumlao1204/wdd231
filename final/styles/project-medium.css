@@ -35,13 +35,8 @@
 
     .navigation a {
         padding: 8px 14px;
-        border-radius: 4px;
+        border-radius: 0;
         font-size: 0.9rem;
-    }
-
-    .navigation a.active {
-        border-bottom: none;
-        background-color: var(--active-button);
     }
 
     /* Hero */
