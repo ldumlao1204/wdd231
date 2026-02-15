@@ -41,7 +41,7 @@
 
     .navigation a.active {
         border-bottom: none;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: #003570;
     }
 
     /* Hero */
