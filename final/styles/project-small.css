@@ -1,14 +1,13 @@
 :root {
     --primary-color: #004799;
     --secondary-color: #a2071b;
-    --text-color: #333333;
+    --text-color: #161616;
     --bg-color: #e6eef7;
     --white: #ffffff;
     --accent-color: #214673;
     --light-gray: #e8ecef;
     --active-button: #336cad;
-    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.25);
 }
 
 * {
@@ -25,7 +24,7 @@ body {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     color: var(--text-color);
-    background-color: var(--bg-color);
+    background-color: var(--white);
     line-height: 1.6;
 }
 
@@ -149,45 +148,39 @@ nav {
 
 /*************** HERO SECTION *********************/
 .hero {
-    position: relative;
-    color: var(--white);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 .hero-img {
     width: 100%;
-    height: 350px;
+    height: 280px;
     object-fit: cover;
     display: block;
 }
 
 .hero-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 24px 15px;
-    background: linear-gradient(135deg, rgba(0, 71, 153, 0.93) 0%, rgba(0, 102, 204, 0.9) 50%, rgba(162, 7, 27, 0.92) 100%);
+    padding: 32px 20px;
+    text-align: center;
 }
 
 .hero h1 {
     font-size: 1.8rem;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 16px;
 }
 
 .hero p {
     font-size: 1rem;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     max-width: 600px;
     opacity: 0.95;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .cta-button {
@@ -212,7 +205,7 @@ nav {
 /*************** PAGE BANNER *********************/
 .page-banner {
     position: relative;
-    color: var(--white);
+    color: var(--primary-color);
     text-align: center;
     overflow: hidden;
 }
@@ -246,6 +239,7 @@ nav {
     margin-top: 8px;
     opacity: 0.9;
     font-size: 1rem;
+    color: var(--primary-color);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -267,11 +261,12 @@ nav {
 }
 
 .info-card {
-    background: var(--white);
+    background: var(--bg-color);
     padding: 28px 20px;
     border-radius: 10px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s;
+    border: solid 1px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.5s;
 }
 
 .info-card:hover {

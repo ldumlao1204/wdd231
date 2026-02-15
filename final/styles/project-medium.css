@@ -44,17 +44,30 @@
         background-color: #003570;
     }
 
-    /* Hero */
+    /* Hero - side by side */
+    .hero {
+        flex-direction: row;
+    }
+
     .hero-img {
-        height: 450px;
+        width: 50%;
+        height: auto;
+        min-height: 350px;
+    }
+
+    .hero-content {
+        width: 50%;
+        padding: 40px 32px;
+        text-align: left;
+        align-items: flex-start;
     }
 
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .hero p {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
     }
 
     /* Page Banner */
