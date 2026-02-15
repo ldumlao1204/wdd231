@@ -2,11 +2,12 @@
     --primary-color: #004799;
     --secondary-color: #a2071b;
     --text-color: #333333;
-    --bg-color: #a4cef7;
+    --bg-color: #bfdbf7;
     --white: #ffffff;
     --accent-color: #214673;
     --light-gray: #e8ecef;
     --active-button: #336cad;
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
