@@ -191,6 +191,17 @@
         padding: 32px;
     }
 
+    /* Stories Grid - 2 columns */
+    .stories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .stories-section {
+        padding: 40px 32px;
+    }
+
     /* Typography */
     h1 { font-size: 2rem; }
     h2 { font-size: 1.6rem; }

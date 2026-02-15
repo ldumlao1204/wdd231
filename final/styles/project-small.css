@@ -1,6 +1,6 @@
 :root {
     --primary-color: #033369;
-    --secondary-color: #61050F;
+    --secondary-color: #920717;
     --text-color: #0f0f0f;
     --bg-color: #e0e9f3;
     --white: #ffffff;
@@ -53,6 +53,33 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/*************** CARD ANIMATIONS *********************/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.info-card,
+.resource-card,
+.defect-card,
+.story-card,
+.treatment-item {
+    animation: fadeInUp 0.5s ease both;
+}
+
+.info-card:nth-child(1), .resource-card:nth-child(1), .defect-card:nth-child(1), .story-card:nth-child(1) { animation-delay: 0.05s; }
+.info-card:nth-child(2), .resource-card:nth-child(2), .defect-card:nth-child(2), .story-card:nth-child(2) { animation-delay: 0.1s; }
+.info-card:nth-child(3), .resource-card:nth-child(3), .defect-card:nth-child(3), .story-card:nth-child(3) { animation-delay: 0.15s; }
+.resource-card:nth-child(4), .defect-card:nth-child(4), .story-card:nth-child(4) { animation-delay: 0.2s; }
+.resource-card:nth-child(5), .story-card:nth-child(5) { animation-delay: 0.25s; }
+.resource-card:nth-child(6), .story-card:nth-child(6) { animation-delay: 0.3s; }
 
 /*************** HEADER *********************/
 header {
@@ -295,11 +322,12 @@ nav {
     border-radius: 10px;
     border: 1px solid var(--accent-color);
     box-shadow: var(--box-shadow);
-    transition: transform 0.5s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .info-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
 }
 
 .card-icon {
@@ -379,7 +407,7 @@ nav {
     border-radius: 10px;
     border-left: 4px solid var(--primary-color);
     box-shadow: var(--box-shadow);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
     display: grid;
     grid-template-areas:
@@ -394,7 +422,8 @@ nav {
 }
 
 .resource-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-6px);
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
 }
 
 .resource-img {
@@ -547,6 +576,12 @@ nav {
     box-shadow: var(--shadow);
     border-top: 4px solid var(--secondary-color);
     position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.defect-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
 }
 
 .defect-number {
@@ -1022,4 +1057,158 @@ footer p {
 .footer-bottom a:hover {
     opacity: 1;
     text-decoration: underline;
+}
+
+/*************** STORIES PAGE *********************/
+.stories-section {
+    padding: 40px 20px;
+}
+
+.visit-banner {
+    background-color: var(--white);
+    border-left: 4px solid var(--secondary-color);
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    box-shadow: var(--box-shadow);
+}
+
+.stories-section .section-description {
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--text-color);
+}
+
+.sort-controls {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.sort-btn {
+    padding: 8px 16px;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    background-color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sort-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.sort-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.story-card {
+    background: var(--white);
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    display: grid;
+    grid-template-areas:
+        "photograph"
+        "name"
+        "age"
+        "milestone"
+        "story"
+        "meta";
+    grid-template-rows: auto auto auto auto 1fr auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.story-img {
+    grid-area: photograph;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-img img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 12px;
+}
+
+.story-name {
+    grid-area: name;
+    color: var(--primary-color);
+    margin: 12px 16px 4px;
+    font-size: 1.1rem;
+}
+
+.story-age {
+    grid-area: age;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    margin: 0 16px 8px;
+    font-weight: 600;
+}
+
+.story-milestone {
+    grid-area: milestone;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin: 0 16px 8px;
+}
+
+.story-text {
+    grid-area: story;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin: 0 16px 12px;
+    line-height: 1.6;
+}
+
+.story-meta {
+    grid-area: meta;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 0 16px 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--light-gray);
+}
+
+.story-diagnosis {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background-color: var(--bg-color);
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.story-date {
+    font-size: 0.8rem;
+    color: var(--accent-color);
 }

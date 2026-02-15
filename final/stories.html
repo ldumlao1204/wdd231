@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | ToF Lifeline</title>
-    <meta name="description" content="Thank you for contacting Tetralogy of Fallot Lifeline.">
+    <title>Heart Warrior Stories | ToF Lifeline</title>
+    <meta name="description"
+        content="Read inspiring milestone stories from Heart Warriors and families affected by Tetralogy of Fallot. Every heartbeat tells a story of courage.">
     <meta name="author" content="Leilany Dumlao">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Heart Warrior Stories | ToF Lifeline">
+    <meta property="og:description"
+        content="Inspiring milestone stories from Heart Warriors and their families. Discover courage, hope, and triumph over Tetralogy of Fallot.">
+    <meta property="og:image" content="https://ldumlao1204.github.io/wdd231/final/images/tof-logo.webp">
+    <meta property="og:url" content="https://ldumlao1204.github.io/wdd231/final/stories.html">
+    <meta property="og:type" content="website">
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
@@ -20,6 +29,11 @@
     <link rel="stylesheet" href="styles/project-small.css">
     <link rel="stylesheet" href="styles/project-medium.css">
     <link rel="stylesheet" href="styles/project-large.css">
+
+    <!-- Scripts -->
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script type="module" src="scripts/stories.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -33,20 +47,36 @@
             <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="stories.html">Stories</a></li>
+                <li><a href="stories.html" class="active">Stories</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="thankyou-section">
-            <h1>Thank You!</h1>
-            <p>Your message has been received. Here is a summary of your submission:</p>
-            <div id="form-data" class="form-summary">
-                <!-- Form data will be displayed here via JavaScript -->
+        <!-- Page Banner -->
+        <section class="page-banner no-image">
+            <h1>Heart Warrior Stories</h1>
+            <p>Every heartbeat tells a story of courage</p>
+        </section>
+
+        <!-- Stories Section -->
+        <section class="stories-section">
+            <!-- Visit Tracking Banner -->
+            <div id="visit-message" class="visit-banner"></div>
+
+            <p class="section-description">These are real milestones from Heart Warriors and their families. Every story is a reminder that life after a ToF diagnosis is full of hope and possibility.</p>
+
+            <!-- Sort Controls -->
+            <div class="sort-controls">
+                <button class="sort-btn active" data-sort="newest">Newest First</button>
+                <button class="sort-btn" data-sort="oldest">Oldest First</button>
             </div>
-            <a href="index.html" class="cta-button">Return to Home</a>
+
+            <!-- Dynamic Stories Grid -->
+            <div id="stories-container" class="stories-grid">
+                <!-- Stories loaded dynamically via JavaScript -->
+            </div>
         </section>
     </main>
 
@@ -85,8 +115,5 @@
         </div>
     </footer>
 
-    <script src="scripts/getdates.js"></script>
-    <script src="scripts/navigation.js"></script>
-    <script src="scripts/thankyou.js"></script>
 </body>
 </html>
