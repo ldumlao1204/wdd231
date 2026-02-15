@@ -104,17 +104,27 @@ async function init() {
 
     // Load saved filter preference from localStorage
     const savedFilter = loadFilterPreference();
-    const filterSelect = document.getElementById('category-filter');
+    const filterContainer = document.getElementById('filter-buttons');
 
-    if (filterSelect) {
-        filterSelect.value = savedFilter;
+    if (filterContainer) {
+        const filterButtons = filterContainer.querySelectorAll('.filter-btn');
+
+        // Set active state from saved preference
+        filterButtons.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.filter === savedFilter);
+        });
+
         displayResources(resources, savedFilter);
 
-        // DOM Manipulation: Event listener for filter change
-        filterSelect.addEventListener('change', (e) => {
-            const selectedFilter = e.target.value;
-            saveFilterPreference(selectedFilter);
-            displayResources(resources, selectedFilter);
+        // DOM Manipulation: Event listeners for filter buttons
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const selectedFilter = btn.dataset.filter;
+                saveFilterPreference(selectedFilter);
+                displayResources(resources, selectedFilter);
+            });
         });
     }
 

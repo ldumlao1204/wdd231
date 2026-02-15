@@ -55,7 +55,7 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <img src="images/home-hero.webp" alt="A heart warrior child smiling with family" class="hero-img" width="1200" height="500" loading="eager">
+            <img src="images/home-hero.webp" alt="A heart warrior child smiling with family" class="hero-img" width="1200" height="200" loading="eager">
             <div class="hero-content">
                 <h1>Every Heart Warrior Deserves a Lifeline</h1>
                 <p>Empowering families and individuals affected by Tetralogy of Fallot with trusted medical information, personal stories, and a supportive community.</p>
@@ -89,15 +89,12 @@
         <section class="resources-section">
             <h2>ToF Resources & Support</h2>
             <p class="section-description">Explore our curated collection of medical centers, support organizations, and educational resources for the ToF community.</p>
-            <div class="filter-controls">
-                <label for="category-filter">Filter by Category:</label>
-                <select id="category-filter">
-                    <option value="all">All Resources</option>
-                    <option value="Medical Center">Medical Centers</option>
-                    <option value="Support Organization">Support Organizations</option>
-                    <option value="Educational Resource">Educational Resources</option>
-                    <option value="Research Institution">Research Institutions</option>
-                </select>
+            <div class="filter-controls" id="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Resources</button>
+                <button class="filter-btn" data-filter="Medical Center">Medical Centers</button>
+                <button class="filter-btn" data-filter="Support Organization">Support Organizations</button>
+                <button class="filter-btn" data-filter="Educational Resource">Educational Resources</button>
+                <button class="filter-btn" data-filter="Research Institution">Research Institutions</button>
             </div>
             <div id="resources-container" class="resources-grid">
                 <!-- Dynamic content loaded via JavaScript -->

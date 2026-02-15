@@ -1,11 +1,11 @@
 :root {
     --primary-color: #004799;
     --secondary-color: #a2071b;
-    --text-color: #161616;
-    --bg-color: #e6eef7;
+    --text-color: #0f0f0f;
+    --bg-color: #d3e4f7;
     --white: #ffffff;
     --accent-color: #214673;
-    --light-gray: #e8ecef;
+    --light-gray: #acd7fc;
     --active-button: #336cad;
     --box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.25);
 }
@@ -24,7 +24,7 @@ body {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     color: var(--text-color);
-    background-color: var(--white);
+    background-color: var(--bg-color);
     line-height: 1.6;
 }
 
@@ -148,39 +148,44 @@ nav {
 
 /*************** HERO SECTION *********************/
 .hero {
-    display: flex;
-    flex-direction: column;
+    position: relative;
     overflow: hidden;
-    background-color: var(--primary-color);
     color: var(--white);
 }
 
 .hero-img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 350px;
+    object-fit: cover;
     display: block;
 }
 
 .hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 32px 20px;
+    padding: 24px 20px;
     text-align: center;
+    background: rgba(18, 40, 66, 0.65);
 }
 
 .hero h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 16px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .hero p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-bottom: 24px;
     max-width: 600px;
-    opacity: 0.95;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .cta-button {
@@ -281,7 +286,7 @@ nav {
 }
 
 .info-card {
-    background: var(--bg-color);
+    background: var(--white);
     padding: 28px 20px;
     border-radius: 10px;
     border: 1px solid var(--accent-color);
@@ -306,13 +311,13 @@ nav {
 
 .info-card p {
     font-size: 0.95rem;
-    color: #555;
+    color: var(--text-color);
 }
 
 /*************** RESOURCES SECTION *********************/
 .resources-section {
     padding: 40px 20px;
-    background-color: var(--white);
+    background-color: var(--light-gray);
 }
 
 .resources-section h2 {
@@ -324,30 +329,38 @@ nav {
 .section-description {
     text-align: center;
     margin-bottom: 24px;
-    color: #666;
+    color: var(--text-color);
 }
 
 .filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
     margin-bottom: 24px;
-    text-align: center;
 }
 
-.filter-controls label {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    margin-right: 8px;
-    font-size: 0.95rem;
-}
-
-.filter-controls select {
+.filter-btn {
     padding: 8px 16px;
     border: 2px solid var(--primary-color);
-    border-radius: 6px;
-    font-family: "Open Sans", sans-serif;
-    font-size: 0.9rem;
-    color: var(--text-color);
+    border-radius: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--primary-color);
     background-color: var(--white);
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 .resources-grid {
@@ -356,10 +369,10 @@ nav {
 }
 
 .resource-card {
-    background: var(--bg-color);
+    background: var(--white);
     padding: 20px;
     border-radius: 10px;
-    border-left: 4px solid var(--primary-color);
+    border-left: 4px solid var(--primary-color); 
     box-shadow: var(--shadow);
     transition: transform 0.3s;
 }
@@ -387,7 +400,7 @@ nav {
 
 .resource-card p {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--text-color);
     margin-bottom: 12px;
 }
 
@@ -401,15 +414,15 @@ nav {
 .resource-location,
 .resource-specialty {
     font-size: 0.8rem;
-    background: var(--light-gray);
+  
     padding: 3px 10px;
     border-radius: 4px;
-    color: #555;
+    color: var(--text-color);
 }
 
 .resource-rating {
-    color: #f5a623;
-    font-size: 1rem;
+    color: #f59905;
+    font-size: 1.5rem;
     margin-bottom: 12px;
 }
 
@@ -443,6 +456,15 @@ nav {
     padding: 40px 20px;
 }
 
+.about-intro-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    margin: 24px auto 0;
+    display: block;
+}
+
 .about-intro h2 {
     color: var(--primary-color);
     margin-bottom: 16px;
@@ -455,7 +477,7 @@ nav {
 
 .defects-section {
     padding: 40px 20px;
-    background-color: var(--white);
+    background-color: var(--light-gray);
 }
 
 .defects-section h2 {
@@ -466,17 +488,18 @@ nav {
 
 .defects-section > p {
     text-align: center;
-    color: #666;
+    color: var(--text-color);
     margin-bottom: 24px;
 }
 
 .defect-cards {
     display: grid;
     gap: 20px;
+    box-shadow: var(--box-shadow);
 }
 
 .defect-card {
-    background: var(--bg-color);
+    background: var(--white);
     padding: 24px 20px;
     border-radius: 10px;
     box-shadow: var(--shadow);
@@ -500,13 +523,13 @@ nav {
 }
 
 .defect-card h3 {
-    color: var(--primary-color);
+    color: var(--text-color);
     margin-bottom: 10px;
 }
 
 .defect-card p {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--text-color);
     margin-bottom: 14px;
 }
 
@@ -562,7 +585,7 @@ nav {
 .treatment-item li {
     margin-bottom: 8px;
     font-size: 0.9rem;
-    color: #555;
+    color: var(--text-color);
 }
 
 .mission-section {
