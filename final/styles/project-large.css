@@ -47,7 +47,6 @@
 
     /* Hero */
     .hero-img {
-        min-height: 350px;
         border-radius: 0 25px;
     }
 
@@ -67,10 +66,18 @@
 
     /* Page Banner */
     .banner-img {
-        height: 350px;
+        height: 400px;
     }
 
     .banner-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .page-banner.no-image {
+        padding: 60px 48px;
+    }
+
+    .page-banner.no-image h1 {
         font-size: 2.4rem;
     }
 

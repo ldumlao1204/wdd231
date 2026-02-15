@@ -52,7 +52,7 @@
     .hero-img {
         width: 50%;
         height: auto;
-        min-height: 350px;
+        object-fit: cover;
     }
 
     .hero-content {
@@ -75,8 +75,16 @@
         height: 300px;
     }
 
-    .page-banner {
+    .banner-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .page-banner.no-image {
         padding: 48px 40px;
+    }
+
+    .page-banner.no-image h1 {
+        font-size: 1.8rem;
     }
 
     /* Info Cards - 2 columns */
