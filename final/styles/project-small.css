@@ -2,7 +2,7 @@
     --primary-color: #004799;
     --secondary-color: #a2071b;
     --text-color: #333333;
-    --bg-color: #bfdbf7;
+    --bg-color: #e6eef7;
     --white: #ffffff;
     --accent-color: #214673;
     --light-gray: #e8ecef;
@@ -173,7 +173,7 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 24px 15px;
-    background: linear-gradient(135deg, rgba(0, 71, 153, 0.88) 0%, rgba(0, 102, 204, 0.8) 50%, rgba(162, 7, 27, 0.82) 100%);
+    background: linear-gradient(135deg, rgba(0, 71, 153, 0.93) 0%, rgba(0, 102, 204, 0.9) 50%, rgba(162, 7, 27, 0.92) 100%);
 }
 
 .hero h1 {
@@ -235,7 +235,7 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 24px 20px;
-    background: linear-gradient(135deg, rgba(0, 71, 153, 0.8), rgba(0, 102, 204, 0.7));
+    background: linear-gradient(135deg, rgba(0, 71, 153, 0.93), rgba(0, 102, 204, 0.9));
 }
 
 .banner-content h1 {
