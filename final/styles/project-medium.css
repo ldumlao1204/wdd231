@@ -85,9 +85,39 @@
         padding: 10px 20px;
     }
 
-    /* Resources Grid - 2 columns */
+    /* Resources Grid - 1 column centered */
     .resources-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Resource card — category on top, image left of content, button bottom */
+    .resource-card {
+        grid-template-columns: 100px 1fr;
+        grid-template-areas:
+            "category   category"
+            "photograph name"
+            "photograph description"
+            "photograph details"
+            "photograph rating"
+            "button     button";
+        grid-template-rows: auto auto auto 1fr auto auto;
+    }
+
+    .resource-img {
+        border-radius: 0;
+    }
+
+    .resource-img img {
+        width: 100px;
+        height: 150px;
+        object-fit: contain;
+        padding: 8px;
+    }
+
+    .resource-name {
+        margin-top: 8px;
     }
 
     /* About intro - side by side */

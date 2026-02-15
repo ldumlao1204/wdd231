@@ -108,6 +108,27 @@
         margin: 0 auto;
     }
 
+    /* Resource card — stacked vertical with image on top */
+    .resource-card {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "photograph"
+            "category"
+            "name"
+            "description"
+            "details"
+            "rating"
+            "button";
+        grid-template-rows: auto auto auto 1fr auto auto auto;
+    }
+
+    .resource-img img {
+        width: 100px;
+        height: 150px;
+        object-fit: contain;
+        padding: 8px;
+    }
+
     /* About Page */
     .about-intro {
         padding: 50px 60px;

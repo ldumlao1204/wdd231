@@ -1,31 +1,18 @@
 // main.js - ES Module for the Home Page
 import { openModal, closeModal } from './modal.js';
-
-// ========== Data Fetching with Async/Await and Try/Catch ==========
-async function fetchResources() {
-    try {
-        const response = await fetch('data/tof-resources.json');
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const data = await response.json();
-        return data.resources;
-    } catch (error) {
-        console.error('Error fetching resources:', error);
-        const container = document.getElementById('resources-container');
-        container.innerHTML = '<p class="error-message">Unable to load resources. Please try again later.</p>';
-        return [];
-    }
-}
+import { resources } from '../data/tof-resources.mjs';
 
 // ========== Dynamic Content Generation with Template Literals ==========
 function createResourceCard(resource) {
     const stars = '&#9733;'.repeat(resource.rating) + '&#9734;'.repeat(5 - resource.rating);
 
     return `<article class="resource-card" data-category="${resource.category}">
+        <figure class="resource-img">
+            <img src="${resource.image}" alt="${resource.name} logo" width="300" height="200" loading="lazy">
+        </figure>
         <div class="resource-category">${resource.category}</div>
-        <h3>${resource.name}</h3>
-        <p>${resource.description}</p>
+        <h3 class="resource-name">${resource.name}</h3>
+        <p class="resource-desc">${resource.description}</p>
         <div class="resource-details">
             <span class="resource-location">${resource.location}</span>
             <span class="resource-specialty">${resource.specialty}</span>
@@ -36,13 +23,13 @@ function createResourceCard(resource) {
 }
 
 // ========== Display Resources with Array Methods ==========
-function displayResources(resources, filter = 'all') {
+function displayResources(resourceList, filter = 'all') {
     const container = document.getElementById('resources-container');
 
     // Array method: filter
     const filteredResources = filter === 'all'
-        ? resources
-        : resources.filter(resource => resource.category === filter);
+        ? resourceList
+        : resourceList.filter(resource => resource.category === filter);
 
     // Array method: map + template literals
     const cardsHTML = filteredResources.map(resource => createResourceCard(resource)).join('');
@@ -54,7 +41,7 @@ function displayResources(resources, filter = 'all') {
     detailButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             const resourceName = e.target.dataset.name;
-            const resource = resources.find(r => r.name === resourceName);
+            const resource = resourceList.find(r => r.name === resourceName);
             if (resource) {
                 showResourceModal(resource);
             }
@@ -97,9 +84,7 @@ function loadFilterPreference() {
 }
 
 // ========== Initialize ==========
-async function init() {
-    const resources = await fetchResources();
-
+function init() {
     if (resources.length === 0) return;
 
     // Load saved filter preference from localStorage
