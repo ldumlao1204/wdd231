@@ -157,8 +157,15 @@
     }
 
     .form-group input,
-    .form-group select {
+    .form-group select,
+    .form-group textarea {
         max-width: 400px;
+    }
+
+    .contact-form fieldset {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     /* Footer - 3 columns */

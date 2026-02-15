@@ -17,7 +17,7 @@ export const resources = [
         "specialty": "Congenital Heart Disease",
         "website": "https://www.chop.edu",
         "rating": 5,
-        "image": "images/tof-logo.webp"
+        "image": "images/hospital/childrens-philadelphia.webp"
     },
     {
         "name": "Great Ormond Street Hospital",
@@ -117,7 +117,7 @@ export const resources = [
         "specialty": "Peer Support",
         "website": "https://www.conqueringchd.org",
         "rating": 4,
-        "image": "images/tof-logo.webp"
+        "image": "images/hospital/conquering-chd.webp"
     },
     {
         "name": "Congenital Heart Public Health Consortium",
