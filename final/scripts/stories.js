@@ -37,7 +37,7 @@ function createStoryCard(story) {
 
     return `<article class="story-card">
         <figure class="story-img">
-            <img src="${story.image}" alt="${story.name}" width="100" height="100" loading="lazy">
+            <img src="${story.image}" alt="${story.name}" width="200" height="300" loading="lazy">
         </figure>
         <h3 class="story-name">${story.name}</h3>
         <p class="story-age">${story.age}</p>
