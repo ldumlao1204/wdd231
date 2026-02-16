@@ -678,6 +678,7 @@ nav {
     margin-bottom: 40px;
     background-color: var(--white);
     border-top: 4px solid var(--secondary-color);
+    border-radius: 12px;
     box-shadow: var(--box-shadow);
     transition: all 0.3s ease;
 }
