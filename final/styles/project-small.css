@@ -1,15 +1,19 @@
 :root {
     --primary-color: #033369;
+    --primary-dark: #003570;
     --secondary-color: #920717;
+    --secondary-hover: #c41020;
     --text-color: #0f0f0f;
+    --mid-gray: #555;
     --bg-color: #e0e9f3;
     --white: #ffffff;
     --accent-color: #214673;
     --light-gray: #e4ebf1;
     --active-button: #114d88;
     --star-rate: #9104aa;
+    --overlay-color: var(--overlay-color);
     --box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.25);
-    
+    --hover-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -202,7 +206,7 @@ nav {
     justify-content: flex-start;
     padding: 20px 20px;
     text-align: center;
-    background: rgba(18, 40, 66, 0.65);
+    background: var(--overlay-color);
 }
 
 /* Stories & Contact: no full overlay, text-only background */
@@ -215,7 +219,7 @@ nav {
 .hero-stories .hero-content p,
 .hero-contact .hero-content h1,
 .hero-contact .hero-content p {
-    background: linear-gradient(to right, transparent, rgba(18, 40, 66, 0.65) 15%, rgba(18, 40, 66, 0.65) 85%, transparent);
+    background: linear-gradient(to right, transparent, var(--overlay-color) 15%, var(--overlay-color) 85%, transparent);
     padding: 8px 40px;
     border-radius: 6px;
     display: inline-block;
@@ -224,6 +228,8 @@ nav {
 .hero h1 {
     font-size: 1.6rem;
     margin-bottom: 10px;
+    margin-top: 50px;
+    color: var(--white);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
@@ -248,7 +254,7 @@ nav {
 }
 
 .cta-button:hover {
-    background-color: #c41020;
+    background-color: var(--secondary-hover);
     text-decoration: none;
     transform: translateY(-2px);
 }
@@ -325,7 +331,7 @@ nav {
 
 .info-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: var(--hover-shadow);
 }
 
 .card-icon {
@@ -421,7 +427,7 @@ nav {
 
 .resource-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: var(--hover-shadow);
 }
 
 .resource-img {
@@ -509,14 +515,14 @@ nav {
 }
 
 .view-details-btn:hover {
-    background-color: #c41020;
+    background-color: var(--secondary-hover);
 }
 
 .error-message,
 .no-results {
     text-align: center;
     padding: 20px;
-    color: #666;
+    color: var(--mid-gray);
     font-style: italic;
 }
 
@@ -581,7 +587,7 @@ nav {
 
 .defect-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: var(--hover-shadow);
 }
 
 .defect-number {
@@ -624,7 +630,7 @@ nav {
 }
 
 .detail-btn:hover {
-    background-color: #003570;
+    background-color: var(--primary-dark);
 }
 
 .treatment-section {
@@ -653,7 +659,7 @@ nav {
 
 .treatment-item:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: var(--hover-shadow);
 }
 
 .treatment-item h3 {
@@ -684,7 +690,7 @@ nav {
 
 .mission-section:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: var(--hover-shadow);
 }
 
 .mission-section h2 {
@@ -742,7 +748,7 @@ nav {
     background: none;
     border: none;
     font-size: 1.8rem;
-    color: #555;
+    color: var(--mid-gray);
     cursor: pointer;
     line-height: 1;
     transition: color 0.3s;
@@ -791,7 +797,7 @@ nav {
 }
 
 .modal-link:hover {
-    background-color: #003570;
+    background-color: var(--primary-dark);
     text-decoration: none;
 }
 
@@ -809,7 +815,7 @@ nav {
 .modal-content li {
     margin-bottom: 6px;
     font-size: 0.9rem;
-    color: #555;
+    color: var(--mid-gray);
 }
 
 /*************** CONTACT FORM *********************/
@@ -817,10 +823,6 @@ nav {
     padding: 40px 20px;
 }
 
-.hero h1 {
-    color: var(--white);
-    margin-top: 50px;
-}    
 
 .contact-info {
     margin-bottom: 32px;
@@ -859,7 +861,7 @@ nav {
 
 .contact-item p {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--mid-gray);
 }
 
 .contact-form fieldset {
@@ -958,7 +960,7 @@ nav {
 }
 
 .submit-btn:hover {
-    background-color: #c41020;
+    background-color: var(--secondary-hover);
     transform: translateY(-2px);
 }
 
@@ -1178,7 +1180,7 @@ footer p {
 
 .story-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: var(--hover-shadow);
 }
 
 .story-img {
