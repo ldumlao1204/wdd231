@@ -867,6 +867,8 @@ nav {
     border-radius: 8px;
     padding: 20px 16px;
     margin: 0 16px 20px 16px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
 }
 
 .contact-form legend {
