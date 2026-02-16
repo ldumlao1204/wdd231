@@ -219,7 +219,7 @@ nav {
 .hero-stories .hero-content p,
 .hero-contact .hero-content h1,
 .hero-contact .hero-content p {
-    background: linear-gradient(to right, transparent, var(--overlay-color) 15%, var(--overlay-color) 85%, transparent);
+    background: linear-gradient(to right, transparent, rgba(6, 46, 95, 0.85) 15%, rgba(6, 46, 95, 0.85) 85%, transparent);
     padding: 8px 40px;
     border-radius: 6px;
     display: inline-block;
@@ -286,6 +286,7 @@ nav {
     padding: 60px 20px;
     text-align: center;
     background: var(--overlay-color);
+    color: var(--white);
 }
 
 .banner-content h1 {
@@ -554,6 +555,7 @@ nav {
     padding: 40px 20px;
     background-color: var(--accent-color);
     border-radius: 12px;
+    color: var(--white);
 }
 
 .defects-section h2 {
