@@ -177,6 +177,6 @@ export const resources = [
         "specialty": "Parent-to-Parent Support",
         "website": "https://www.sistersbyheart.org",
         "rating": 4,
-        "image": "images/tof-logo.webp"
+        "image": "images/hospital/sisters-by-heart.webp"
     }
 ];

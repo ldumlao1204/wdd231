@@ -437,7 +437,7 @@ nav {
 
 .resource-img img {
     width: 100px;
-    height: 150px;
+    height: 100px;
     object-fit: contain;
     padding: 8px;
 }
@@ -644,7 +644,14 @@ nav {
     background: var(--white);
     padding: 24px;
     border-radius: 10px;
-    box-shadow: var(--shadow);
+    border-top: 4px solid var(--secondary-color);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.treatment-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
 }
 
 .treatment-item h3 {
@@ -666,6 +673,14 @@ nav {
 .mission-section {
     padding: 40px 20px;
     background-color: var(--white);
+    border-top: 4px solid var(--secondary-color);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
 }
 
 .mission-section h2 {

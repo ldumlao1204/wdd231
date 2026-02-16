@@ -124,7 +124,7 @@
 
     .resource-img img {
         width: 100px;
-        height: 150px;
+        height: 100px;
         object-fit: contain;
         padding: 8px;
     }
