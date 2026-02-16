@@ -180,10 +180,31 @@
     }
 
     /* Stories Grid - 2 columns */
+    /* Stories Grid - 1 column, full width */
     .stories-grid {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 700px;
+        grid-template-columns: 1fr;
+        max-width: 100%;
         margin: 0 auto;
+    }
+
+    /* Story card — image on right side */
+    .story-card {
+        grid-template-columns: 1fr 100px;
+        grid-template-areas:
+            "name       photograph"
+            "age        photograph"
+            "milestone  photograph"
+            "story      story"
+            "meta       meta";
+        grid-template-rows: auto auto auto 1fr auto;
+    }
+
+    .story-img {
+        border-radius: 0;
+    }
+
+    .story-name {
+        margin-top: 12px;
     }
 
     .stories-section {
