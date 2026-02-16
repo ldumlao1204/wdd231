@@ -9,6 +9,7 @@
     --active-button: #114d88;
     --star-rate: #9104aa;
     --box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.25);
+    
 }
 
 * {
@@ -320,7 +321,7 @@ nav {
     border-radius: 10px;
     border: 1px solid var(--accent-color);
     box-shadow: var(--box-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .info-card:hover {
@@ -405,7 +406,7 @@ nav {
     border-radius: 10px;
     border-left: 4px solid var(--primary-color);
     box-shadow: var(--box-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     overflow: hidden;
     display: grid;
     grid-template-areas:
@@ -546,18 +547,20 @@ nav {
 
 .defects-section {
     padding: 40px 20px;
-    background-color: var(--light-gray);
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    border-radius: 12px;
 }
 
 .defects-section h2 {
-    color: var(--primary-color);
+    color: var(--white);
     text-align: center;
     margin-bottom: 8px;
 }
 
 .defects-section > p {
     text-align: center;
-    color: var(--text-color);
+    color: var(--white);
     margin-bottom: 24px;
 }
 
@@ -570,11 +573,11 @@ nav {
 .defect-card {
     background: var(--white);
     padding: 24px 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: var(--shadow);
     border-top: 4px solid var(--secondary-color);
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .defect-card:hover {
@@ -643,10 +646,10 @@ nav {
 .treatment-item {
     background: var(--white);
     padding: 24px;
-    border-radius: 10px;
+    border-radius: 12px;
     border-top: 4px solid var(--secondary-color);
     box-shadow: var(--box-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .treatment-item:hover {
@@ -672,10 +675,11 @@ nav {
 
 .mission-section {
     padding: 40px 20px;
+    margin-bottom: 40px;
     background-color: var(--white);
     border-top: 4px solid var(--secondary-color);
     box-shadow: var(--box-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .mission-section:hover {
@@ -1155,7 +1159,7 @@ footer p {
         "story"
         "meta";
     grid-template-rows: auto auto auto auto 1fr auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .story-card:hover {
