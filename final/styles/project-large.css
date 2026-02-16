@@ -221,10 +221,10 @@
     }
 
     .story-card {
-        grid-template-columns: 1fr clamp(200px, 45%, 200px);
-        grid-template-rows: auto auto auto 1fr auto;
+        grid-template-columns: 1fr clamp(150px, 45%, 250px);
+        grid-template-rows: auto auto auto;
         min-height: 100px;
-        min-width: 300px;
+        min-width: 400px;
         grid-template-areas:
             "name       photograph"
             "age        photograph"

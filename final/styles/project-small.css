@@ -866,8 +866,7 @@ nav {
     border: 1px solid var(--accent-color);
     border-radius: 8px;
     padding: 20px 16px;
-    margin-left: 5px;
-    margin-bottom: 20px;
+    margin: 0 16px 20px 16px;
 }
 
 .contact-form legend {
@@ -1103,6 +1102,7 @@ footer p {
     padding: 16px 20px;
     margin-bottom: 24px;
     border-radius: 6px;
+    text-align: center;
     font-size: 0.95rem;
     color: var(--text-color);
     box-shadow: var(--box-shadow);
@@ -1110,6 +1110,7 @@ footer p {
 
 .stories-section h2 {
     color: var(--accent-color);
+    text-align: center;
 }
 
 
