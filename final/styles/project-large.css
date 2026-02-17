@@ -169,6 +169,11 @@
     /* Contact Page */
     .contact-section {
         padding: 50px 60px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .contact-form {
         max-width: 700px;
         margin: 0 auto;
     }

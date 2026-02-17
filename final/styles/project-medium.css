@@ -135,19 +135,16 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Contact Page - side by side */
+    /* Contact Page */
     .contact-section {
-        padding: 40px;
+        padding: 50px 60px;
+        max-width: 900px;
+        margin: 0 auto;
     }
 
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        max-width: 100%;
-    }
-
-    .contact-form fieldset {
-        max-width: 100%;
+    .contact-form {
+        max-width: 700px;
+        margin: 0 auto;
     }
 
     /* Footer - 3 columns */
