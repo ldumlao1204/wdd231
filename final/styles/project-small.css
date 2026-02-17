@@ -207,7 +207,6 @@ nav {
     padding: 40px 20px;
     text-align: center;
     background: var(--overlay-color);
-    color: var(--white);
 }
 
 /* Stories & Contact: no full overlay, text-only background */
@@ -238,6 +237,7 @@ nav {
     font-size: 0.95rem;
     margin-bottom: 16px;
     max-width: 600px;
+    color: var(--white);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
