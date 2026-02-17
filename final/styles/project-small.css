@@ -97,7 +97,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: var(--shadow);
+    box-shadow: var(--box-shadow);
 }
 
 .logo-link {
@@ -583,7 +583,7 @@ nav {
     color: var(--text-color);
     padding: 24px 20px;
     border-radius: 12px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--box-shadow);
     border-top: 4px solid var(--secondary-color);
     position: relative;
     transition: all 0.3s ease;
@@ -876,7 +876,7 @@ nav {
 }
 
 .required {
-    color: var(--secondary-color)
+    color: var(--secondary-color);
 }
 
 .form-group input,
