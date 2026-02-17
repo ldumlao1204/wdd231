@@ -89,7 +89,7 @@ a:hover {
 /*************** HEADER *********************/
 header {
     display: grid;
-    grid-template-columns: 70px 1fr 44px;
+    grid-template-columns: 80px 1fr 44px;
     align-items: center;
     padding: 8px 16px;
     background-color: var(--primary-color);
@@ -184,7 +184,7 @@ nav {
 .hero {
     position: relative;
     overflow: hidden;
-    color: var(--white);
+    color: var(--text-color);
 }
 
 .hero-img {
@@ -207,6 +207,7 @@ nav {
     padding: 20px 20px;
     text-align: center;
     background: var(--overlay-color);
+    color: var(--white);
 }
 
 /* Stories & Contact: no full overlay, text-only background */
@@ -578,6 +579,7 @@ nav {
 
 .defect-card {
     background: var(--white);
+    color: var(--text-color);
     padding: 24px 20px;
     border-radius: 12px;
     box-shadow: var(--shadow);
