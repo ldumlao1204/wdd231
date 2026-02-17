@@ -97,7 +97,7 @@ export const resources = [
         "specialty": "Cardiovascular Research",
         "website": "https://www.nhlbi.nih.gov",
         "rating": 5,
-        "image": "images/hospital/nhlbi.jpg"
+        "image": "images/hospital/nhlbi.webp"
     },
     {
         "name": "Cincinnati Children's Heart Institute",
@@ -137,7 +137,7 @@ export const resources = [
         "specialty": "Family Advocacy",
         "website": "https://www.heartkids.org.au",
         "rating": 4,
-        "image": "images/hospital/heartkids.jpg"
+        "image": "images/hospital/heartkids.webp"
     },
     {
         "name": "Stanford Children's Health - Lucile Packard",
