@@ -140,20 +140,14 @@
         padding: 40px;
     }
 
-    .contact-details {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
     .form-group input,
     .form-group select,
     .form-group textarea {
-        max-width: 400px;
+        max-width: 100%;
     }
 
     .contact-form fieldset {
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 100%;
     }
 
     /* Footer - 3 columns */
