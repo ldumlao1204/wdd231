@@ -85,6 +85,31 @@ const totalCreditsSpan = document.getElementById('total-credits');
 const allButton = document.getElementById('all');
 const cseButton = document.getElementById('cse');
 const wddButton = document.getElementById('wdd');
+const courseDetails = document.getElementById('course-details');
+
+// Display modal with course details
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = `
+        <button id="closeModal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Languages</strong>: ${course.technology.join(', ')}</p>
+    `;
+    courseDetails.showModal();
+
+    document.getElementById('closeModal').addEventListener('click', () => {
+        courseDetails.close();
+    });
+
+    courseDetails.addEventListener('click', (e) => {
+        if (e.target === courseDetails) {
+            courseDetails.close();
+        }
+    }, { once: true });
+}
 
 // Display the courses function
 function displayCourses(filteredCourses) {
@@ -94,6 +119,9 @@ function displayCourses(filteredCourses) {
         const courseCard = document.createElement('div');
         courseCard.className = `course-card ${course.completed ? 'completed' : ''}`;
         courseCard.textContent = `${course.subject} ${course.number}`;
+        courseCard.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
         coursesContainer.appendChild(courseCard);
     });
 
