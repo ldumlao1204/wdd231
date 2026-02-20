@@ -275,16 +275,58 @@ main h1 {
 footer {
   background-color: var(--primary-color);
   color: var(--text-light);
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   text-align: center;
   margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-left h3,
+.footer-right h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.footer-left p,
+.footer-right p {
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .social-links {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .social-links a {
