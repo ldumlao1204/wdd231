@@ -518,6 +518,10 @@
         height: 120px;
     }
 
+    .spotlight-info {
+        padding-right: 1rem;
+    }
+
     .spotlight-info p {
         font-size: 1rem;
     }

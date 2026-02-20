@@ -135,6 +135,7 @@ nav {
 
 .navigation li {
     border-bottom: 1px solid var(--border-light);
+    color: var(--color-dark);
 }
 
 .navigation a {
